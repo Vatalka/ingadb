@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:ingadb/constants.dart';
-import 'package:ingadb/genres/data/entity/genres_response.dart';
+import 'package:ingadb/core/constants.dart';
+import 'package:ingadb/core/errors/exceptions.dart';
+import 'package:ingadb/genres/data/entity/genres_response_dto.dart';
 
 abstract class GenresDataSource {
-  Future<GenreResponse> getGenres();
+  Future<GenresResponse> getGenres();
 }
 
 class GenresDataSourceImpl extends GenresDataSource {
@@ -12,13 +13,13 @@ class GenresDataSourceImpl extends GenresDataSource {
   GenresDataSourceImpl({required this.dio});
 
   @override
-  Future<GenreResponse> getGenres() async {
+  Future<GenresResponse> getGenres() async {
     try {
       final response =
           await dio.get('${Constants.baseUrl}genres?key=${Constants.apiKey}');
-      return GenreResponse.fromJson(response.data);
+      return GenresResponse.fromJson(response.data);
     } catch (e) {
-      throw Exception(e.toString());
+      throw ServerException(message: e.toString());
     }
   }
 }
