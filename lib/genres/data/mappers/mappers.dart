@@ -1,24 +1,21 @@
 import 'package:ingadb/genres/data/entity/genres_response_dto.dart';
-import 'package:ingadb/genres/domain/model/genres.dart';
+import 'package:ingadb/genres/domain/model/genres_model.dart';
 
-Results fromEntityToDomainModel(ResultResponse entity) {
-  return Results(
+Genres fromEntityToDomainGenres(ResultResponse entity) {
+  return Genres(
       id: entity.id,
       name: entity.name,
-      slug: entity.slug,
       gamesCount: entity.gamesCount,
       imageBackground: entity.imageBackground,
       games: entity.games
-          .map((e) => fromEntityToDomainGames(GameResponse(
-          id: e.id, slug: e.slug, name: e.name, added: e.added)))
+          .map((e) => fromEntityToDomainGames(
+              GamesOfTheGenre(id: e.id, name: e.name) as GameResponse))
           .toList());
 }
 
-Games fromEntityToDomainGames(GameResponse entity) {
-  return Games(
+GamesOfTheGenre fromEntityToDomainGames(GameResponse entity) {
+  return GamesOfTheGenre(
     id: entity.id,
-    slug: entity.slug,
     name: entity.name,
-    added: entity.added,
   );
 }

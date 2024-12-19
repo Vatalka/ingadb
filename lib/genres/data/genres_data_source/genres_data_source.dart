@@ -19,7 +19,7 @@ class GenresDataSourceImpl extends GenresDataSource {
           await dio.get('${Constants.baseUrl}genres?key=${Constants.apiKey}');
       return GenresResponse.fromJson(response.data);
     } catch (e) {
-      throw ServerException(message: e.toString());
+      throw AppException(message: e.toString());
     }
   }
 }
