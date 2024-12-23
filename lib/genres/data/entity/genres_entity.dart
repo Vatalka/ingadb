@@ -2,12 +2,16 @@
 // final genresResponse = genresResponseFromJson(jsonString);
 
 import 'dart:convert';
+import 'package:json_annotation/json_annotation.dart';
+
+part 'genres_entity.g.dart';
 
 GenresResponse genresResponseFromJson(String str) =>
     GenresResponse.fromJson(json.decode(str));
 
 String genresResponseToJson(GenresResponse data) => json.encode(data.toJson());
 
+@JsonSerializable()
 class GenresResponse {
   final int count;
   final dynamic next;
@@ -50,6 +54,7 @@ class GenresResponse {
       };
 }
 
+@JsonSerializable()
 class ResultResponse {
   final int id;
   final String name;
@@ -104,6 +109,7 @@ class ResultResponse {
       };
 }
 
+@JsonSerializable()
 class GameResponse {
   final int id;
   final String slug;

@@ -1,25 +1,26 @@
-class Genres {
-  final int id;
-  final String name;
-  final int gamesCount;
-  final String imageBackground;
-  final List<GamesOfTheGenre>? games;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  const Genres({
-    required this.id,
-    required this.name,
-    required this.gamesCount,
-    required this.imageBackground,
-    required this.games,
-  });
+part 'genres_model.freezed.dart';
+
+@freezed
+class Genres with _$Genres {
+  const Genres._();
+
+  const factory Genres({
+    required int id,
+    required String name,
+    required int gamesCount,
+    required String imageBackground,
+    required List<GamesOfTheGenre>? games,
+  }) = _Genres;
 }
 
-class GamesOfTheGenre {
-  final int id;
-  final String name;
+@freezed
+class GamesOfTheGenre with _$GamesOfTheGenre {
+  const GamesOfTheGenre._();
 
-  const GamesOfTheGenre({
-    required this.id,
-    required this.name,
-  });
+  const factory GamesOfTheGenre({
+    required int id,
+    required String name,
+  }) = _GamesOfTheGenre;
 }
