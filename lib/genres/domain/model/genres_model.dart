@@ -1,26 +1,27 @@
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'genres_model.freezed.dart';
 
 @freezed
-class Genres with _$Genres {
-  const Genres._();
-
-  const factory Genres({
+class Genre with _$Genre {
+  const factory Genre({
     required int id,
     required String name,
     required int gamesCount,
     required String imageBackground,
-    required List<GamesOfTheGenre>? games,
-  }) = _Genres;
+    required List<Game>? games,
+  }) = _Genre;
+
 }
 
 @freezed
-class GamesOfTheGenre with _$GamesOfTheGenre {
-  const GamesOfTheGenre._();
-
-  const factory GamesOfTheGenre({
+class Game with _$Game {
+  const factory Game({
     required int id,
     required String name,
-  }) = _GamesOfTheGenre;
+  }) = _Game;
+
 }
+
+

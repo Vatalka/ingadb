@@ -1,22 +1,23 @@
 // To parse this JSON data, do
-// final genresResponse = genresResponseFromJson(jsonString);
+// final genresEntity = genresEntityFromJson(jsonString);
 
 import 'dart:convert';
+import 'package:ingadb/genres/domain/model/genres_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'genres_entity.g.dart';
 
-GenresResponse genresResponseFromJson(String str) =>
-    GenresResponse.fromJson(json.decode(str));
+GenresResponse genresEntityFromJson(String str) =>
+    GenresResponse.fromJson(json.decode(str) as Map<String, dynamic>);
 
-String genresResponseToJson(GenresResponse data) => json.encode(data.toJson());
+String genresEntityToJson(GenresResponse data) => json.encode(data.toJson());
 
 @JsonSerializable()
 class GenresResponse {
   final int count;
   final dynamic next;
   final dynamic previous;
-  final List<ResultResponse> results;
+  final List<GenreEntity> results;
 
   GenresResponse({
     required this.count,
@@ -29,7 +30,7 @@ class GenresResponse {
     int? count,
     dynamic next,
     dynamic previous,
-    List<ResultResponse>? results,
+    List<GenreEntity>? results,
   }) =>
       GenresResponse(
         count: count ?? this.count,
@@ -38,32 +39,22 @@ class GenresResponse {
         results: results ?? this.results,
       );
 
-  factory GenresResponse.fromJson(Map<String, dynamic> json) => GenresResponse(
-        count: json["count"],
-        next: json["next"],
-        previous: json["previous"],
-        results: List<ResultResponse>.from(
-            json["results"].map((x) => ResultResponse.fromJson(x))),
-      );
+  factory GenresResponse.fromJson(Map<String, dynamic> json) =>
+      _$GenresResponseFromJson(json);
 
-  Map<String, dynamic> toJson() => {
-        "count": count,
-        "next": next,
-        "previous": previous,
-        "results": List<dynamic>.from(results.map((x) => x.toJson())),
-      };
+  Map<String, dynamic> toJson() => _$GenresResponseToJson(this);
 }
 
-@JsonSerializable()
-class ResultResponse {
+@JsonSerializable(fieldRename: FieldRename.snake)
+class GenreEntity {
   final int id;
   final String name;
   final String slug;
   final int gamesCount;
   final String imageBackground;
-  final List<GameResponse> games;
+  final List<GameEntity> games;
 
-  ResultResponse({
+  GenreEntity({
     required this.id,
     required this.name,
     required this.slug,
@@ -72,15 +63,15 @@ class ResultResponse {
     required this.games,
   });
 
-  ResultResponse copyWith({
+  GenreEntity copyWith({
     int? id,
     String? name,
     String? slug,
     int? gamesCount,
     String? imageBackground,
-    List<GameResponse>? games,
+    List<GameEntity>? games,
   }) =>
-      ResultResponse(
+      GenreEntity(
         id: id ?? this.id,
         name: name ?? this.name,
         slug: slug ?? this.slug,
@@ -89,64 +80,58 @@ class ResultResponse {
         games: games ?? this.games,
       );
 
-  factory ResultResponse.fromJson(Map<String, dynamic> json) => ResultResponse(
-        id: json["id"],
-        name: json["name"],
-        slug: json["slug"],
-        gamesCount: json["games_count"],
-        imageBackground: json["image_background"],
-        games: List<GameResponse>.from(
-            json["games"].map((x) => GameResponse.fromJson(x))),
-      );
+  factory GenreEntity.fromJson(Map<String, dynamic> json) =>
+      _$GenreEntityFromJson(json);
 
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "slug": slug,
-        "games_count": gamesCount,
-        "image_background": imageBackground,
-        "games": List<dynamic>.from(games.map((x) => x.toJson())),
-      };
+  Map<String, dynamic> toJson() => _$GenreEntityToJson(this);
 }
 
 @JsonSerializable()
-class GameResponse {
+class GameEntity {
   final int id;
   final String slug;
   final String name;
   final int added;
 
-  GameResponse({
+  GameEntity({
     required this.id,
     required this.slug,
     required this.name,
     required this.added,
   });
 
-  GameResponse copyWith({
+  GameEntity copyWith({
     int? id,
     String? slug,
     String? name,
     int? added,
   }) =>
-      GameResponse(
+      GameEntity(
         id: id ?? this.id,
         slug: slug ?? this.slug,
         name: name ?? this.name,
         added: added ?? this.added,
       );
 
-  factory GameResponse.fromJson(Map<String, dynamic> json) => GameResponse(
-        id: json["id"],
-        slug: json["slug"],
-        name: json["name"],
-        added: json["added"],
-      );
+  factory GameEntity.fromJson(Map<String, dynamic> json) =>
+      _$GameEntityFromJson(json);
 
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "slug": slug,
-        "name": name,
-        "added": added,
-      };
+  Map<String, dynamic> toJson() => _$GameEntityToJson(this);
+}
+
+extension GameEntityExt on GameEntity {
+  Game toDomain() => Game(
+        id: id,
+        name: name,
+      );
+}
+
+extension GenresEntityExt on GenreEntity {
+  Genre toDomain() => Genre(
+        id: id,
+        name: name,
+        gamesCount: gamesCount,
+        imageBackground: imageBackground,
+        games: games.map((e) => e.toDomain()).toList(),
+      );
 }

@@ -12,7 +12,7 @@ GenresResponse _$GenresResponseFromJson(Map<String, dynamic> json) =>
       next: json['next'],
       previous: json['previous'],
       results: (json['results'] as List<dynamic>)
-          .map((e) => ResultResponse.fromJson(e as Map<String, dynamic>))
+          .map((e) => GenreEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -24,36 +24,35 @@ Map<String, dynamic> _$GenresResponseToJson(GenresResponse instance) =>
       'results': instance.results,
     };
 
-ResultResponse _$ResultResponseFromJson(Map<String, dynamic> json) =>
-    ResultResponse(
+GenreEntity _$GenreEntityFromJson(Map<String, dynamic> json) => GenreEntity(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       slug: json['slug'] as String,
-      gamesCount: (json['gamesCount'] as num).toInt(),
-      imageBackground: json['imageBackground'] as String,
+      gamesCount: (json['games_count'] as num).toInt(),
+      imageBackground: json['image_background'] as String,
       games: (json['games'] as List<dynamic>)
-          .map((e) => GameResponse.fromJson(e as Map<String, dynamic>))
+          .map((e) => GameEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$ResultResponseToJson(ResultResponse instance) =>
+Map<String, dynamic> _$GenreEntityToJson(GenreEntity instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'slug': instance.slug,
-      'gamesCount': instance.gamesCount,
-      'imageBackground': instance.imageBackground,
+      'games_count': instance.gamesCount,
+      'image_background': instance.imageBackground,
       'games': instance.games,
     };
 
-GameResponse _$GameResponseFromJson(Map<String, dynamic> json) => GameResponse(
+GameEntity _$GameEntityFromJson(Map<String, dynamic> json) => GameEntity(
       id: (json['id'] as num).toInt(),
       slug: json['slug'] as String,
       name: json['name'] as String,
       added: (json['added'] as num).toInt(),
     );
 
-Map<String, dynamic> _$GameResponseToJson(GameResponse instance) =>
+Map<String, dynamic> _$GameEntityToJson(GameEntity instance) =>
     <String, dynamic>{
       'id': instance.id,
       'slug': instance.slug,

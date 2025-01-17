@@ -15,43 +15,43 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$Genres {
+mixin _$Genre {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   int get gamesCount => throw _privateConstructorUsedError;
   String get imageBackground => throw _privateConstructorUsedError;
-  List<GamesOfTheGenre>? get games => throw _privateConstructorUsedError;
+  List<Game>? get games => throw _privateConstructorUsedError;
 
-  /// Create a copy of Genres
+  /// Create a copy of Genre
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GenresCopyWith<Genres> get copyWith => throw _privateConstructorUsedError;
+  $GenreCopyWith<Genre> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenresCopyWith<$Res> {
-  factory $GenresCopyWith(Genres value, $Res Function(Genres) then) =
-      _$GenresCopyWithImpl<$Res, Genres>;
+abstract class $GenreCopyWith<$Res> {
+  factory $GenreCopyWith(Genre value, $Res Function(Genre) then) =
+      _$GenreCopyWithImpl<$Res, Genre>;
   @useResult
   $Res call(
       {int id,
       String name,
       int gamesCount,
       String imageBackground,
-      List<GamesOfTheGenre>? games});
+      List<Game>? games});
 }
 
 /// @nodoc
-class _$GenresCopyWithImpl<$Res, $Val extends Genres>
-    implements $GenresCopyWith<$Res> {
-  _$GenresCopyWithImpl(this._value, this._then);
+class _$GenreCopyWithImpl<$Res, $Val extends Genre>
+    implements $GenreCopyWith<$Res> {
+  _$GenreCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Genres
+  /// Create a copy of Genre
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -82,16 +82,16 @@ class _$GenresCopyWithImpl<$Res, $Val extends Genres>
       games: freezed == games
           ? _value.games
           : games // ignore: cast_nullable_to_non_nullable
-              as List<GamesOfTheGenre>?,
+              as List<Game>?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$GenresImplCopyWith<$Res> implements $GenresCopyWith<$Res> {
-  factory _$$GenresImplCopyWith(
-          _$GenresImpl value, $Res Function(_$GenresImpl) then) =
-      __$$GenresImplCopyWithImpl<$Res>;
+abstract class _$$GenreImplCopyWith<$Res> implements $GenreCopyWith<$Res> {
+  factory _$$GenreImplCopyWith(
+          _$GenreImpl value, $Res Function(_$GenreImpl) then) =
+      __$$GenreImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,18 +99,18 @@ abstract class _$$GenresImplCopyWith<$Res> implements $GenresCopyWith<$Res> {
       String name,
       int gamesCount,
       String imageBackground,
-      List<GamesOfTheGenre>? games});
+      List<Game>? games});
 }
 
 /// @nodoc
-class __$$GenresImplCopyWithImpl<$Res>
-    extends _$GenresCopyWithImpl<$Res, _$GenresImpl>
-    implements _$$GenresImplCopyWith<$Res> {
-  __$$GenresImplCopyWithImpl(
-      _$GenresImpl _value, $Res Function(_$GenresImpl) _then)
+class __$$GenreImplCopyWithImpl<$Res>
+    extends _$GenreCopyWithImpl<$Res, _$GenreImpl>
+    implements _$$GenreImplCopyWith<$Res> {
+  __$$GenreImplCopyWithImpl(
+      _$GenreImpl _value, $Res Function(_$GenreImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Genres
+  /// Create a copy of Genre
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -121,7 +121,7 @@ class __$$GenresImplCopyWithImpl<$Res>
     Object? imageBackground = null,
     Object? games = freezed,
   }) {
-    return _then(_$GenresImpl(
+    return _then(_$GenreImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -141,22 +141,21 @@ class __$$GenresImplCopyWithImpl<$Res>
       games: freezed == games
           ? _value._games
           : games // ignore: cast_nullable_to_non_nullable
-              as List<GamesOfTheGenre>?,
+              as List<Game>?,
     ));
   }
 }
 
 /// @nodoc
 
-class _$GenresImpl extends _Genres {
-  const _$GenresImpl(
+class _$GenreImpl with DiagnosticableTreeMixin implements _Genre {
+  const _$GenreImpl(
       {required this.id,
       required this.name,
       required this.gamesCount,
       required this.imageBackground,
-      required final List<GamesOfTheGenre>? games})
-      : _games = games,
-        super._();
+      required final List<Game>? games})
+      : _games = games;
 
   @override
   final int id;
@@ -166,9 +165,9 @@ class _$GenresImpl extends _Genres {
   final int gamesCount;
   @override
   final String imageBackground;
-  final List<GamesOfTheGenre>? _games;
+  final List<Game>? _games;
   @override
-  List<GamesOfTheGenre>? get games {
+  List<Game>? get games {
     final value = _games;
     if (value == null) return null;
     if (_games is EqualUnmodifiableListView) return _games;
@@ -177,15 +176,27 @@ class _$GenresImpl extends _Genres {
   }
 
   @override
-  String toString() {
-    return 'Genres(id: $id, name: $name, gamesCount: $gamesCount, imageBackground: $imageBackground, games: $games)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'Genre(id: $id, name: $name, gamesCount: $gamesCount, imageBackground: $imageBackground, games: $games)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'Genre'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('gamesCount', gamesCount))
+      ..add(DiagnosticsProperty('imageBackground', imageBackground))
+      ..add(DiagnosticsProperty('games', games));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GenresImpl &&
+            other is _$GenreImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.gamesCount, gamesCount) ||
@@ -199,23 +210,22 @@ class _$GenresImpl extends _Genres {
   int get hashCode => Object.hash(runtimeType, id, name, gamesCount,
       imageBackground, const DeepCollectionEquality().hash(_games));
 
-  /// Create a copy of Genres
+  /// Create a copy of Genre
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenresImplCopyWith<_$GenresImpl> get copyWith =>
-      __$$GenresImplCopyWithImpl<_$GenresImpl>(this, _$identity);
+  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
+      __$$GenreImplCopyWithImpl<_$GenreImpl>(this, _$identity);
 }
 
-abstract class _Genres extends Genres {
-  const factory _Genres(
+abstract class _Genre implements Genre {
+  const factory _Genre(
       {required final int id,
       required final String name,
       required final int gamesCount,
       required final String imageBackground,
-      required final List<GamesOfTheGenre>? games}) = _$GenresImpl;
-  const _Genres._() : super._();
+      required final List<Game>? games}) = _$GenreImpl;
 
   @override
   int get id;
@@ -226,48 +236,46 @@ abstract class _Genres extends Genres {
   @override
   String get imageBackground;
   @override
-  List<GamesOfTheGenre>? get games;
+  List<Game>? get games;
 
-  /// Create a copy of Genres
+  /// Create a copy of Genre
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GenresImplCopyWith<_$GenresImpl> get copyWith =>
+  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$GamesOfTheGenre {
+mixin _$Game {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
-  /// Create a copy of GamesOfTheGenre
+  /// Create a copy of Game
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GamesOfTheGenreCopyWith<GamesOfTheGenre> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GameCopyWith<Game> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GamesOfTheGenreCopyWith<$Res> {
-  factory $GamesOfTheGenreCopyWith(
-          GamesOfTheGenre value, $Res Function(GamesOfTheGenre) then) =
-      _$GamesOfTheGenreCopyWithImpl<$Res, GamesOfTheGenre>;
+abstract class $GameCopyWith<$Res> {
+  factory $GameCopyWith(Game value, $Res Function(Game) then) =
+      _$GameCopyWithImpl<$Res, Game>;
   @useResult
   $Res call({int id, String name});
 }
 
 /// @nodoc
-class _$GamesOfTheGenreCopyWithImpl<$Res, $Val extends GamesOfTheGenre>
-    implements $GamesOfTheGenreCopyWith<$Res> {
-  _$GamesOfTheGenreCopyWithImpl(this._value, this._then);
+class _$GameCopyWithImpl<$Res, $Val extends Game>
+    implements $GameCopyWith<$Res> {
+  _$GameCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GamesOfTheGenre
+  /// Create a copy of Game
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -289,25 +297,23 @@ class _$GamesOfTheGenreCopyWithImpl<$Res, $Val extends GamesOfTheGenre>
 }
 
 /// @nodoc
-abstract class _$$GamesOfTheGenreImplCopyWith<$Res>
-    implements $GamesOfTheGenreCopyWith<$Res> {
-  factory _$$GamesOfTheGenreImplCopyWith(_$GamesOfTheGenreImpl value,
-          $Res Function(_$GamesOfTheGenreImpl) then) =
-      __$$GamesOfTheGenreImplCopyWithImpl<$Res>;
+abstract class _$$GameImplCopyWith<$Res> implements $GameCopyWith<$Res> {
+  factory _$$GameImplCopyWith(
+          _$GameImpl value, $Res Function(_$GameImpl) then) =
+      __$$GameImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String name});
 }
 
 /// @nodoc
-class __$$GamesOfTheGenreImplCopyWithImpl<$Res>
-    extends _$GamesOfTheGenreCopyWithImpl<$Res, _$GamesOfTheGenreImpl>
-    implements _$$GamesOfTheGenreImplCopyWith<$Res> {
-  __$$GamesOfTheGenreImplCopyWithImpl(
-      _$GamesOfTheGenreImpl _value, $Res Function(_$GamesOfTheGenreImpl) _then)
+class __$$GameImplCopyWithImpl<$Res>
+    extends _$GameCopyWithImpl<$Res, _$GameImpl>
+    implements _$$GameImplCopyWith<$Res> {
+  __$$GameImplCopyWithImpl(_$GameImpl _value, $Res Function(_$GameImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GamesOfTheGenre
+  /// Create a copy of Game
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -315,7 +321,7 @@ class __$$GamesOfTheGenreImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
   }) {
-    return _then(_$GamesOfTheGenreImpl(
+    return _then(_$GameImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -330,9 +336,8 @@ class __$$GamesOfTheGenreImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GamesOfTheGenreImpl extends _GamesOfTheGenre {
-  const _$GamesOfTheGenreImpl({required this.id, required this.name})
-      : super._();
+class _$GameImpl with DiagnosticableTreeMixin implements _Game {
+  const _$GameImpl({required this.id, required this.name});
 
   @override
   final int id;
@@ -340,15 +345,24 @@ class _$GamesOfTheGenreImpl extends _GamesOfTheGenre {
   final String name;
 
   @override
-  String toString() {
-    return 'GamesOfTheGenre(id: $id, name: $name)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'Game(id: $id, name: $name)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'Game'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('name', name));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GamesOfTheGenreImpl &&
+            other is _$GameImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name));
   }
@@ -356,31 +370,28 @@ class _$GamesOfTheGenreImpl extends _GamesOfTheGenre {
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  /// Create a copy of GamesOfTheGenre
+  /// Create a copy of Game
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GamesOfTheGenreImplCopyWith<_$GamesOfTheGenreImpl> get copyWith =>
-      __$$GamesOfTheGenreImplCopyWithImpl<_$GamesOfTheGenreImpl>(
-          this, _$identity);
+  _$$GameImplCopyWith<_$GameImpl> get copyWith =>
+      __$$GameImplCopyWithImpl<_$GameImpl>(this, _$identity);
 }
 
-abstract class _GamesOfTheGenre extends GamesOfTheGenre {
-  const factory _GamesOfTheGenre(
-      {required final int id,
-      required final String name}) = _$GamesOfTheGenreImpl;
-  const _GamesOfTheGenre._() : super._();
+abstract class _Game implements Game {
+  const factory _Game({required final int id, required final String name}) =
+      _$GameImpl;
 
   @override
   int get id;
   @override
   String get name;
 
-  /// Create a copy of GamesOfTheGenre
+  /// Create a copy of Game
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GamesOfTheGenreImplCopyWith<_$GamesOfTheGenreImpl> get copyWith =>
+  _$$GameImplCopyWith<_$GameImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
