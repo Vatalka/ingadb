@@ -23,5 +23,3 @@ class Game with _$Game {
   }) = _Game;
 
 }
-
-

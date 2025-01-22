@@ -1,7 +1,6 @@
 // To parse this JSON data, do
 // final genresEntity = genresEntityFromJson(jsonString);
 
-import 'dart:convert';
 import 'package:ingadb/genres/domain/model/genres_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 

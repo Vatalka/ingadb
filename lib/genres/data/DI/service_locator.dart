@@ -7,18 +7,14 @@ import 'package:ingadb/genres/domain/repository/genres_repository.dart';
 
 final getIt = GetIt.instance;
 
-class ServiceLocator {
-  ServiceLocator._();
-
-  static setUp() {
-    getIt.registerLazySingleton<Dio>(
-      () => Dio(),
-    );
-    getIt.registerLazySingleton<GenresDataSource>(
-      () => GenresDataSource(getIt.get(), baseUrl: Constants.baseUrl),
-    );
-    getIt.registerLazySingleton<GenresRepository>(
-      () => GenresRepositoryImpl(genresDataSource: getIt.get()),
-    );
-  }
+void setUpDependencies() {
+  getIt.registerLazySingleton<Dio>(
+    () => Dio(),
+  );
+  getIt.registerLazySingleton<GenresDataSource>(
+    () => GenresDataSource(getIt.get(), baseUrl: Constants.baseUrl),
+  );
+  getIt.registerLazySingleton<GenresRepository>(
+    () => GenresRepositoryImpl(genresDataSource: getIt.get()),
+  );
 }

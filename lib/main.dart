@@ -14,7 +14,7 @@ void main() async {
   await Future.delayed(const Duration(seconds: 3));
   FlutterNativeSplash.remove();
   Bloc.observer = const CounterObserver();
-  ServiceLocator.setUp();
+  setUpDependencies();
   runApp(const MyApp());
 }
 

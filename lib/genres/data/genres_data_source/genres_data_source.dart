@@ -12,7 +12,7 @@ abstract class GenresDataSource {
 
   @GET('genres')
   Future<GenresResponse> getGenres(
-      {@Query('key') String key = Constants.apiKey});
+      {@Query('key') String key = Constants.apiKey,});
 }
 
 class ParseErrorLogger {
