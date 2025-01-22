@@ -14,8 +14,7 @@ class _GenresDataSource implements GenresDataSource {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??=
-        'https://api.rawg.io/api/genres?key=e6622eb7274a4f18a133a9fc4e7ecc72';
+    baseUrl ??= 'https://api.rawg.io/api/';
   }
 
   final Dio _dio;
@@ -25,9 +24,9 @@ class _GenresDataSource implements GenresDataSource {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<GenresResponse> getGenres() async {
+  Future<GenresResponse> getGenres({String key = Constants.apiKey}) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'key': key};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<GenresResponse>(Options(

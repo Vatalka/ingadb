@@ -6,12 +6,13 @@ import 'package:retrofit/http.dart';
 
 part 'genres_data_source.g.dart';
 
-@RestApi(baseUrl: '${Constants.baseUrl}genres?key=${Constants.apiKey}')
+@RestApi(baseUrl: Constants.baseUrl)
 abstract class GenresDataSource {
   factory GenresDataSource(Dio dio, {String baseUrl}) = _GenresDataSource;
 
   @GET('genres')
-  Future<GenresResponse> getGenres();
+  Future<GenresResponse> getGenres(
+      {@Query('key') String key = Constants.apiKey});
 }
 
 class ParseErrorLogger {

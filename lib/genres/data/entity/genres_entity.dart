@@ -7,11 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'genres_entity.g.dart';
 
-GenresResponse genresEntityFromJson(String str) =>
-    GenresResponse.fromJson(json.decode(str) as Map<String, dynamic>);
-
-String genresEntityToJson(GenresResponse data) => json.encode(data.toJson());
-
 @JsonSerializable()
 class GenresResponse {
   final int count;
