@@ -3,7 +3,9 @@ import 'package:ingadb/genres/data/entity/genres_entity.dart';
 import 'package:ingadb/genres/data/genres_data_source/genres_data_source.dart';
 import 'package:ingadb/genres/domain/model/genres_model.dart';
 import 'package:ingadb/genres/domain/repository/genres_repository.dart';
+import 'package:injectable/injectable.dart';
 
+@LazySingleton(as: GenresRepository)
 class GenresRepositoryImpl implements GenresRepository {
   final GenresDataSource genresDataSource;
 
