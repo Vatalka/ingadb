@@ -15,7 +15,7 @@ class GenreCubit extends Cubit<GenreState> {
   GenreCubit(this._genresRepository)
       : super(const GenreState.initial());
 
-  Future<void> loadGenres() async {
+  Future<void> fetchGenres() async {
     emit(const GenreState.loading());
     try {
       final genres = await _genresRepository.getGenres();

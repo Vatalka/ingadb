@@ -10,7 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;
-import 'package:ingadb/genres/data/DI/module/net_work_module.dart' as _i313;
+import 'package:ingadb/genres/data/DI/module/network_module.dart' as _i518;
 import 'package:ingadb/genres/data/genres_data_source/genres_data_source.dart'
     as _i234;
 import 'package:ingadb/genres/data/repository_impl/genres_repository_impl.dart'
@@ -46,4 +46,4 @@ extension GetItInjectableX on _i174.GetIt {
   }
 }
 
-class _$NetworkModule extends _i313.NetworkModule {}
+class _$NetworkModule extends _i518.NetworkModule {}
