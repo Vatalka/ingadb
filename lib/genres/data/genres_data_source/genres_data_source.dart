@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:ingadb/core/constants.dart';
+import 'package:ingadb/genre_detail/data/entity/genre_detail_entity.dart';
 import 'package:ingadb/genres/data/entity/genres_entity.dart';
 import 'package:logger/logger.dart';
 import 'package:retrofit/http.dart';
@@ -11,8 +12,15 @@ abstract class GenresDataSource {
   factory GenresDataSource(Dio dio, {String baseUrl}) = _GenresDataSource;
 
   @GET('genres')
-  Future<GenresResponse> getGenres(
-      {@Query('key') String key = Constants.apiKey,});
+  Future<GenresResponse> getGenres({
+    @Query('key') String key = Constants.apiKey,
+  });
+
+  @GET('genres/{id}')
+  Future<GenreDetailEntity> getGenreDetail({
+    @Path('id') required int id,
+    @Query('key') String key = Constants.apiKey,
+  });
 }
 
 class ParseErrorLogger {

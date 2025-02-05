@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ingadb/genres/presentation/cubit/genre_cubit.dart';
 import 'package:ingadb/genres/presentation/page/failure_page.dart';
-import 'package:ingadb/genres/presentation/page/genre_detail_page/genre_detail_page.dart';
+import 'package:ingadb/genres/presentation/page/genre_page/genre_item.dart';
 import 'package:ingadb/genres/presentation/page/initial_page.dart';
 import 'package:ingadb/genres/presentation/page/loading_page.dart';
 
@@ -24,46 +24,8 @@ class GenrePage extends StatelessWidget {
               itemCount: genres.length,
               itemBuilder: (context, index) {
                 final genre = genres[index];
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute<GenreDetailPage>(
-                        builder: (context) => GenreDetailPage(genre: genre),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 3 / 2,
-                          child: Image.network(
-                            genre.imageBackground,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                genre.name,
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text('${genre.gamesCount} games'),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                return GenreItem(
+                  genre: genre,
                 );
               },
             ),
