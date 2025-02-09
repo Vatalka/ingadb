@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:get_it/get_it.dart';
 import 'package:ingadb/genres/data/DI/injectable.dart';
 import 'package:ingadb/genres/presentation/counter_observer.dart';
-import 'package:ingadb/genres/presentation/cubit/genre_cubit.dart';
 import 'package:ingadb/genres/presentation/page/genre_page/genre_page.dart';
 
 void main() async {
@@ -31,10 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
         useMaterial3: true,
       ),
-      home: BlocProvider<GenreCubit>(
-        create: (_) => GetIt.I.get(),
-        child: GenrePage(),
-      ),
+      home: GenrePage(),
     );
   }
 }
