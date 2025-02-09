@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ingadb/genre_detail/domain/model/genre_detail_model.dart';
+import 'package:ingadb/genres/domain/model/genres_model.dart';
 import 'package:ingadb/genres/domain/repository/genres_repository.dart';
 import 'package:injectable/injectable.dart';
 
@@ -12,16 +12,21 @@ part 'genre_detail_state.dart';
 class GenreDetailCubit extends Cubit<GenreDetailState> {
   final GenresRepository _genreDetailRepository;
 
-  GenreDetailCubit(this._genreDetailRepository)
-      : super(const GenreDetailState.initial());
+  GenreDetailCubit(@factoryParam Genre genre, this._genreDetailRepository)
+      : super(GenreDetailState(genre: genre));
 
   Future<void> fetchGenreDetail(int id) async {
-    emit(const GenreDetailState.loading());
+    emit(state.copyWith(genreDetailLoading: true));
     try {
       final genreDetail = await _genreDetailRepository.getGenreDetail(id: id);
-      emit(GenreDetailState.success(genreDetail.data!));
+      emit(
+        state.copyWith(
+          genreDetailLoading: false,
+          genreDetails: genreDetail.data?.description,
+        ),
+      );
     } catch (e) {
-      emit(GenreDetailState.failure(message: e.toString()));
+      emit(state.copyWith(genreDetailLoading: false, error: e));
     }
   }
 }

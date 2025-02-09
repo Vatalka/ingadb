@@ -16,55 +16,15 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$GenreDetailState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(GenreDetail genreDetail) success,
-    required TResult Function(String message) failure,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(GenreDetail genreDetail)? success,
-    TResult? Function(String message)? failure,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(GenreDetail genreDetail)? success,
-    TResult Function(String message)? failure,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) failure,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failure value)? failure,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? failure,
-    required TResult orElse(),
-  }) =>
+  Genre get genre => throw _privateConstructorUsedError;
+  bool get genreDetailLoading => throw _privateConstructorUsedError;
+  String? get genreDetails => throw _privateConstructorUsedError;
+  Object? get error => throw _privateConstructorUsedError;
+
+  /// Create a copy of GenreDetailState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GenreDetailStateCopyWith<GenreDetailState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -73,6 +33,14 @@ abstract class $GenreDetailStateCopyWith<$Res> {
   factory $GenreDetailStateCopyWith(
           GenreDetailState value, $Res Function(GenreDetailState) then) =
       _$GenreDetailStateCopyWithImpl<$Res, GenreDetailState>;
+  @useResult
+  $Res call(
+      {Genre genre,
+      bool genreDetailLoading,
+      String? genreDetails,
+      Object? error});
+
+  $GenreCopyWith<$Res> get genre;
 }
 
 /// @nodoc
@@ -87,422 +55,66 @@ class _$GenreDetailStateCopyWithImpl<$Res, $Val extends GenreDetailState>
 
   /// Create a copy of GenreDetailState
   /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$GenreDetailStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of GenreDetailState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
-
-  @override
-  String toString() {
-    return 'GenreDetailState.initial()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(GenreDetail genreDetail) success,
-    required TResult Function(String message) failure,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(GenreDetail genreDetail)? success,
-    TResult? Function(String message)? failure,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(GenreDetail genreDetail)? success,
-    TResult Function(String message)? failure,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) failure,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failure value)? failure,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? failure,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements GenreDetailState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$GenreDetailStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of GenreDetailState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
-
-  @override
-  String toString() {
-    return 'GenreDetailState.loading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(GenreDetail genreDetail) success,
-    required TResult Function(String message) failure,
-  }) {
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(GenreDetail genreDetail)? success,
-    TResult? Function(String message)? failure,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(GenreDetail genreDetail)? success,
-    TResult Function(String message)? failure,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) failure,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failure value)? failure,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? failure,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Loading implements GenreDetailState {
-  const factory _Loading() = _$LoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({GenreDetail genreDetail});
-
-  $GenreDetailCopyWith<$Res> get genreDetail;
-}
-
-/// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$GenreDetailStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of GenreDetailState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? genreDetail = null,
+    Object? genre = null,
+    Object? genreDetailLoading = null,
+    Object? genreDetails = freezed,
+    Object? error = freezed,
   }) {
-    return _then(_$SuccessImpl(
-      null == genreDetail
-          ? _value.genreDetail
-          : genreDetail // ignore: cast_nullable_to_non_nullable
-              as GenreDetail,
-    ));
+    return _then(_value.copyWith(
+      genre: null == genre
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
+              as Genre,
+      genreDetailLoading: null == genreDetailLoading
+          ? _value.genreDetailLoading
+          : genreDetailLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      genreDetails: freezed == genreDetails
+          ? _value.genreDetails
+          : genreDetails // ignore: cast_nullable_to_non_nullable
+              as String?,
+      error: freezed == error ? _value.error : error,
+    ) as $Val);
   }
 
   /// Create a copy of GenreDetailState
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $GenreDetailCopyWith<$Res> get genreDetail {
-    return $GenreDetailCopyWith<$Res>(_value.genreDetail, (value) {
-      return _then(_value.copyWith(genreDetail: value));
+  $GenreCopyWith<$Res> get genre {
+    return $GenreCopyWith<$Res>(_value.genre, (value) {
+      return _then(_value.copyWith(genre: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(this.genreDetail);
-
+abstract class _$$GenreDetailStateImplCopyWith<$Res>
+    implements $GenreDetailStateCopyWith<$Res> {
+  factory _$$GenreDetailStateImplCopyWith(_$GenreDetailStateImpl value,
+          $Res Function(_$GenreDetailStateImpl) then) =
+      __$$GenreDetailStateImplCopyWithImpl<$Res>;
   @override
-  final GenreDetail genreDetail;
-
-  @override
-  String toString() {
-    return 'GenreDetailState.success(genreDetail: $genreDetail)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            (identical(other.genreDetail, genreDetail) ||
-                other.genreDetail == genreDetail));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, genreDetail);
-
-  /// Create a copy of GenreDetailState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(GenreDetail genreDetail) success,
-    required TResult Function(String message) failure,
-  }) {
-    return success(genreDetail);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(GenreDetail genreDetail)? success,
-    TResult? Function(String message)? failure,
-  }) {
-    return success?.call(genreDetail);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(GenreDetail genreDetail)? success,
-    TResult Function(String message)? failure,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(genreDetail);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) failure,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failure value)? failure,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? failure,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Success implements GenreDetailState {
-  const factory _Success(final GenreDetail genreDetail) = _$SuccessImpl;
-
-  GenreDetail get genreDetail;
-
-  /// Create a copy of GenreDetailState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FailureImplCopyWith<$Res> {
-  factory _$$FailureImplCopyWith(
-          _$FailureImpl value, $Res Function(_$FailureImpl) then) =
-      __$$FailureImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String message});
+  $Res call(
+      {Genre genre,
+      bool genreDetailLoading,
+      String? genreDetails,
+      Object? error});
+
+  @override
+  $GenreCopyWith<$Res> get genre;
 }
 
 /// @nodoc
-class __$$FailureImplCopyWithImpl<$Res>
-    extends _$GenreDetailStateCopyWithImpl<$Res, _$FailureImpl>
-    implements _$$FailureImplCopyWith<$Res> {
-  __$$FailureImplCopyWithImpl(
-      _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
+class __$$GenreDetailStateImplCopyWithImpl<$Res>
+    extends _$GenreDetailStateCopyWithImpl<$Res, _$GenreDetailStateImpl>
+    implements _$$GenreDetailStateImplCopyWith<$Res> {
+  __$$GenreDetailStateImplCopyWithImpl(_$GenreDetailStateImpl _value,
+      $Res Function(_$GenreDetailStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GenreDetailState
@@ -510,132 +122,100 @@ class __$$FailureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? genre = null,
+    Object? genreDetailLoading = null,
+    Object? genreDetails = freezed,
+    Object? error = freezed,
   }) {
-    return _then(_$FailureImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
+    return _then(_$GenreDetailStateImpl(
+      genre: null == genre
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
+              as Genre,
+      genreDetailLoading: null == genreDetailLoading
+          ? _value.genreDetailLoading
+          : genreDetailLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      genreDetails: freezed == genreDetails
+          ? _value.genreDetails
+          : genreDetails // ignore: cast_nullable_to_non_nullable
+              as String?,
+      error: freezed == error ? _value.error : error,
     ));
   }
 }
 
 /// @nodoc
 
-class _$FailureImpl implements _Failure {
-  const _$FailureImpl({required this.message});
+class _$GenreDetailStateImpl implements _GenreDetailState {
+  const _$GenreDetailStateImpl(
+      {required this.genre,
+      this.genreDetailLoading = true,
+      this.genreDetails,
+      this.error});
 
   @override
-  final String message;
+  final Genre genre;
+  @override
+  @JsonKey()
+  final bool genreDetailLoading;
+  @override
+  final String? genreDetails;
+  @override
+  final Object? error;
 
   @override
   String toString() {
-    return 'GenreDetailState.failure(message: $message)';
+    return 'GenreDetailState(genre: $genre, genreDetailLoading: $genreDetailLoading, genreDetails: $genreDetails, error: $error)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FailureImpl &&
-            (identical(other.message, message) || other.message == message));
+            other is _$GenreDetailStateImpl &&
+            (identical(other.genre, genre) || other.genre == genre) &&
+            (identical(other.genreDetailLoading, genreDetailLoading) ||
+                other.genreDetailLoading == genreDetailLoading) &&
+            (identical(other.genreDetails, genreDetails) ||
+                other.genreDetails == genreDetails) &&
+            const DeepCollectionEquality().equals(other.error, error));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode => Object.hash(runtimeType, genre, genreDetailLoading,
+      genreDetails, const DeepCollectionEquality().hash(error));
 
   /// Create a copy of GenreDetailState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
-      __$$FailureImplCopyWithImpl<_$FailureImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(GenreDetail genreDetail) success,
-    required TResult Function(String message) failure,
-  }) {
-    return failure(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(GenreDetail genreDetail)? success,
-    TResult? Function(String message)? failure,
-  }) {
-    return failure?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(GenreDetail genreDetail)? success,
-    TResult Function(String message)? failure,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) failure,
-  }) {
-    return failure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failure value)? failure,
-  }) {
-    return failure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? failure,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(this);
-    }
-    return orElse();
-  }
+  _$$GenreDetailStateImplCopyWith<_$GenreDetailStateImpl> get copyWith =>
+      __$$GenreDetailStateImplCopyWithImpl<_$GenreDetailStateImpl>(
+          this, _$identity);
 }
 
-abstract class _Failure implements GenreDetailState {
-  const factory _Failure({required final String message}) = _$FailureImpl;
+abstract class _GenreDetailState implements GenreDetailState {
+  const factory _GenreDetailState(
+      {required final Genre genre,
+      final bool genreDetailLoading,
+      final String? genreDetails,
+      final Object? error}) = _$GenreDetailStateImpl;
 
-  String get message;
+  @override
+  Genre get genre;
+  @override
+  bool get genreDetailLoading;
+  @override
+  String? get genreDetails;
+  @override
+  Object? get error;
 
   /// Create a copy of GenreDetailState
   /// with the given fields replaced by the non-null parameter values.
+  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+  _$$GenreDetailStateImplCopyWith<_$GenreDetailStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

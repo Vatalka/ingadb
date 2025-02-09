@@ -17,6 +17,7 @@ import 'package:ingadb/genres/data/genres_data_source/genres_data_source.dart'
     as _i234;
 import 'package:ingadb/genres/data/repository_impl/genres_repository_impl.dart'
     as _i494;
+import 'package:ingadb/genres/domain/model/genres_model.dart' as _i323;
 import 'package:ingadb/genres/domain/repository/genres_repository.dart'
     as _i334;
 import 'package:ingadb/genres/presentation/cubit/genre_cubit.dart' as _i242;
@@ -42,8 +43,14 @@ extension GetItInjectableX on _i174.GetIt {
         () => networkModule.provideGenresDataSource(gh<_i361.Dio>()));
     gh.lazySingleton<_i334.GenresRepository>(() => _i494.GenresRepositoryImpl(
         genresDataSource: gh<_i234.GenresDataSource>()));
-    gh.factory<_i223.GenreDetailCubit>(
-        () => _i223.GenreDetailCubit(gh<_i334.GenresRepository>()));
+    gh.factoryParam<_i223.GenreDetailCubit, _i323.Genre, dynamic>((
+      genre,
+      _,
+    ) =>
+        _i223.GenreDetailCubit(
+          genre,
+          gh<_i334.GenresRepository>(),
+        ));
     gh.factory<_i242.GenreCubit>(
         () => _i242.GenreCubit(gh<_i334.GenresRepository>()));
     return this;
