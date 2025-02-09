@@ -51,6 +51,5 @@ class GenreItem extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
