@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:ingadb/genre_detail/presentation/cubit/genre_detail_cubit.dart';
-import 'package:ingadb/genre_detail/presentation/page/genre_detail_page/based_genre_details.dart';
-import 'package:ingadb/genre_detail/presentation/page/genre_detail_page/genre_description.dart';
-import 'package:ingadb/genre_detail/presentation/page/genre_detail_page/genre_detail_pade_loader.dart';
+import 'package:ingadb/genre_detail/presentation/page/genre_detail_base.dart';
+import 'package:ingadb/genre_detail/presentation/page/genre_detail_description.dart';
+import 'package:ingadb/genre_detail/presentation/page/genre_detail_page_loader.dart';
 import 'package:ingadb/genres/domain/model/genres_model.dart';
 
 class GenreDetailPage extends StatelessWidget {
@@ -25,12 +25,12 @@ class GenreDetailPage extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  BasedGenreDetails(),
-                  GenreDescription(),
+                  GenreDetailBase(),
+                  GenreDetailDescription(),
                 ],
               ),
             ),
-            GenreDetailPadeLoader(),
+            GenreDetailPageLoader(),
           ],
         ),
       ),
