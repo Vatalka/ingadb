@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:ingadb/genres/presentation/cubit/genre_cubit.dart';
 import 'package:ingadb/genres/presentation/page/failure_page.dart';
-import 'package:ingadb/genres/presentation/page/genre_item.dart';
+import 'package:ingadb/genres/presentation/page/item/genre_item.dart';
 import 'package:ingadb/genres/presentation/page/initial_page.dart';
 import 'package:ingadb/genres/presentation/page/loading_page.dart';
 

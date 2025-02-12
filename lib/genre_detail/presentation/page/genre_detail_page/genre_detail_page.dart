@@ -20,18 +20,14 @@ class GenreDetailPage extends StatelessWidget {
       create: (_) => GetIt.I.get(param1: genre)..fetchGenreDetail(genre.id),
       child: Scaffold(
         appBar: AppBar(title: Text(genre.name)),
-        body: const Stack(
-          children: [
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  GenreDetailBase(),
-                  GenreDetailDescription(),
-                ],
-              ),
-            ),
-            GenreDetailPageLoader(),
-          ],
+        body: const SingleChildScrollView(
+          child: Column(
+            children: [
+              GenreDetailBase(),
+              GenreDetailPageLoader(),
+              GenreDetailDescription(),
+            ],
+          ),
         ),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ingadb/genre_detail/presentation/cubit/genre_detail_cubit.dart';
@@ -11,13 +12,7 @@ class GenreDetailBase extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AspectRatio(
-          aspectRatio: 3 / 2,
-          child: Image.network(
-            genre.imageBackground,
-            fit: BoxFit.cover,
-          ),
-        ),
+        Image(image: CachedNetworkImageProvider(genre.imageBackground)),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(

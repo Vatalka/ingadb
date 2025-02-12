@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ingadb/genre_detail/presentation/page/genre_detail_page/genre_detail_page.dart';
@@ -26,8 +27,17 @@ class GenreItem extends StatelessWidget {
           children: [
             AspectRatio(
               aspectRatio: 3 / 2,
-              child: Image.network(
-                genre.imageBackground,
+              child: CachedNetworkImage(
+                imageUrl: genre.imageBackground,
+                cacheKey:
+                    genre.imageBackground + DateTime.now().day.toString(),
+                progressIndicatorBuilder: (context, url, downloadProgress) =>
+                    Center(
+                  child: CircularProgressIndicator(
+                    value: downloadProgress.progress,
+                  ),
+                ),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
                 fit: BoxFit.cover,
               ),
             ),
