@@ -24,7 +24,13 @@ class GenreDetailDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     final detail =
         context.select((GenreDetailCubit cubit) => cubit.state.genreDetails);
-    if (detail == null) return const SizedBox();
-    return Text(cleanDescription(detail));
+    if (detail == null) return const SliverToBoxAdapter(child: SizedBox());
+    return SliverFillRemaining(
+      hasScrollBody: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+        child: Text(cleanDescription(detail)),
+      ),
+    );
   }
 }

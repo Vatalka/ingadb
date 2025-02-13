@@ -9,9 +9,11 @@ class GenreDetailPageLoader extends StatelessWidget {
   Widget build(BuildContext context) {
     final isLoading = context
         .select((GenreDetailCubit cubit) => cubit.state.genreDetailLoading);
-    if (!isLoading) return const SizedBox();
-    return const Center(
-      child: CircularProgressIndicator(),
+    if (!isLoading) return const SliverToBoxAdapter(child: SizedBox());
+    return const SliverToBoxAdapter(
+      child: Center(
+        child: CircularProgressIndicator(),
+      ),
     );
   }
 }
