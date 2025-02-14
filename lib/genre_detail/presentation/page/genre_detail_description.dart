@@ -22,8 +22,18 @@ class GenreDetailDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isLoading = context
+        .select((GenreDetailCubit cubit) => cubit.state.genreDetailLoading);
     final detail =
         context.select((GenreDetailCubit cubit) => cubit.state.genreDetails);
+    if (isLoading) {
+      return const SliverFillRemaining(
+        hasScrollBody: false,
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
+      );
+    }
     if (detail == null) return const SliverToBoxAdapter(child: SizedBox());
     return SliverFillRemaining(
       hasScrollBody: false,

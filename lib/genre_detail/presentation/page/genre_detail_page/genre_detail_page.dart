@@ -6,7 +6,6 @@ import 'package:ingadb/genre_detail/presentation/page/genre_detail_description.d
 import 'package:ingadb/genre_detail/presentation/page/genre_detail_games.dart';
 import 'package:ingadb/genre_detail/presentation/page/genre_detail_image.dart';
 import 'package:ingadb/genre_detail/presentation/page/genre_detail_info.dart';
-import 'package:ingadb/genre_detail/presentation/page/genre_detail_page_loader.dart';
 import 'package:ingadb/genres/domain/model/genres_model.dart';
 
 class GenreDetailPage extends StatelessWidget {
@@ -27,7 +26,6 @@ class GenreDetailPage extends StatelessWidget {
             GenreDetailImage(),
             GenreDetailInfo(),
             GenreDetailGames(),
-            GenreDetailPageLoader(),
             GenreDetailDescription(),
           ],
         ),

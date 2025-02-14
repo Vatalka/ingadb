@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:ingadb/config/theme/colors.dart';
 import 'package:ingadb/genres/data/DI/injectable.dart';
 import 'package:ingadb/genres/presentation/counter_observer.dart';
 import 'package:ingadb/genres/presentation/page/genre_page/genre_page.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.deepOrangeAccent),
         useMaterial3: true,
       ),
       home: GenrePage(),

@@ -28,9 +28,8 @@ class GenreItem extends StatelessWidget {
             AspectRatio(
               aspectRatio: 3 / 2,
               child: CachedNetworkImage(
+                memCacheWidth: MediaQuery.of(context).size.width.toInt(),
                 imageUrl: genre.imageBackground,
-                cacheKey:
-                    genre.imageBackground + DateTime.now().day.toString(),
                 progressIndicatorBuilder: (context, url, downloadProgress) =>
                     Center(
                   child: CircularProgressIndicator(
