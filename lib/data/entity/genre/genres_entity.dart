@@ -113,19 +113,19 @@ class GameEntity {
   Map<String, dynamic> toJson() => _$GameEntityToJson(this);
 }
 
+extension GenresEntityExt on GenreEntity {
+  Genre toDomain() => Genre(
+    id: id,
+    name: name,
+    gamesCount: gamesCount,
+    imageBackground: imageBackground,
+    games: games.map((e) => e.toDomain()).toList(),
+  );
+}
+
 extension GameEntityExt on GameEntity {
   Game toDomain() => Game(
         id: id,
         name: name,
-      );
-}
-
-extension GenresEntityExt on GenreEntity {
-  Genre toDomain() => Genre(
-        id: id,
-        name: name,
-        gamesCount: gamesCount,
-        imageBackground: imageBackground,
-        games: games.map((e) => e.toDomain()).toList(),
       );
 }

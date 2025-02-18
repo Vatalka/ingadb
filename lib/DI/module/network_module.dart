@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:ingadb/core/constants.dart';
-import 'package:ingadb/data/api/genre/genres_data_source.dart';
+import 'package:ingadb/data/api/api_client.dart';
 import 'package:injectable/injectable.dart';
 
 const _connectionTimeout = Duration(seconds: 30);
@@ -12,7 +12,7 @@ const _sendTimeout = Duration(seconds: 30);
 @module
 abstract class NetworkModule {
   @lazySingleton
-  GenresDataSource provideGenresDataSource(Dio dio) => GenresDataSource(dio);
+  ApiClient provideGenresDataSource(Dio dio) => ApiClient(dio);
 
   @lazySingleton
   Dio provideDio(LogInterceptor logInterceptor) {

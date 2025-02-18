@@ -10,7 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:dio/dio.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
-import 'package:ingadb/data/api/genre/genres_data_source.dart' as _i4;
+import 'package:ingadb/data/api/api_client.dart' as _i4;
 import 'package:ingadb/data/repository/genre/genres_repository_impl.dart'
     as _i6;
 import 'package:ingadb/DI/module/network_module.dart' as _i10;
@@ -37,10 +37,10 @@ extension GetItInjectableX on _i1.GetIt {
         () => networkModule.provideLogInterceptor());
     gh.lazySingleton<_i3.Dio>(
         () => networkModule.provideDio(gh<_i3.LogInterceptor>()));
-    gh.lazySingleton<_i4.GenresDataSource>(
+    gh.lazySingleton<_i4.ApiClient>(
         () => networkModule.provideGenresDataSource(gh<_i3.Dio>()));
-    gh.lazySingleton<_i5.GenresRepository>(() =>
-        _i6.GenresRepositoryImpl(genresDataSource: gh<_i4.GenresDataSource>()));
+    gh.lazySingleton<_i5.GenresRepository>(
+        () => _i6.GenresRepositoryImpl(genresDataSource: gh<_i4.ApiClient>()));
     gh.factoryParam<_i7.GenreDetailCubit, _i8.Genre, dynamic>((
       genre,
       _,

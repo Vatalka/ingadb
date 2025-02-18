@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'genres_data_source.dart';
+part of 'api_client.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'genres_data_source.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
 
-class _GenresDataSource implements GenresDataSource {
-  _GenresDataSource(
+class _ApiClient implements ApiClient {
+  _ApiClient(
     this._dio, {
     this.baseUrl,
     this.errorLogger,
@@ -85,6 +85,40 @@ class _GenresDataSource implements GenresDataSource {
     late GenreDetailEntity _value;
     try {
       _value = GenreDetailEntity.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<ListOfGamesEntity> getListOfGames(
+      {String key = Constants.apiKey}) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'key': key};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<ListOfGamesEntity>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'games',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late ListOfGamesEntity _value;
+    try {
+      _value = ListOfGamesEntity.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

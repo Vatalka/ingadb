@@ -1,17 +1,30 @@
 import 'package:dio/dio.dart';
 import 'package:ingadb/core/constants.dart';
 import 'package:ingadb/data/entity/game/game_entity.dart';
+import 'package:ingadb/data/entity/genre/genres_entity.dart';
+import 'package:ingadb/data/entity/genre_detail/genre_detail_entity.dart';
 import 'package:logger/logger.dart';
 import 'package:retrofit/http.dart';
 
-part 'game_api.g.dart';
+part 'api_client.g.dart';
 
 @RestApi(baseUrl: Constants.baseUrl)
-abstract class GameApi {
-  factory GameApi(Dio dio, {String baseUrl}) = _GameApi;
+abstract class ApiClient {
+  factory ApiClient(Dio dio, {String baseUrl}) = _ApiClient;
+
+  @GET('genres')
+  Future<GenresResponse> getGenres({
+    @Query('key') String key = Constants.apiKey,
+  });
+
+  @GET('genres/{id}')
+  Future<GenreDetailEntity> getGenreDetail({
+    @Path('id') required int id,
+    @Query('key') String key = Constants.apiKey,
+  });
 
   @GET('games')
-  Future<GameEntity> getGames({
+  Future<ListOfGamesEntity> getListOfGames({
     @Query('key') String key = Constants.apiKey,
   });
 }

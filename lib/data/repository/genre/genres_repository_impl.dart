@@ -1,15 +1,15 @@
 import 'package:ingadb/core/errors/exceptions.dart';
-import 'package:ingadb/data/entity/genre_detail/genre_detail_entity.dart';
-import 'package:ingadb/domain/model/genre_detail/genre_detail_model.dart';
+import 'package:ingadb/data/api/api_client.dart';
 import 'package:ingadb/data/entity/genre/genres_entity.dart';
-import 'package:ingadb/data/api/genre/genres_data_source.dart';
-import 'package:ingadb/domain/repository/genre/genres_repository.dart';
+import 'package:ingadb/data/entity/genre_detail/genre_detail_entity.dart';
 import 'package:ingadb/domain/model/genre/genres_model.dart';
+import 'package:ingadb/domain/model/genre_detail/genre_detail_model.dart';
+import 'package:ingadb/domain/repository/genre/genres_repository.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: GenresRepository)
 class GenresRepositoryImpl implements GenresRepository {
-  final GenresDataSource genresDataSource;
+  final ApiClient genresDataSource;
 
   GenresRepositoryImpl({required this.genresDataSource});
 
