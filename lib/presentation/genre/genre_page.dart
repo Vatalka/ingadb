@@ -23,7 +23,7 @@ class _View extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AppBar title')),
+      appBar: AppBar(title: const Text('GenrePage AppBar title')),
       body: BlocBuilder<GenreCubit, GenreState>(
         builder: (context, state) {
           return state.when(

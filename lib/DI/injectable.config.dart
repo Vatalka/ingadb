@@ -12,11 +12,13 @@ import 'package:dio/dio.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:ingadb/data/api/api_client.dart' as _i4;
 import 'package:ingadb/data/repository_impl/repository_impl.dart' as _i6;
-import 'package:ingadb/DI/module/network_module.dart' as _i10;
-import 'package:ingadb/domain/cubit/genre/genre_cubit.dart' as _i7;
+import 'package:ingadb/DI/module/network_module.dart' as _i12;
+import 'package:ingadb/domain/cubit/game/game_cubit.dart' as _i7;
+import 'package:ingadb/domain/cubit/genre/genre_cubit.dart' as _i11;
 import 'package:ingadb/domain/cubit/genre_detail/genre_detail_cubit.dart'
-    as _i8;
-import 'package:ingadb/domain/model/genre/genres_model.dart' as _i9;
+    as _i9;
+import 'package:ingadb/domain/model/game/game_model.dart' as _i8;
+import 'package:ingadb/domain/model/genre/genres_model.dart' as _i10;
 import 'package:ingadb/domain/repository/repository.dart' as _i5;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -40,17 +42,25 @@ extension GetItInjectableX on _i1.GetIt {
         () => networkModule.provideGenresDataSource(gh<_i3.Dio>()));
     gh.lazySingleton<_i5.Repository>(
         () => _i6.RepositoryImpl(apiClient: gh<_i4.ApiClient>()));
-    gh.factory<_i7.GenreCubit>(() => _i7.GenreCubit(gh<_i5.Repository>()));
-    gh.factoryParam<_i8.GenreDetailCubit, _i9.Genre, dynamic>((
+    gh.factoryParam<_i7.GameCubit, List<_i8.Games>, dynamic>((
+      games,
+      _,
+    ) =>
+        _i7.GameCubit(
+          games,
+          gh<_i5.Repository>(),
+        ));
+    gh.factoryParam<_i9.GenreDetailCubit, _i10.Genre, dynamic>((
       genre,
       _,
     ) =>
-        _i8.GenreDetailCubit(
+        _i9.GenreDetailCubit(
           genre,
           gh<_i5.Repository>(),
         ));
+    gh.factory<_i11.GenreCubit>(() => _i11.GenreCubit(gh<_i5.Repository>()));
     return this;
   }
 }
 
-class _$NetworkModule extends _i10.NetworkModule {}
+class _$NetworkModule extends _i12.NetworkModule {}

@@ -4,7 +4,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:ingadb/DI/injectable.dart';
 import 'package:ingadb/config/theme/colors.dart';
 import 'package:ingadb/counter_observer.dart';
-import 'package:ingadb/presentation/genre/genre_page.dart';
+import 'package:ingadb/presentation/home_page.dart';
 
 void main() async {
   final WidgetsBinding widgetsBinding =
@@ -24,13 +24,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Material App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.deepOrangeAccent),
         useMaterial3: true,
       ),
-      home: GenrePage(),
+      home: const HomePage(),
     );
   }
 }

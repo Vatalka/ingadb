@@ -9,15 +9,15 @@ part 'genre_state.dart';
 
 @injectable
 class GenreCubit extends Cubit<GenreState> {
-  final Repository _genresRepository;
+  final Repository _repository;
 
-  GenreCubit(this._genresRepository)
+  GenreCubit(this._repository)
       : super(const GenreState.initial());
 
   Future<void> fetchGenres() async {
     emit(const GenreState.loading());
     try {
-      final genres = await _genresRepository.getGenres();
+      final genres = await _repository.getGenres();
       emit(GenreState.success(genres.data!));
     } catch (e) {
       emit(GenreState.failure(message: e.toString()));

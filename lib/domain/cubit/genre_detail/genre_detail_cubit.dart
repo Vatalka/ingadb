@@ -9,15 +9,15 @@ part 'genre_detail_state.dart';
 
 @injectable
 class GenreDetailCubit extends Cubit<GenreDetailState> {
-  final Repository _genreDetailRepository;
+  final Repository _repository;
 
-  GenreDetailCubit(@factoryParam Genre genre, this._genreDetailRepository)
+  GenreDetailCubit(@factoryParam Genre genre, this._repository)
       : super(GenreDetailState(genre: genre));
 
   Future<void> fetchGenreDetail(int id) async {
     emit(state.copyWith(genreDetailLoading: true));
     try {
-      final genreDetail = await _genreDetailRepository.getGenreDetail(id: id);
+      final genreDetail = await _repository.getGenreDetail(id: id);
       emit(
         state.copyWith(
           genreDetailLoading: false,
