@@ -10,11 +10,10 @@ class GameRepositoryImpl implements GameRepository {
   GameRepositoryImpl(this.apiClient);
 
   @override
-  Future<ResponseData<ResultModel>> getListOfGames() async {
+  Future<ResponseData<List<ResultModel>>> getListOfGames() async {
     try {
       final response = await apiClient.getListOfGames();
       final games = response.results.map((game) => game.toDomain()).toList();
-      ///ToDo
       return ResponseData.success(games);
     } catch (e) {
       return ResponseData.failure(null, AppException(message: e.toString()));
