@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ingadb/domain/repository/genre/genres_repository.dart';
+import 'package:ingadb/domain/repository/repository.dart';
 import 'package:ingadb/domain/model/genre/genres_model.dart';
 import 'package:injectable/injectable.dart';
 
@@ -9,7 +9,7 @@ part 'genre_detail_state.dart';
 
 @injectable
 class GenreDetailCubit extends Cubit<GenreDetailState> {
-  final GenresRepository _genreDetailRepository;
+  final Repository _genreDetailRepository;
 
   GenreDetailCubit(@factoryParam Genre genre, this._genreDetailRepository)
       : super(GenreDetailState(genre: genre));

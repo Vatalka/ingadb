@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'game_model.freezed.dart';
 
 @freezed
-class ListOfGamesModel with _$ListOfGamesModel {
-  const factory ListOfGamesModel({
+class ListOfGames with _$ListOfGames {
+  const factory ListOfGames({
     required int count,
     required String next,
     required dynamic previous,
-    required List<ResultModel> results,
+    required List<Games> results,
     required String seoTitle,
     required String seoDescription,
     required String seoKeywords,
@@ -16,16 +16,16 @@ class ListOfGamesModel with _$ListOfGamesModel {
     required bool noIndex,
     required bool noFollow,
     required String description,
-    required FiltersModel filters,
+    required Filters filters,
     required List<String> noFollowCollections,
-  }) = _ListOfGamesModel;
+  }) = _ListOfGames;
 }
 
 @freezed
-class FiltersModel with _$FiltersModel {
-  const factory FiltersModel({
+class Filters with _$Filters {
+  const factory Filters({
     required List<FiltersYearModel> years,
-  }) = _FiltersModel;
+  }) = _Filters;
 }
 
 @freezed
@@ -35,24 +35,24 @@ class FiltersYearModel with _$FiltersYearModel {
     required int to,
     required String filter,
     required int decade,
-    required List<YearYearModel> years,
+    required List<YearYear> years,
     required bool noFollow,
     required int count,
   }) = _FiltersYearModel;
 }
 
 @freezed
-class YearYearModel with _$YearYearModel {
-  const factory YearYearModel({
+class YearYear with _$YearYear {
+  const factory YearYear({
     required int year,
     required int count,
     required bool noFollow,
-  }) = _YearYearModel;
+  }) = _YearYear;
 }
 
 @freezed
-class ResultModel with _$ResultModel {
-  const factory ResultModel({
+class Games with _$Games {
+  const factory Games({
     required int id,
     required String slug,
     required String name,
@@ -61,69 +61,69 @@ class ResultModel with _$ResultModel {
     required String backgroundImage,
     required double rating,
     required int ratingTop,
-    required List<RatingModel> ratings,
+    required List<Rating> ratings,
     required int ratingsCount,
     required int reviewsTextCount,
     required int added,
-    required AddedByStatusModel addedByStatus,
+    required AddedByStatus addedByStatus,
     required int metaCritic,
     required int playtime,
     required int suggestionsCount,
     required DateTime updated,
     required dynamic userGame,
     required int reviewsCount,
-    required ColorModel saturatedColor,
-    required ColorModel dominantColor,
-    required List<PlatformElementModel> platforms,
-    required List<ParentPlatformModel> parentPlatforms,
-    required List<GenreModel> genres,
-    required List<StoreModel> stores,
+    required Color saturatedColor,
+    required Color dominantColor,
+    required List<PlatformElement> platforms,
+    required List<ParentPlatform> parentPlatforms,
+    required List<Genres> genres,
+    required List<Store> stores,
     required dynamic clip,
-    required List<GenreModel> tags,
-    required EsrbRatingModel esrbRating,
-    required List<ShortScreenshotModel> shortScreenshots,
-  }) = _ResultModel;
+    required List<Genres> tags,
+    required EsrbRating esrbRating,
+    required List<ShortScreenshot> shortScreenshots,
+  }) = _Games;
 }
 
 @freezed
-class AddedByStatusModel with _$AddedByStatusModel {
-  const factory AddedByStatusModel({
+class AddedByStatus with _$AddedByStatus {
+  const factory AddedByStatus({
     required int yet,
     required int owned,
     required int beaten,
     required int toPlay,
     required int dropped,
     required int playing,
-  }) = _AddedByStatusModel;
+  }) = _AddedByStatus;
 }
 
-enum ColorModel {
+enum Color {
   THE_0_F0_F0_F
 }
 
 @freezed
-class EsrbRatingModel with _$EsrbRatingModel {
-  const factory EsrbRatingModel({
+class EsrbRating with _$EsrbRating {
+  const factory EsrbRating({
     required int id,
     required String name,
     required String slug,
-  }) = _EsrbRatingModel;
+  }) = _EsrbRating;
 }
 
 @freezed
-class GenreModel with _$GenreModel {
-  const factory GenreModel({
+class Genres with _$Genres {
+  const factory Genres({
     required int id,
     required String name,
     required String slug,
     required int gamesCount,
     required String imageBackground,
-    required DomainModel domain,
-    required LanguageModel language,
-  }) = _GenreModel;
+    required Domain domain,
+    required Language language,
+  }) = _Genres;
 }
 
-enum DomainModel {
+enum Domain {
   APPS_APPLE_COM,
   EPICGAMES_COM,
   GOG_COM,
@@ -135,30 +135,30 @@ enum DomainModel {
   STORE_STEAMPOWERED_COM
 }
 
-enum LanguageModel {
+enum Language {
   ENG
 }
 
 @freezed
-class ParentPlatformModel with _$ParentPlatformModel {
-  const factory ParentPlatformModel({
-    required EsrbRatingModel platform,
-  }) = _ParentPlatformModel;
+class ParentPlatform with _$ParentPlatform {
+  const factory ParentPlatform({
+    required EsrbRating platform,
+  }) = _ParentPlatform;
 }
 
 @freezed
-class PlatformElementModel with _$PlatformElementModel {
-  const factory PlatformElementModel({
-    required PlatformPlatformModel platform,
+class PlatformElement with _$PlatformElement {
+  const factory PlatformElement({
+    required PlatformPlatform platform,
     required DateTime releasedAt,
-    required RequirementsModel requirementsEn,
-    required RequirementsModel requirementsRu,
-  }) = _PlatformElementModel;
+    required Requirements requirementsEn,
+    required Requirements requirementsRu,
+  }) = _PlatformElement;
 }
 
 @freezed
-class PlatformPlatformModel with _$PlatformPlatformModel {
-  const factory PlatformPlatformModel({
+class PlatformPlatform with _$PlatformPlatform {
+  const factory PlatformPlatform({
     required int id,
     required String name,
     required String slug,
@@ -167,25 +167,25 @@ class PlatformPlatformModel with _$PlatformPlatformModel {
     required int yearStart,
     required int gamesCount,
     required String imageBackground,
-  }) = _PlatformPlatformModel;
+  }) = _PlatformPlatform;
 }
 
 @freezed
-class RequirementsModel with _$RequirementsModel {
-  const factory RequirementsModel({
+class Requirements with _$Requirements {
+  const factory Requirements({
     required String minimum,
     required String recommended,
-  }) = _RequirementsModel;
+  }) = _Requirements;
 }
 
 @freezed
-class RatingModel with _$RatingModel {
-  const factory RatingModel({
+class Rating with _$Rating {
+  const factory Rating({
     required int id,
     required TitleModel title,
     required int count,
     required double percent,
-  }) = _RatingModel;
+  }) = _Rating;
 }
 
 enum TitleModel {
@@ -196,17 +196,17 @@ enum TitleModel {
 }
 
 @freezed
-class ShortScreenshotModel with _$ShortScreenshotModel {
-  const factory ShortScreenshotModel({
+class ShortScreenshot with _$ShortScreenshot {
+  const factory ShortScreenshot({
     required int id,
     required String image,
-  }) = _ShortScreenshotModel;
+  }) = _ShortScreenshot;
 }
 
 @freezed
-class StoreModel with _$StoreModel {
-  const factory StoreModel({
+class Store with _$Store {
+  const factory Store({
     required int id,
-    required GenreModel store,
-  }) = _StoreModel;
+    required Genres store,
+  }) = _Store;
 }

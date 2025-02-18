@@ -15,11 +15,11 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$ListOfGamesModel {
+mixin _$ListOfGames {
   int get count => throw _privateConstructorUsedError;
   String get next => throw _privateConstructorUsedError;
   dynamic get previous => throw _privateConstructorUsedError;
-  List<ResultModel> get results => throw _privateConstructorUsedError;
+  List<Games> get results => throw _privateConstructorUsedError;
   String get seoTitle => throw _privateConstructorUsedError;
   String get seoDescription => throw _privateConstructorUsedError;
   String get seoKeywords => throw _privateConstructorUsedError;
@@ -27,27 +27,27 @@ mixin _$ListOfGamesModel {
   bool get noIndex => throw _privateConstructorUsedError;
   bool get noFollow => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
-  FiltersModel get filters => throw _privateConstructorUsedError;
+  Filters get filters => throw _privateConstructorUsedError;
   List<String> get noFollowCollections => throw _privateConstructorUsedError;
 
-  /// Create a copy of ListOfGamesModel
+  /// Create a copy of ListOfGames
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListOfGamesModelCopyWith<ListOfGamesModel> get copyWith =>
+  $ListOfGamesCopyWith<ListOfGames> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListOfGamesModelCopyWith<$Res> {
-  factory $ListOfGamesModelCopyWith(
-          ListOfGamesModel value, $Res Function(ListOfGamesModel) then) =
-      _$ListOfGamesModelCopyWithImpl<$Res, ListOfGamesModel>;
+abstract class $ListOfGamesCopyWith<$Res> {
+  factory $ListOfGamesCopyWith(
+          ListOfGames value, $Res Function(ListOfGames) then) =
+      _$ListOfGamesCopyWithImpl<$Res, ListOfGames>;
   @useResult
   $Res call(
       {int count,
       String next,
       dynamic previous,
-      List<ResultModel> results,
+      List<Games> results,
       String seoTitle,
       String seoDescription,
       String seoKeywords,
@@ -55,23 +55,23 @@ abstract class $ListOfGamesModelCopyWith<$Res> {
       bool noIndex,
       bool noFollow,
       String description,
-      FiltersModel filters,
+      Filters filters,
       List<String> noFollowCollections});
 
-  $FiltersModelCopyWith<$Res> get filters;
+  $FiltersCopyWith<$Res> get filters;
 }
 
 /// @nodoc
-class _$ListOfGamesModelCopyWithImpl<$Res, $Val extends ListOfGamesModel>
-    implements $ListOfGamesModelCopyWith<$Res> {
-  _$ListOfGamesModelCopyWithImpl(this._value, this._then);
+class _$ListOfGamesCopyWithImpl<$Res, $Val extends ListOfGames>
+    implements $ListOfGamesCopyWith<$Res> {
+  _$ListOfGamesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ListOfGamesModel
+  /// Create a copy of ListOfGames
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -106,7 +106,7 @@ class _$ListOfGamesModelCopyWithImpl<$Res, $Val extends ListOfGamesModel>
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<ResultModel>,
+              as List<Games>,
       seoTitle: null == seoTitle
           ? _value.seoTitle
           : seoTitle // ignore: cast_nullable_to_non_nullable
@@ -138,7 +138,7 @@ class _$ListOfGamesModelCopyWithImpl<$Res, $Val extends ListOfGamesModel>
       filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
-              as FiltersModel,
+              as Filters,
       noFollowCollections: null == noFollowCollections
           ? _value.noFollowCollections
           : noFollowCollections // ignore: cast_nullable_to_non_nullable
@@ -146,30 +146,30 @@ class _$ListOfGamesModelCopyWithImpl<$Res, $Val extends ListOfGamesModel>
     ) as $Val);
   }
 
-  /// Create a copy of ListOfGamesModel
+  /// Create a copy of ListOfGames
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $FiltersModelCopyWith<$Res> get filters {
-    return $FiltersModelCopyWith<$Res>(_value.filters, (value) {
+  $FiltersCopyWith<$Res> get filters {
+    return $FiltersCopyWith<$Res>(_value.filters, (value) {
       return _then(_value.copyWith(filters: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$ListOfGamesModelImplCopyWith<$Res>
-    implements $ListOfGamesModelCopyWith<$Res> {
-  factory _$$ListOfGamesModelImplCopyWith(_$ListOfGamesModelImpl value,
-          $Res Function(_$ListOfGamesModelImpl) then) =
-      __$$ListOfGamesModelImplCopyWithImpl<$Res>;
+abstract class _$$ListOfGamesImplCopyWith<$Res>
+    implements $ListOfGamesCopyWith<$Res> {
+  factory _$$ListOfGamesImplCopyWith(
+          _$ListOfGamesImpl value, $Res Function(_$ListOfGamesImpl) then) =
+      __$$ListOfGamesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {int count,
       String next,
       dynamic previous,
-      List<ResultModel> results,
+      List<Games> results,
       String seoTitle,
       String seoDescription,
       String seoKeywords,
@@ -177,22 +177,22 @@ abstract class _$$ListOfGamesModelImplCopyWith<$Res>
       bool noIndex,
       bool noFollow,
       String description,
-      FiltersModel filters,
+      Filters filters,
       List<String> noFollowCollections});
 
   @override
-  $FiltersModelCopyWith<$Res> get filters;
+  $FiltersCopyWith<$Res> get filters;
 }
 
 /// @nodoc
-class __$$ListOfGamesModelImplCopyWithImpl<$Res>
-    extends _$ListOfGamesModelCopyWithImpl<$Res, _$ListOfGamesModelImpl>
-    implements _$$ListOfGamesModelImplCopyWith<$Res> {
-  __$$ListOfGamesModelImplCopyWithImpl(_$ListOfGamesModelImpl _value,
-      $Res Function(_$ListOfGamesModelImpl) _then)
+class __$$ListOfGamesImplCopyWithImpl<$Res>
+    extends _$ListOfGamesCopyWithImpl<$Res, _$ListOfGamesImpl>
+    implements _$$ListOfGamesImplCopyWith<$Res> {
+  __$$ListOfGamesImplCopyWithImpl(
+      _$ListOfGamesImpl _value, $Res Function(_$ListOfGamesImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ListOfGamesModel
+  /// Create a copy of ListOfGames
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -211,7 +211,7 @@ class __$$ListOfGamesModelImplCopyWithImpl<$Res>
     Object? filters = null,
     Object? noFollowCollections = null,
   }) {
-    return _then(_$ListOfGamesModelImpl(
+    return _then(_$ListOfGamesImpl(
       count: null == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
@@ -227,7 +227,7 @@ class __$$ListOfGamesModelImplCopyWithImpl<$Res>
       results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<ResultModel>,
+              as List<Games>,
       seoTitle: null == seoTitle
           ? _value.seoTitle
           : seoTitle // ignore: cast_nullable_to_non_nullable
@@ -259,7 +259,7 @@ class __$$ListOfGamesModelImplCopyWithImpl<$Res>
       filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
-              as FiltersModel,
+              as Filters,
       noFollowCollections: null == noFollowCollections
           ? _value._noFollowCollections
           : noFollowCollections // ignore: cast_nullable_to_non_nullable
@@ -270,12 +270,12 @@ class __$$ListOfGamesModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ListOfGamesModelImpl implements _ListOfGamesModel {
-  const _$ListOfGamesModelImpl(
+class _$ListOfGamesImpl implements _ListOfGames {
+  const _$ListOfGamesImpl(
       {required this.count,
       required this.next,
       required this.previous,
-      required final List<ResultModel> results,
+      required final List<Games> results,
       required this.seoTitle,
       required this.seoDescription,
       required this.seoKeywords,
@@ -294,9 +294,9 @@ class _$ListOfGamesModelImpl implements _ListOfGamesModel {
   final String next;
   @override
   final dynamic previous;
-  final List<ResultModel> _results;
+  final List<Games> _results;
   @override
-  List<ResultModel> get results {
+  List<Games> get results {
     if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_results);
@@ -317,7 +317,7 @@ class _$ListOfGamesModelImpl implements _ListOfGamesModel {
   @override
   final String description;
   @override
-  final FiltersModel filters;
+  final Filters filters;
   final List<String> _noFollowCollections;
   @override
   List<String> get noFollowCollections {
@@ -329,14 +329,14 @@ class _$ListOfGamesModelImpl implements _ListOfGamesModel {
 
   @override
   String toString() {
-    return 'ListOfGamesModel(count: $count, next: $next, previous: $previous, results: $results, seoTitle: $seoTitle, seoDescription: $seoDescription, seoKeywords: $seoKeywords, seoH1: $seoH1, noIndex: $noIndex, noFollow: $noFollow, description: $description, filters: $filters, noFollowCollections: $noFollowCollections)';
+    return 'ListOfGames(count: $count, next: $next, previous: $previous, results: $results, seoTitle: $seoTitle, seoDescription: $seoDescription, seoKeywords: $seoKeywords, seoH1: $seoH1, noIndex: $noIndex, noFollow: $noFollow, description: $description, filters: $filters, noFollowCollections: $noFollowCollections)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ListOfGamesModelImpl &&
+            other is _$ListOfGamesImpl &&
             (identical(other.count, count) || other.count == count) &&
             (identical(other.next, next) || other.next == next) &&
             const DeepCollectionEquality().equals(other.previous, previous) &&
@@ -375,32 +375,30 @@ class _$ListOfGamesModelImpl implements _ListOfGamesModel {
       filters,
       const DeepCollectionEquality().hash(_noFollowCollections));
 
-  /// Create a copy of ListOfGamesModel
+  /// Create a copy of ListOfGames
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListOfGamesModelImplCopyWith<_$ListOfGamesModelImpl> get copyWith =>
-      __$$ListOfGamesModelImplCopyWithImpl<_$ListOfGamesModelImpl>(
-          this, _$identity);
+  _$$ListOfGamesImplCopyWith<_$ListOfGamesImpl> get copyWith =>
+      __$$ListOfGamesImplCopyWithImpl<_$ListOfGamesImpl>(this, _$identity);
 }
 
-abstract class _ListOfGamesModel implements ListOfGamesModel {
-  const factory _ListOfGamesModel(
-          {required final int count,
-          required final String next,
-          required final dynamic previous,
-          required final List<ResultModel> results,
-          required final String seoTitle,
-          required final String seoDescription,
-          required final String seoKeywords,
-          required final String seoH1,
-          required final bool noIndex,
-          required final bool noFollow,
-          required final String description,
-          required final FiltersModel filters,
-          required final List<String> noFollowCollections}) =
-      _$ListOfGamesModelImpl;
+abstract class _ListOfGames implements ListOfGames {
+  const factory _ListOfGames(
+      {required final int count,
+      required final String next,
+      required final dynamic previous,
+      required final List<Games> results,
+      required final String seoTitle,
+      required final String seoDescription,
+      required final String seoKeywords,
+      required final String seoH1,
+      required final bool noIndex,
+      required final bool noFollow,
+      required final String description,
+      required final Filters filters,
+      required final List<String> noFollowCollections}) = _$ListOfGamesImpl;
 
   @override
   int get count;
@@ -409,7 +407,7 @@ abstract class _ListOfGamesModel implements ListOfGamesModel {
   @override
   dynamic get previous;
   @override
-  List<ResultModel> get results;
+  List<Games> get results;
   @override
   String get seoTitle;
   @override
@@ -425,49 +423,47 @@ abstract class _ListOfGamesModel implements ListOfGamesModel {
   @override
   String get description;
   @override
-  FiltersModel get filters;
+  Filters get filters;
   @override
   List<String> get noFollowCollections;
 
-  /// Create a copy of ListOfGamesModel
+  /// Create a copy of ListOfGames
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListOfGamesModelImplCopyWith<_$ListOfGamesModelImpl> get copyWith =>
+  _$$ListOfGamesImplCopyWith<_$ListOfGamesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$FiltersModel {
+mixin _$Filters {
   List<FiltersYearModel> get years => throw _privateConstructorUsedError;
 
-  /// Create a copy of FiltersModel
+  /// Create a copy of Filters
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $FiltersModelCopyWith<FiltersModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $FiltersCopyWith<Filters> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FiltersModelCopyWith<$Res> {
-  factory $FiltersModelCopyWith(
-          FiltersModel value, $Res Function(FiltersModel) then) =
-      _$FiltersModelCopyWithImpl<$Res, FiltersModel>;
+abstract class $FiltersCopyWith<$Res> {
+  factory $FiltersCopyWith(Filters value, $Res Function(Filters) then) =
+      _$FiltersCopyWithImpl<$Res, Filters>;
   @useResult
   $Res call({List<FiltersYearModel> years});
 }
 
 /// @nodoc
-class _$FiltersModelCopyWithImpl<$Res, $Val extends FiltersModel>
-    implements $FiltersModelCopyWith<$Res> {
-  _$FiltersModelCopyWithImpl(this._value, this._then);
+class _$FiltersCopyWithImpl<$Res, $Val extends Filters>
+    implements $FiltersCopyWith<$Res> {
+  _$FiltersCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of FiltersModel
+  /// Create a copy of Filters
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -484,32 +480,31 @@ class _$FiltersModelCopyWithImpl<$Res, $Val extends FiltersModel>
 }
 
 /// @nodoc
-abstract class _$$FiltersModelImplCopyWith<$Res>
-    implements $FiltersModelCopyWith<$Res> {
-  factory _$$FiltersModelImplCopyWith(
-          _$FiltersModelImpl value, $Res Function(_$FiltersModelImpl) then) =
-      __$$FiltersModelImplCopyWithImpl<$Res>;
+abstract class _$$FiltersImplCopyWith<$Res> implements $FiltersCopyWith<$Res> {
+  factory _$$FiltersImplCopyWith(
+          _$FiltersImpl value, $Res Function(_$FiltersImpl) then) =
+      __$$FiltersImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<FiltersYearModel> years});
 }
 
 /// @nodoc
-class __$$FiltersModelImplCopyWithImpl<$Res>
-    extends _$FiltersModelCopyWithImpl<$Res, _$FiltersModelImpl>
-    implements _$$FiltersModelImplCopyWith<$Res> {
-  __$$FiltersModelImplCopyWithImpl(
-      _$FiltersModelImpl _value, $Res Function(_$FiltersModelImpl) _then)
+class __$$FiltersImplCopyWithImpl<$Res>
+    extends _$FiltersCopyWithImpl<$Res, _$FiltersImpl>
+    implements _$$FiltersImplCopyWith<$Res> {
+  __$$FiltersImplCopyWithImpl(
+      _$FiltersImpl _value, $Res Function(_$FiltersImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of FiltersModel
+  /// Create a copy of Filters
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? years = null,
   }) {
-    return _then(_$FiltersModelImpl(
+    return _then(_$FiltersImpl(
       years: null == years
           ? _value._years
           : years // ignore: cast_nullable_to_non_nullable
@@ -520,8 +515,8 @@ class __$$FiltersModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiltersModelImpl implements _FiltersModel {
-  const _$FiltersModelImpl({required final List<FiltersYearModel> years})
+class _$FiltersImpl implements _Filters {
+  const _$FiltersImpl({required final List<FiltersYearModel> years})
       : _years = years;
 
   final List<FiltersYearModel> _years;
@@ -534,14 +529,14 @@ class _$FiltersModelImpl implements _FiltersModel {
 
   @override
   String toString() {
-    return 'FiltersModel(years: $years)';
+    return 'Filters(years: $years)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiltersModelImpl &&
+            other is _$FiltersImpl &&
             const DeepCollectionEquality().equals(other._years, _years));
   }
 
@@ -549,27 +544,27 @@ class _$FiltersModelImpl implements _FiltersModel {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_years));
 
-  /// Create a copy of FiltersModel
+  /// Create a copy of Filters
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$FiltersModelImplCopyWith<_$FiltersModelImpl> get copyWith =>
-      __$$FiltersModelImplCopyWithImpl<_$FiltersModelImpl>(this, _$identity);
+  _$$FiltersImplCopyWith<_$FiltersImpl> get copyWith =>
+      __$$FiltersImplCopyWithImpl<_$FiltersImpl>(this, _$identity);
 }
 
-abstract class _FiltersModel implements FiltersModel {
-  const factory _FiltersModel({required final List<FiltersYearModel> years}) =
-      _$FiltersModelImpl;
+abstract class _Filters implements Filters {
+  const factory _Filters({required final List<FiltersYearModel> years}) =
+      _$FiltersImpl;
 
   @override
   List<FiltersYearModel> get years;
 
-  /// Create a copy of FiltersModel
+  /// Create a copy of Filters
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FiltersModelImplCopyWith<_$FiltersModelImpl> get copyWith =>
+  _$$FiltersImplCopyWith<_$FiltersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -579,7 +574,7 @@ mixin _$FiltersYearModel {
   int get to => throw _privateConstructorUsedError;
   String get filter => throw _privateConstructorUsedError;
   int get decade => throw _privateConstructorUsedError;
-  List<YearYearModel> get years => throw _privateConstructorUsedError;
+  List<YearYear> get years => throw _privateConstructorUsedError;
   bool get noFollow => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
 
@@ -601,7 +596,7 @@ abstract class $FiltersYearModelCopyWith<$Res> {
       int to,
       String filter,
       int decade,
-      List<YearYearModel> years,
+      List<YearYear> years,
       bool noFollow,
       int count});
 }
@@ -649,7 +644,7 @@ class _$FiltersYearModelCopyWithImpl<$Res, $Val extends FiltersYearModel>
       years: null == years
           ? _value.years
           : years // ignore: cast_nullable_to_non_nullable
-              as List<YearYearModel>,
+              as List<YearYear>,
       noFollow: null == noFollow
           ? _value.noFollow
           : noFollow // ignore: cast_nullable_to_non_nullable
@@ -675,7 +670,7 @@ abstract class _$$FiltersYearModelImplCopyWith<$Res>
       int to,
       String filter,
       int decade,
-      List<YearYearModel> years,
+      List<YearYear> years,
       bool noFollow,
       int count});
 }
@@ -721,7 +716,7 @@ class __$$FiltersYearModelImplCopyWithImpl<$Res>
       years: null == years
           ? _value._years
           : years // ignore: cast_nullable_to_non_nullable
-              as List<YearYearModel>,
+              as List<YearYear>,
       noFollow: null == noFollow
           ? _value.noFollow
           : noFollow // ignore: cast_nullable_to_non_nullable
@@ -742,7 +737,7 @@ class _$FiltersYearModelImpl implements _FiltersYearModel {
       required this.to,
       required this.filter,
       required this.decade,
-      required final List<YearYearModel> years,
+      required final List<YearYear> years,
       required this.noFollow,
       required this.count})
       : _years = years;
@@ -755,9 +750,9 @@ class _$FiltersYearModelImpl implements _FiltersYearModel {
   final String filter;
   @override
   final int decade;
-  final List<YearYearModel> _years;
+  final List<YearYear> _years;
   @override
-  List<YearYearModel> get years {
+  List<YearYear> get years {
     if (_years is EqualUnmodifiableListView) return _years;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_years);
@@ -808,7 +803,7 @@ abstract class _FiltersYearModel implements FiltersYearModel {
       required final int to,
       required final String filter,
       required final int decade,
-      required final List<YearYearModel> years,
+      required final List<YearYear> years,
       required final bool noFollow,
       required final int count}) = _$FiltersYearModelImpl;
 
@@ -821,7 +816,7 @@ abstract class _FiltersYearModel implements FiltersYearModel {
   @override
   int get decade;
   @override
-  List<YearYearModel> get years;
+  List<YearYear> get years;
   @override
   bool get noFollow;
   @override
@@ -836,38 +831,37 @@ abstract class _FiltersYearModel implements FiltersYearModel {
 }
 
 /// @nodoc
-mixin _$YearYearModel {
+mixin _$YearYear {
   int get year => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
   bool get noFollow => throw _privateConstructorUsedError;
 
-  /// Create a copy of YearYearModel
+  /// Create a copy of YearYear
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $YearYearModelCopyWith<YearYearModel> get copyWith =>
+  $YearYearCopyWith<YearYear> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $YearYearModelCopyWith<$Res> {
-  factory $YearYearModelCopyWith(
-          YearYearModel value, $Res Function(YearYearModel) then) =
-      _$YearYearModelCopyWithImpl<$Res, YearYearModel>;
+abstract class $YearYearCopyWith<$Res> {
+  factory $YearYearCopyWith(YearYear value, $Res Function(YearYear) then) =
+      _$YearYearCopyWithImpl<$Res, YearYear>;
   @useResult
   $Res call({int year, int count, bool noFollow});
 }
 
 /// @nodoc
-class _$YearYearModelCopyWithImpl<$Res, $Val extends YearYearModel>
-    implements $YearYearModelCopyWith<$Res> {
-  _$YearYearModelCopyWithImpl(this._value, this._then);
+class _$YearYearCopyWithImpl<$Res, $Val extends YearYear>
+    implements $YearYearCopyWith<$Res> {
+  _$YearYearCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of YearYearModel
+  /// Create a copy of YearYear
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -894,25 +888,25 @@ class _$YearYearModelCopyWithImpl<$Res, $Val extends YearYearModel>
 }
 
 /// @nodoc
-abstract class _$$YearYearModelImplCopyWith<$Res>
-    implements $YearYearModelCopyWith<$Res> {
-  factory _$$YearYearModelImplCopyWith(
-          _$YearYearModelImpl value, $Res Function(_$YearYearModelImpl) then) =
-      __$$YearYearModelImplCopyWithImpl<$Res>;
+abstract class _$$YearYearImplCopyWith<$Res>
+    implements $YearYearCopyWith<$Res> {
+  factory _$$YearYearImplCopyWith(
+          _$YearYearImpl value, $Res Function(_$YearYearImpl) then) =
+      __$$YearYearImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int year, int count, bool noFollow});
 }
 
 /// @nodoc
-class __$$YearYearModelImplCopyWithImpl<$Res>
-    extends _$YearYearModelCopyWithImpl<$Res, _$YearYearModelImpl>
-    implements _$$YearYearModelImplCopyWith<$Res> {
-  __$$YearYearModelImplCopyWithImpl(
-      _$YearYearModelImpl _value, $Res Function(_$YearYearModelImpl) _then)
+class __$$YearYearImplCopyWithImpl<$Res>
+    extends _$YearYearCopyWithImpl<$Res, _$YearYearImpl>
+    implements _$$YearYearImplCopyWith<$Res> {
+  __$$YearYearImplCopyWithImpl(
+      _$YearYearImpl _value, $Res Function(_$YearYearImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of YearYearModel
+  /// Create a copy of YearYear
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -921,7 +915,7 @@ class __$$YearYearModelImplCopyWithImpl<$Res>
     Object? count = null,
     Object? noFollow = null,
   }) {
-    return _then(_$YearYearModelImpl(
+    return _then(_$YearYearImpl(
       year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -940,8 +934,8 @@ class __$$YearYearModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$YearYearModelImpl implements _YearYearModel {
-  const _$YearYearModelImpl(
+class _$YearYearImpl implements _YearYear {
+  const _$YearYearImpl(
       {required this.year, required this.count, required this.noFollow});
 
   @override
@@ -953,14 +947,14 @@ class _$YearYearModelImpl implements _YearYearModel {
 
   @override
   String toString() {
-    return 'YearYearModel(year: $year, count: $count, noFollow: $noFollow)';
+    return 'YearYear(year: $year, count: $count, noFollow: $noFollow)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$YearYearModelImpl &&
+            other is _$YearYearImpl &&
             (identical(other.year, year) || other.year == year) &&
             (identical(other.count, count) || other.count == count) &&
             (identical(other.noFollow, noFollow) ||
@@ -970,20 +964,20 @@ class _$YearYearModelImpl implements _YearYearModel {
   @override
   int get hashCode => Object.hash(runtimeType, year, count, noFollow);
 
-  /// Create a copy of YearYearModel
+  /// Create a copy of YearYear
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$YearYearModelImplCopyWith<_$YearYearModelImpl> get copyWith =>
-      __$$YearYearModelImplCopyWithImpl<_$YearYearModelImpl>(this, _$identity);
+  _$$YearYearImplCopyWith<_$YearYearImpl> get copyWith =>
+      __$$YearYearImplCopyWithImpl<_$YearYearImpl>(this, _$identity);
 }
 
-abstract class _YearYearModel implements YearYearModel {
-  const factory _YearYearModel(
+abstract class _YearYear implements YearYear {
+  const factory _YearYear(
       {required final int year,
       required final int count,
-      required final bool noFollow}) = _$YearYearModelImpl;
+      required final bool noFollow}) = _$YearYearImpl;
 
   @override
   int get year;
@@ -992,16 +986,16 @@ abstract class _YearYearModel implements YearYearModel {
   @override
   bool get noFollow;
 
-  /// Create a copy of YearYearModel
+  /// Create a copy of YearYear
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$YearYearModelImplCopyWith<_$YearYearModelImpl> get copyWith =>
+  _$$YearYearImplCopyWith<_$YearYearImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$ResultModel {
+mixin _$Games {
   int get id => throw _privateConstructorUsedError;
   String get slug => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
@@ -1010,43 +1004,40 @@ mixin _$ResultModel {
   String get backgroundImage => throw _privateConstructorUsedError;
   double get rating => throw _privateConstructorUsedError;
   int get ratingTop => throw _privateConstructorUsedError;
-  List<RatingModel> get ratings => throw _privateConstructorUsedError;
+  List<Rating> get ratings => throw _privateConstructorUsedError;
   int get ratingsCount => throw _privateConstructorUsedError;
   int get reviewsTextCount => throw _privateConstructorUsedError;
   int get added => throw _privateConstructorUsedError;
-  AddedByStatusModel get addedByStatus => throw _privateConstructorUsedError;
+  AddedByStatus get addedByStatus => throw _privateConstructorUsedError;
   int get metaCritic => throw _privateConstructorUsedError;
   int get playtime => throw _privateConstructorUsedError;
   int get suggestionsCount => throw _privateConstructorUsedError;
   DateTime get updated => throw _privateConstructorUsedError;
   dynamic get userGame => throw _privateConstructorUsedError;
   int get reviewsCount => throw _privateConstructorUsedError;
-  ColorModel get saturatedColor => throw _privateConstructorUsedError;
-  ColorModel get dominantColor => throw _privateConstructorUsedError;
-  List<PlatformElementModel> get platforms =>
+  Color get saturatedColor => throw _privateConstructorUsedError;
+  Color get dominantColor => throw _privateConstructorUsedError;
+  List<PlatformElement> get platforms => throw _privateConstructorUsedError;
+  List<ParentPlatform> get parentPlatforms =>
       throw _privateConstructorUsedError;
-  List<ParentPlatformModel> get parentPlatforms =>
-      throw _privateConstructorUsedError;
-  List<GenreModel> get genres => throw _privateConstructorUsedError;
-  List<StoreModel> get stores => throw _privateConstructorUsedError;
+  List<Genres> get genres => throw _privateConstructorUsedError;
+  List<Store> get stores => throw _privateConstructorUsedError;
   dynamic get clip => throw _privateConstructorUsedError;
-  List<GenreModel> get tags => throw _privateConstructorUsedError;
-  EsrbRatingModel get esrbRating => throw _privateConstructorUsedError;
-  List<ShortScreenshotModel> get shortScreenshots =>
+  List<Genres> get tags => throw _privateConstructorUsedError;
+  EsrbRating get esrbRating => throw _privateConstructorUsedError;
+  List<ShortScreenshot> get shortScreenshots =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of ResultModel
+  /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResultModelCopyWith<ResultModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GamesCopyWith<Games> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ResultModelCopyWith<$Res> {
-  factory $ResultModelCopyWith(
-          ResultModel value, $Res Function(ResultModel) then) =
-      _$ResultModelCopyWithImpl<$Res, ResultModel>;
+abstract class $GamesCopyWith<$Res> {
+  factory $GamesCopyWith(Games value, $Res Function(Games) then) =
+      _$GamesCopyWithImpl<$Res, Games>;
   @useResult
   $Res call(
       {int id,
@@ -1057,43 +1048,43 @@ abstract class $ResultModelCopyWith<$Res> {
       String backgroundImage,
       double rating,
       int ratingTop,
-      List<RatingModel> ratings,
+      List<Rating> ratings,
       int ratingsCount,
       int reviewsTextCount,
       int added,
-      AddedByStatusModel addedByStatus,
+      AddedByStatus addedByStatus,
       int metaCritic,
       int playtime,
       int suggestionsCount,
       DateTime updated,
       dynamic userGame,
       int reviewsCount,
-      ColorModel saturatedColor,
-      ColorModel dominantColor,
-      List<PlatformElementModel> platforms,
-      List<ParentPlatformModel> parentPlatforms,
-      List<GenreModel> genres,
-      List<StoreModel> stores,
+      Color saturatedColor,
+      Color dominantColor,
+      List<PlatformElement> platforms,
+      List<ParentPlatform> parentPlatforms,
+      List<Genres> genres,
+      List<Store> stores,
       dynamic clip,
-      List<GenreModel> tags,
-      EsrbRatingModel esrbRating,
-      List<ShortScreenshotModel> shortScreenshots});
+      List<Genres> tags,
+      EsrbRating esrbRating,
+      List<ShortScreenshot> shortScreenshots});
 
-  $AddedByStatusModelCopyWith<$Res> get addedByStatus;
-  $EsrbRatingModelCopyWith<$Res> get esrbRating;
+  $AddedByStatusCopyWith<$Res> get addedByStatus;
+  $EsrbRatingCopyWith<$Res> get esrbRating;
 }
 
 /// @nodoc
-class _$ResultModelCopyWithImpl<$Res, $Val extends ResultModel>
-    implements $ResultModelCopyWith<$Res> {
-  _$ResultModelCopyWithImpl(this._value, this._then);
+class _$GamesCopyWithImpl<$Res, $Val extends Games>
+    implements $GamesCopyWith<$Res> {
+  _$GamesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ResultModel
+  /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -1164,7 +1155,7 @@ class _$ResultModelCopyWithImpl<$Res, $Val extends ResultModel>
       ratings: null == ratings
           ? _value.ratings
           : ratings // ignore: cast_nullable_to_non_nullable
-              as List<RatingModel>,
+              as List<Rating>,
       ratingsCount: null == ratingsCount
           ? _value.ratingsCount
           : ratingsCount // ignore: cast_nullable_to_non_nullable
@@ -1180,7 +1171,7 @@ class _$ResultModelCopyWithImpl<$Res, $Val extends ResultModel>
       addedByStatus: null == addedByStatus
           ? _value.addedByStatus
           : addedByStatus // ignore: cast_nullable_to_non_nullable
-              as AddedByStatusModel,
+              as AddedByStatus,
       metaCritic: null == metaCritic
           ? _value.metaCritic
           : metaCritic // ignore: cast_nullable_to_non_nullable
@@ -1208,27 +1199,27 @@ class _$ResultModelCopyWithImpl<$Res, $Val extends ResultModel>
       saturatedColor: null == saturatedColor
           ? _value.saturatedColor
           : saturatedColor // ignore: cast_nullable_to_non_nullable
-              as ColorModel,
+              as Color,
       dominantColor: null == dominantColor
           ? _value.dominantColor
           : dominantColor // ignore: cast_nullable_to_non_nullable
-              as ColorModel,
+              as Color,
       platforms: null == platforms
           ? _value.platforms
           : platforms // ignore: cast_nullable_to_non_nullable
-              as List<PlatformElementModel>,
+              as List<PlatformElement>,
       parentPlatforms: null == parentPlatforms
           ? _value.parentPlatforms
           : parentPlatforms // ignore: cast_nullable_to_non_nullable
-              as List<ParentPlatformModel>,
+              as List<ParentPlatform>,
       genres: null == genres
           ? _value.genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<GenreModel>,
+              as List<Genres>,
       stores: null == stores
           ? _value.stores
           : stores // ignore: cast_nullable_to_non_nullable
-              as List<StoreModel>,
+              as List<Store>,
       clip: freezed == clip
           ? _value.clip
           : clip // ignore: cast_nullable_to_non_nullable
@@ -1236,45 +1227,44 @@ class _$ResultModelCopyWithImpl<$Res, $Val extends ResultModel>
       tags: null == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<GenreModel>,
+              as List<Genres>,
       esrbRating: null == esrbRating
           ? _value.esrbRating
           : esrbRating // ignore: cast_nullable_to_non_nullable
-              as EsrbRatingModel,
+              as EsrbRating,
       shortScreenshots: null == shortScreenshots
           ? _value.shortScreenshots
           : shortScreenshots // ignore: cast_nullable_to_non_nullable
-              as List<ShortScreenshotModel>,
+              as List<ShortScreenshot>,
     ) as $Val);
   }
 
-  /// Create a copy of ResultModel
+  /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $AddedByStatusModelCopyWith<$Res> get addedByStatus {
-    return $AddedByStatusModelCopyWith<$Res>(_value.addedByStatus, (value) {
+  $AddedByStatusCopyWith<$Res> get addedByStatus {
+    return $AddedByStatusCopyWith<$Res>(_value.addedByStatus, (value) {
       return _then(_value.copyWith(addedByStatus: value) as $Val);
     });
   }
 
-  /// Create a copy of ResultModel
+  /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $EsrbRatingModelCopyWith<$Res> get esrbRating {
-    return $EsrbRatingModelCopyWith<$Res>(_value.esrbRating, (value) {
+  $EsrbRatingCopyWith<$Res> get esrbRating {
+    return $EsrbRatingCopyWith<$Res>(_value.esrbRating, (value) {
       return _then(_value.copyWith(esrbRating: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$ResultModelImplCopyWith<$Res>
-    implements $ResultModelCopyWith<$Res> {
-  factory _$$ResultModelImplCopyWith(
-          _$ResultModelImpl value, $Res Function(_$ResultModelImpl) then) =
-      __$$ResultModelImplCopyWithImpl<$Res>;
+abstract class _$$GamesImplCopyWith<$Res> implements $GamesCopyWith<$Res> {
+  factory _$$GamesImplCopyWith(
+          _$GamesImpl value, $Res Function(_$GamesImpl) then) =
+      __$$GamesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1286,43 +1276,43 @@ abstract class _$$ResultModelImplCopyWith<$Res>
       String backgroundImage,
       double rating,
       int ratingTop,
-      List<RatingModel> ratings,
+      List<Rating> ratings,
       int ratingsCount,
       int reviewsTextCount,
       int added,
-      AddedByStatusModel addedByStatus,
+      AddedByStatus addedByStatus,
       int metaCritic,
       int playtime,
       int suggestionsCount,
       DateTime updated,
       dynamic userGame,
       int reviewsCount,
-      ColorModel saturatedColor,
-      ColorModel dominantColor,
-      List<PlatformElementModel> platforms,
-      List<ParentPlatformModel> parentPlatforms,
-      List<GenreModel> genres,
-      List<StoreModel> stores,
+      Color saturatedColor,
+      Color dominantColor,
+      List<PlatformElement> platforms,
+      List<ParentPlatform> parentPlatforms,
+      List<Genres> genres,
+      List<Store> stores,
       dynamic clip,
-      List<GenreModel> tags,
-      EsrbRatingModel esrbRating,
-      List<ShortScreenshotModel> shortScreenshots});
+      List<Genres> tags,
+      EsrbRating esrbRating,
+      List<ShortScreenshot> shortScreenshots});
 
   @override
-  $AddedByStatusModelCopyWith<$Res> get addedByStatus;
+  $AddedByStatusCopyWith<$Res> get addedByStatus;
   @override
-  $EsrbRatingModelCopyWith<$Res> get esrbRating;
+  $EsrbRatingCopyWith<$Res> get esrbRating;
 }
 
 /// @nodoc
-class __$$ResultModelImplCopyWithImpl<$Res>
-    extends _$ResultModelCopyWithImpl<$Res, _$ResultModelImpl>
-    implements _$$ResultModelImplCopyWith<$Res> {
-  __$$ResultModelImplCopyWithImpl(
-      _$ResultModelImpl _value, $Res Function(_$ResultModelImpl) _then)
+class __$$GamesImplCopyWithImpl<$Res>
+    extends _$GamesCopyWithImpl<$Res, _$GamesImpl>
+    implements _$$GamesImplCopyWith<$Res> {
+  __$$GamesImplCopyWithImpl(
+      _$GamesImpl _value, $Res Function(_$GamesImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ResultModel
+  /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -1357,7 +1347,7 @@ class __$$ResultModelImplCopyWithImpl<$Res>
     Object? esrbRating = null,
     Object? shortScreenshots = null,
   }) {
-    return _then(_$ResultModelImpl(
+    return _then(_$GamesImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1393,7 +1383,7 @@ class __$$ResultModelImplCopyWithImpl<$Res>
       ratings: null == ratings
           ? _value._ratings
           : ratings // ignore: cast_nullable_to_non_nullable
-              as List<RatingModel>,
+              as List<Rating>,
       ratingsCount: null == ratingsCount
           ? _value.ratingsCount
           : ratingsCount // ignore: cast_nullable_to_non_nullable
@@ -1409,7 +1399,7 @@ class __$$ResultModelImplCopyWithImpl<$Res>
       addedByStatus: null == addedByStatus
           ? _value.addedByStatus
           : addedByStatus // ignore: cast_nullable_to_non_nullable
-              as AddedByStatusModel,
+              as AddedByStatus,
       metaCritic: null == metaCritic
           ? _value.metaCritic
           : metaCritic // ignore: cast_nullable_to_non_nullable
@@ -1437,27 +1427,27 @@ class __$$ResultModelImplCopyWithImpl<$Res>
       saturatedColor: null == saturatedColor
           ? _value.saturatedColor
           : saturatedColor // ignore: cast_nullable_to_non_nullable
-              as ColorModel,
+              as Color,
       dominantColor: null == dominantColor
           ? _value.dominantColor
           : dominantColor // ignore: cast_nullable_to_non_nullable
-              as ColorModel,
+              as Color,
       platforms: null == platforms
           ? _value._platforms
           : platforms // ignore: cast_nullable_to_non_nullable
-              as List<PlatformElementModel>,
+              as List<PlatformElement>,
       parentPlatforms: null == parentPlatforms
           ? _value._parentPlatforms
           : parentPlatforms // ignore: cast_nullable_to_non_nullable
-              as List<ParentPlatformModel>,
+              as List<ParentPlatform>,
       genres: null == genres
           ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<GenreModel>,
+              as List<Genres>,
       stores: null == stores
           ? _value._stores
           : stores // ignore: cast_nullable_to_non_nullable
-              as List<StoreModel>,
+              as List<Store>,
       clip: freezed == clip
           ? _value.clip
           : clip // ignore: cast_nullable_to_non_nullable
@@ -1465,23 +1455,23 @@ class __$$ResultModelImplCopyWithImpl<$Res>
       tags: null == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<GenreModel>,
+              as List<Genres>,
       esrbRating: null == esrbRating
           ? _value.esrbRating
           : esrbRating // ignore: cast_nullable_to_non_nullable
-              as EsrbRatingModel,
+              as EsrbRating,
       shortScreenshots: null == shortScreenshots
           ? _value._shortScreenshots
           : shortScreenshots // ignore: cast_nullable_to_non_nullable
-              as List<ShortScreenshotModel>,
+              as List<ShortScreenshot>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$ResultModelImpl implements _ResultModel {
-  const _$ResultModelImpl(
+class _$GamesImpl implements _Games {
+  const _$GamesImpl(
       {required this.id,
       required this.slug,
       required this.name,
@@ -1490,7 +1480,7 @@ class _$ResultModelImpl implements _ResultModel {
       required this.backgroundImage,
       required this.rating,
       required this.ratingTop,
-      required final List<RatingModel> ratings,
+      required final List<Rating> ratings,
       required this.ratingsCount,
       required this.reviewsTextCount,
       required this.added,
@@ -1503,14 +1493,14 @@ class _$ResultModelImpl implements _ResultModel {
       required this.reviewsCount,
       required this.saturatedColor,
       required this.dominantColor,
-      required final List<PlatformElementModel> platforms,
-      required final List<ParentPlatformModel> parentPlatforms,
-      required final List<GenreModel> genres,
-      required final List<StoreModel> stores,
+      required final List<PlatformElement> platforms,
+      required final List<ParentPlatform> parentPlatforms,
+      required final List<Genres> genres,
+      required final List<Store> stores,
       required this.clip,
-      required final List<GenreModel> tags,
+      required final List<Genres> tags,
       required this.esrbRating,
-      required final List<ShortScreenshotModel> shortScreenshots})
+      required final List<ShortScreenshot> shortScreenshots})
       : _ratings = ratings,
         _platforms = platforms,
         _parentPlatforms = parentPlatforms,
@@ -1535,9 +1525,9 @@ class _$ResultModelImpl implements _ResultModel {
   final double rating;
   @override
   final int ratingTop;
-  final List<RatingModel> _ratings;
+  final List<Rating> _ratings;
   @override
-  List<RatingModel> get ratings {
+  List<Rating> get ratings {
     if (_ratings is EqualUnmodifiableListView) return _ratings;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_ratings);
@@ -1550,7 +1540,7 @@ class _$ResultModelImpl implements _ResultModel {
   @override
   final int added;
   @override
-  final AddedByStatusModel addedByStatus;
+  final AddedByStatus addedByStatus;
   @override
   final int metaCritic;
   @override
@@ -1564,36 +1554,36 @@ class _$ResultModelImpl implements _ResultModel {
   @override
   final int reviewsCount;
   @override
-  final ColorModel saturatedColor;
+  final Color saturatedColor;
   @override
-  final ColorModel dominantColor;
-  final List<PlatformElementModel> _platforms;
+  final Color dominantColor;
+  final List<PlatformElement> _platforms;
   @override
-  List<PlatformElementModel> get platforms {
+  List<PlatformElement> get platforms {
     if (_platforms is EqualUnmodifiableListView) return _platforms;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_platforms);
   }
 
-  final List<ParentPlatformModel> _parentPlatforms;
+  final List<ParentPlatform> _parentPlatforms;
   @override
-  List<ParentPlatformModel> get parentPlatforms {
+  List<ParentPlatform> get parentPlatforms {
     if (_parentPlatforms is EqualUnmodifiableListView) return _parentPlatforms;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parentPlatforms);
   }
 
-  final List<GenreModel> _genres;
+  final List<Genres> _genres;
   @override
-  List<GenreModel> get genres {
+  List<Genres> get genres {
     if (_genres is EqualUnmodifiableListView) return _genres;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_genres);
   }
 
-  final List<StoreModel> _stores;
+  final List<Store> _stores;
   @override
-  List<StoreModel> get stores {
+  List<Store> get stores {
     if (_stores is EqualUnmodifiableListView) return _stores;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_stores);
@@ -1601,19 +1591,19 @@ class _$ResultModelImpl implements _ResultModel {
 
   @override
   final dynamic clip;
-  final List<GenreModel> _tags;
+  final List<Genres> _tags;
   @override
-  List<GenreModel> get tags {
+  List<Genres> get tags {
     if (_tags is EqualUnmodifiableListView) return _tags;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tags);
   }
 
   @override
-  final EsrbRatingModel esrbRating;
-  final List<ShortScreenshotModel> _shortScreenshots;
+  final EsrbRating esrbRating;
+  final List<ShortScreenshot> _shortScreenshots;
   @override
-  List<ShortScreenshotModel> get shortScreenshots {
+  List<ShortScreenshot> get shortScreenshots {
     if (_shortScreenshots is EqualUnmodifiableListView)
       return _shortScreenshots;
     // ignore: implicit_dynamic_type
@@ -1622,14 +1612,14 @@ class _$ResultModelImpl implements _ResultModel {
 
   @override
   String toString() {
-    return 'ResultModel(id: $id, slug: $slug, name: $name, released: $released, tba: $tba, backgroundImage: $backgroundImage, rating: $rating, ratingTop: $ratingTop, ratings: $ratings, ratingsCount: $ratingsCount, reviewsTextCount: $reviewsTextCount, added: $added, addedByStatus: $addedByStatus, metaCritic: $metaCritic, playtime: $playtime, suggestionsCount: $suggestionsCount, updated: $updated, userGame: $userGame, reviewsCount: $reviewsCount, saturatedColor: $saturatedColor, dominantColor: $dominantColor, platforms: $platforms, parentPlatforms: $parentPlatforms, genres: $genres, stores: $stores, clip: $clip, tags: $tags, esrbRating: $esrbRating, shortScreenshots: $shortScreenshots)';
+    return 'Games(id: $id, slug: $slug, name: $name, released: $released, tba: $tba, backgroundImage: $backgroundImage, rating: $rating, ratingTop: $ratingTop, ratings: $ratings, ratingsCount: $ratingsCount, reviewsTextCount: $reviewsTextCount, added: $added, addedByStatus: $addedByStatus, metaCritic: $metaCritic, playtime: $playtime, suggestionsCount: $suggestionsCount, updated: $updated, userGame: $userGame, reviewsCount: $reviewsCount, saturatedColor: $saturatedColor, dominantColor: $dominantColor, platforms: $platforms, parentPlatforms: $parentPlatforms, genres: $genres, stores: $stores, clip: $clip, tags: $tags, esrbRating: $esrbRating, shortScreenshots: $shortScreenshots)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResultModelImpl &&
+            other is _$GamesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.slug, slug) || other.slug == slug) &&
             (identical(other.name, name) || other.name == name) &&
@@ -1711,47 +1701,46 @@ class _$ResultModelImpl implements _ResultModel {
         const DeepCollectionEquality().hash(_shortScreenshots)
       ]);
 
-  /// Create a copy of ResultModel
+  /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResultModelImplCopyWith<_$ResultModelImpl> get copyWith =>
-      __$$ResultModelImplCopyWithImpl<_$ResultModelImpl>(this, _$identity);
+  _$$GamesImplCopyWith<_$GamesImpl> get copyWith =>
+      __$$GamesImplCopyWithImpl<_$GamesImpl>(this, _$identity);
 }
 
-abstract class _ResultModel implements ResultModel {
-  const factory _ResultModel(
-          {required final int id,
-          required final String slug,
-          required final String name,
-          required final DateTime released,
-          required final bool tba,
-          required final String backgroundImage,
-          required final double rating,
-          required final int ratingTop,
-          required final List<RatingModel> ratings,
-          required final int ratingsCount,
-          required final int reviewsTextCount,
-          required final int added,
-          required final AddedByStatusModel addedByStatus,
-          required final int metaCritic,
-          required final int playtime,
-          required final int suggestionsCount,
-          required final DateTime updated,
-          required final dynamic userGame,
-          required final int reviewsCount,
-          required final ColorModel saturatedColor,
-          required final ColorModel dominantColor,
-          required final List<PlatformElementModel> platforms,
-          required final List<ParentPlatformModel> parentPlatforms,
-          required final List<GenreModel> genres,
-          required final List<StoreModel> stores,
-          required final dynamic clip,
-          required final List<GenreModel> tags,
-          required final EsrbRatingModel esrbRating,
-          required final List<ShortScreenshotModel> shortScreenshots}) =
-      _$ResultModelImpl;
+abstract class _Games implements Games {
+  const factory _Games(
+      {required final int id,
+      required final String slug,
+      required final String name,
+      required final DateTime released,
+      required final bool tba,
+      required final String backgroundImage,
+      required final double rating,
+      required final int ratingTop,
+      required final List<Rating> ratings,
+      required final int ratingsCount,
+      required final int reviewsTextCount,
+      required final int added,
+      required final AddedByStatus addedByStatus,
+      required final int metaCritic,
+      required final int playtime,
+      required final int suggestionsCount,
+      required final DateTime updated,
+      required final dynamic userGame,
+      required final int reviewsCount,
+      required final Color saturatedColor,
+      required final Color dominantColor,
+      required final List<PlatformElement> platforms,
+      required final List<ParentPlatform> parentPlatforms,
+      required final List<Genres> genres,
+      required final List<Store> stores,
+      required final dynamic clip,
+      required final List<Genres> tags,
+      required final EsrbRating esrbRating,
+      required final List<ShortScreenshot> shortScreenshots}) = _$GamesImpl;
 
   @override
   int get id;
@@ -1770,7 +1759,7 @@ abstract class _ResultModel implements ResultModel {
   @override
   int get ratingTop;
   @override
-  List<RatingModel> get ratings;
+  List<Rating> get ratings;
   @override
   int get ratingsCount;
   @override
@@ -1778,7 +1767,7 @@ abstract class _ResultModel implements ResultModel {
   @override
   int get added;
   @override
-  AddedByStatusModel get addedByStatus;
+  AddedByStatus get addedByStatus;
   @override
   int get metaCritic;
   @override
@@ -1792,36 +1781,36 @@ abstract class _ResultModel implements ResultModel {
   @override
   int get reviewsCount;
   @override
-  ColorModel get saturatedColor;
+  Color get saturatedColor;
   @override
-  ColorModel get dominantColor;
+  Color get dominantColor;
   @override
-  List<PlatformElementModel> get platforms;
+  List<PlatformElement> get platforms;
   @override
-  List<ParentPlatformModel> get parentPlatforms;
+  List<ParentPlatform> get parentPlatforms;
   @override
-  List<GenreModel> get genres;
+  List<Genres> get genres;
   @override
-  List<StoreModel> get stores;
+  List<Store> get stores;
   @override
   dynamic get clip;
   @override
-  List<GenreModel> get tags;
+  List<Genres> get tags;
   @override
-  EsrbRatingModel get esrbRating;
+  EsrbRating get esrbRating;
   @override
-  List<ShortScreenshotModel> get shortScreenshots;
+  List<ShortScreenshot> get shortScreenshots;
 
-  /// Create a copy of ResultModel
+  /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResultModelImplCopyWith<_$ResultModelImpl> get copyWith =>
+  _$$GamesImplCopyWith<_$GamesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$AddedByStatusModel {
+mixin _$AddedByStatus {
   int get yet => throw _privateConstructorUsedError;
   int get owned => throw _privateConstructorUsedError;
   int get beaten => throw _privateConstructorUsedError;
@@ -1829,34 +1818,34 @@ mixin _$AddedByStatusModel {
   int get dropped => throw _privateConstructorUsedError;
   int get playing => throw _privateConstructorUsedError;
 
-  /// Create a copy of AddedByStatusModel
+  /// Create a copy of AddedByStatus
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AddedByStatusModelCopyWith<AddedByStatusModel> get copyWith =>
+  $AddedByStatusCopyWith<AddedByStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AddedByStatusModelCopyWith<$Res> {
-  factory $AddedByStatusModelCopyWith(
-          AddedByStatusModel value, $Res Function(AddedByStatusModel) then) =
-      _$AddedByStatusModelCopyWithImpl<$Res, AddedByStatusModel>;
+abstract class $AddedByStatusCopyWith<$Res> {
+  factory $AddedByStatusCopyWith(
+          AddedByStatus value, $Res Function(AddedByStatus) then) =
+      _$AddedByStatusCopyWithImpl<$Res, AddedByStatus>;
   @useResult
   $Res call(
       {int yet, int owned, int beaten, int toPlay, int dropped, int playing});
 }
 
 /// @nodoc
-class _$AddedByStatusModelCopyWithImpl<$Res, $Val extends AddedByStatusModel>
-    implements $AddedByStatusModelCopyWith<$Res> {
-  _$AddedByStatusModelCopyWithImpl(this._value, this._then);
+class _$AddedByStatusCopyWithImpl<$Res, $Val extends AddedByStatus>
+    implements $AddedByStatusCopyWith<$Res> {
+  _$AddedByStatusCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AddedByStatusModel
+  /// Create a copy of AddedByStatus
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -1898,11 +1887,11 @@ class _$AddedByStatusModelCopyWithImpl<$Res, $Val extends AddedByStatusModel>
 }
 
 /// @nodoc
-abstract class _$$AddedByStatusModelImplCopyWith<$Res>
-    implements $AddedByStatusModelCopyWith<$Res> {
-  factory _$$AddedByStatusModelImplCopyWith(_$AddedByStatusModelImpl value,
-          $Res Function(_$AddedByStatusModelImpl) then) =
-      __$$AddedByStatusModelImplCopyWithImpl<$Res>;
+abstract class _$$AddedByStatusImplCopyWith<$Res>
+    implements $AddedByStatusCopyWith<$Res> {
+  factory _$$AddedByStatusImplCopyWith(
+          _$AddedByStatusImpl value, $Res Function(_$AddedByStatusImpl) then) =
+      __$$AddedByStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1910,14 +1899,14 @@ abstract class _$$AddedByStatusModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$AddedByStatusModelImplCopyWithImpl<$Res>
-    extends _$AddedByStatusModelCopyWithImpl<$Res, _$AddedByStatusModelImpl>
-    implements _$$AddedByStatusModelImplCopyWith<$Res> {
-  __$$AddedByStatusModelImplCopyWithImpl(_$AddedByStatusModelImpl _value,
-      $Res Function(_$AddedByStatusModelImpl) _then)
+class __$$AddedByStatusImplCopyWithImpl<$Res>
+    extends _$AddedByStatusCopyWithImpl<$Res, _$AddedByStatusImpl>
+    implements _$$AddedByStatusImplCopyWith<$Res> {
+  __$$AddedByStatusImplCopyWithImpl(
+      _$AddedByStatusImpl _value, $Res Function(_$AddedByStatusImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddedByStatusModel
+  /// Create a copy of AddedByStatus
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -1929,7 +1918,7 @@ class __$$AddedByStatusModelImplCopyWithImpl<$Res>
     Object? dropped = null,
     Object? playing = null,
   }) {
-    return _then(_$AddedByStatusModelImpl(
+    return _then(_$AddedByStatusImpl(
       yet: null == yet
           ? _value.yet
           : yet // ignore: cast_nullable_to_non_nullable
@@ -1960,8 +1949,8 @@ class __$$AddedByStatusModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddedByStatusModelImpl implements _AddedByStatusModel {
-  const _$AddedByStatusModelImpl(
+class _$AddedByStatusImpl implements _AddedByStatus {
+  const _$AddedByStatusImpl(
       {required this.yet,
       required this.owned,
       required this.beaten,
@@ -1984,14 +1973,14 @@ class _$AddedByStatusModelImpl implements _AddedByStatusModel {
 
   @override
   String toString() {
-    return 'AddedByStatusModel(yet: $yet, owned: $owned, beaten: $beaten, toPlay: $toPlay, dropped: $dropped, playing: $playing)';
+    return 'AddedByStatus(yet: $yet, owned: $owned, beaten: $beaten, toPlay: $toPlay, dropped: $dropped, playing: $playing)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddedByStatusModelImpl &&
+            other is _$AddedByStatusImpl &&
             (identical(other.yet, yet) || other.yet == yet) &&
             (identical(other.owned, owned) || other.owned == owned) &&
             (identical(other.beaten, beaten) || other.beaten == beaten) &&
@@ -2004,24 +1993,23 @@ class _$AddedByStatusModelImpl implements _AddedByStatusModel {
   int get hashCode =>
       Object.hash(runtimeType, yet, owned, beaten, toPlay, dropped, playing);
 
-  /// Create a copy of AddedByStatusModel
+  /// Create a copy of AddedByStatus
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddedByStatusModelImplCopyWith<_$AddedByStatusModelImpl> get copyWith =>
-      __$$AddedByStatusModelImplCopyWithImpl<_$AddedByStatusModelImpl>(
-          this, _$identity);
+  _$$AddedByStatusImplCopyWith<_$AddedByStatusImpl> get copyWith =>
+      __$$AddedByStatusImplCopyWithImpl<_$AddedByStatusImpl>(this, _$identity);
 }
 
-abstract class _AddedByStatusModel implements AddedByStatusModel {
-  const factory _AddedByStatusModel(
+abstract class _AddedByStatus implements AddedByStatus {
+  const factory _AddedByStatus(
       {required final int yet,
       required final int owned,
       required final int beaten,
       required final int toPlay,
       required final int dropped,
-      required final int playing}) = _$AddedByStatusModelImpl;
+      required final int playing}) = _$AddedByStatusImpl;
 
   @override
   int get yet;
@@ -2036,47 +2024,47 @@ abstract class _AddedByStatusModel implements AddedByStatusModel {
   @override
   int get playing;
 
-  /// Create a copy of AddedByStatusModel
+  /// Create a copy of AddedByStatus
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddedByStatusModelImplCopyWith<_$AddedByStatusModelImpl> get copyWith =>
+  _$$AddedByStatusImplCopyWith<_$AddedByStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$EsrbRatingModel {
+mixin _$EsrbRating {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get slug => throw _privateConstructorUsedError;
 
-  /// Create a copy of EsrbRatingModel
+  /// Create a copy of EsrbRating
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EsrbRatingModelCopyWith<EsrbRatingModel> get copyWith =>
+  $EsrbRatingCopyWith<EsrbRating> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EsrbRatingModelCopyWith<$Res> {
-  factory $EsrbRatingModelCopyWith(
-          EsrbRatingModel value, $Res Function(EsrbRatingModel) then) =
-      _$EsrbRatingModelCopyWithImpl<$Res, EsrbRatingModel>;
+abstract class $EsrbRatingCopyWith<$Res> {
+  factory $EsrbRatingCopyWith(
+          EsrbRating value, $Res Function(EsrbRating) then) =
+      _$EsrbRatingCopyWithImpl<$Res, EsrbRating>;
   @useResult
   $Res call({int id, String name, String slug});
 }
 
 /// @nodoc
-class _$EsrbRatingModelCopyWithImpl<$Res, $Val extends EsrbRatingModel>
-    implements $EsrbRatingModelCopyWith<$Res> {
-  _$EsrbRatingModelCopyWithImpl(this._value, this._then);
+class _$EsrbRatingCopyWithImpl<$Res, $Val extends EsrbRating>
+    implements $EsrbRatingCopyWith<$Res> {
+  _$EsrbRatingCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of EsrbRatingModel
+  /// Create a copy of EsrbRating
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2103,25 +2091,25 @@ class _$EsrbRatingModelCopyWithImpl<$Res, $Val extends EsrbRatingModel>
 }
 
 /// @nodoc
-abstract class _$$EsrbRatingModelImplCopyWith<$Res>
-    implements $EsrbRatingModelCopyWith<$Res> {
-  factory _$$EsrbRatingModelImplCopyWith(_$EsrbRatingModelImpl value,
-          $Res Function(_$EsrbRatingModelImpl) then) =
-      __$$EsrbRatingModelImplCopyWithImpl<$Res>;
+abstract class _$$EsrbRatingImplCopyWith<$Res>
+    implements $EsrbRatingCopyWith<$Res> {
+  factory _$$EsrbRatingImplCopyWith(
+          _$EsrbRatingImpl value, $Res Function(_$EsrbRatingImpl) then) =
+      __$$EsrbRatingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String name, String slug});
 }
 
 /// @nodoc
-class __$$EsrbRatingModelImplCopyWithImpl<$Res>
-    extends _$EsrbRatingModelCopyWithImpl<$Res, _$EsrbRatingModelImpl>
-    implements _$$EsrbRatingModelImplCopyWith<$Res> {
-  __$$EsrbRatingModelImplCopyWithImpl(
-      _$EsrbRatingModelImpl _value, $Res Function(_$EsrbRatingModelImpl) _then)
+class __$$EsrbRatingImplCopyWithImpl<$Res>
+    extends _$EsrbRatingCopyWithImpl<$Res, _$EsrbRatingImpl>
+    implements _$$EsrbRatingImplCopyWith<$Res> {
+  __$$EsrbRatingImplCopyWithImpl(
+      _$EsrbRatingImpl _value, $Res Function(_$EsrbRatingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EsrbRatingModel
+  /// Create a copy of EsrbRating
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2130,7 +2118,7 @@ class __$$EsrbRatingModelImplCopyWithImpl<$Res>
     Object? name = null,
     Object? slug = null,
   }) {
-    return _then(_$EsrbRatingModelImpl(
+    return _then(_$EsrbRatingImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2149,8 +2137,8 @@ class __$$EsrbRatingModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EsrbRatingModelImpl implements _EsrbRatingModel {
-  const _$EsrbRatingModelImpl(
+class _$EsrbRatingImpl implements _EsrbRating {
+  const _$EsrbRatingImpl(
       {required this.id, required this.name, required this.slug});
 
   @override
@@ -2162,14 +2150,14 @@ class _$EsrbRatingModelImpl implements _EsrbRatingModel {
 
   @override
   String toString() {
-    return 'EsrbRatingModel(id: $id, name: $name, slug: $slug)';
+    return 'EsrbRating(id: $id, name: $name, slug: $slug)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EsrbRatingModelImpl &&
+            other is _$EsrbRatingImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.slug, slug) || other.slug == slug));
@@ -2178,21 +2166,20 @@ class _$EsrbRatingModelImpl implements _EsrbRatingModel {
   @override
   int get hashCode => Object.hash(runtimeType, id, name, slug);
 
-  /// Create a copy of EsrbRatingModel
+  /// Create a copy of EsrbRating
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$EsrbRatingModelImplCopyWith<_$EsrbRatingModelImpl> get copyWith =>
-      __$$EsrbRatingModelImplCopyWithImpl<_$EsrbRatingModelImpl>(
-          this, _$identity);
+  _$$EsrbRatingImplCopyWith<_$EsrbRatingImpl> get copyWith =>
+      __$$EsrbRatingImplCopyWithImpl<_$EsrbRatingImpl>(this, _$identity);
 }
 
-abstract class _EsrbRatingModel implements EsrbRatingModel {
-  const factory _EsrbRatingModel(
+abstract class _EsrbRating implements EsrbRating {
+  const factory _EsrbRating(
       {required final int id,
       required final String name,
-      required final String slug}) = _$EsrbRatingModelImpl;
+      required final String slug}) = _$EsrbRatingImpl;
 
   @override
   int get id;
@@ -2201,36 +2188,34 @@ abstract class _EsrbRatingModel implements EsrbRatingModel {
   @override
   String get slug;
 
-  /// Create a copy of EsrbRatingModel
+  /// Create a copy of EsrbRating
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EsrbRatingModelImplCopyWith<_$EsrbRatingModelImpl> get copyWith =>
+  _$$EsrbRatingImplCopyWith<_$EsrbRatingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$GenreModel {
+mixin _$Genres {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get slug => throw _privateConstructorUsedError;
   int get gamesCount => throw _privateConstructorUsedError;
   String get imageBackground => throw _privateConstructorUsedError;
-  DomainModel get domain => throw _privateConstructorUsedError;
-  LanguageModel get language => throw _privateConstructorUsedError;
+  Domain get domain => throw _privateConstructorUsedError;
+  Language get language => throw _privateConstructorUsedError;
 
-  /// Create a copy of GenreModel
+  /// Create a copy of Genres
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GenreModelCopyWith<GenreModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GenresCopyWith<Genres> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenreModelCopyWith<$Res> {
-  factory $GenreModelCopyWith(
-          GenreModel value, $Res Function(GenreModel) then) =
-      _$GenreModelCopyWithImpl<$Res, GenreModel>;
+abstract class $GenresCopyWith<$Res> {
+  factory $GenresCopyWith(Genres value, $Res Function(Genres) then) =
+      _$GenresCopyWithImpl<$Res, Genres>;
   @useResult
   $Res call(
       {int id,
@@ -2238,21 +2223,21 @@ abstract class $GenreModelCopyWith<$Res> {
       String slug,
       int gamesCount,
       String imageBackground,
-      DomainModel domain,
-      LanguageModel language});
+      Domain domain,
+      Language language});
 }
 
 /// @nodoc
-class _$GenreModelCopyWithImpl<$Res, $Val extends GenreModel>
-    implements $GenreModelCopyWith<$Res> {
-  _$GenreModelCopyWithImpl(this._value, this._then);
+class _$GenresCopyWithImpl<$Res, $Val extends Genres>
+    implements $GenresCopyWith<$Res> {
+  _$GenresCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenreModel
+  /// Create a copy of Genres
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2289,21 +2274,20 @@ class _$GenreModelCopyWithImpl<$Res, $Val extends GenreModel>
       domain: null == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as DomainModel,
+              as Domain,
       language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as LanguageModel,
+              as Language,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$GenreModelImplCopyWith<$Res>
-    implements $GenreModelCopyWith<$Res> {
-  factory _$$GenreModelImplCopyWith(
-          _$GenreModelImpl value, $Res Function(_$GenreModelImpl) then) =
-      __$$GenreModelImplCopyWithImpl<$Res>;
+abstract class _$$GenresImplCopyWith<$Res> implements $GenresCopyWith<$Res> {
+  factory _$$GenresImplCopyWith(
+          _$GenresImpl value, $Res Function(_$GenresImpl) then) =
+      __$$GenresImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2312,19 +2296,19 @@ abstract class _$$GenreModelImplCopyWith<$Res>
       String slug,
       int gamesCount,
       String imageBackground,
-      DomainModel domain,
-      LanguageModel language});
+      Domain domain,
+      Language language});
 }
 
 /// @nodoc
-class __$$GenreModelImplCopyWithImpl<$Res>
-    extends _$GenreModelCopyWithImpl<$Res, _$GenreModelImpl>
-    implements _$$GenreModelImplCopyWith<$Res> {
-  __$$GenreModelImplCopyWithImpl(
-      _$GenreModelImpl _value, $Res Function(_$GenreModelImpl) _then)
+class __$$GenresImplCopyWithImpl<$Res>
+    extends _$GenresCopyWithImpl<$Res, _$GenresImpl>
+    implements _$$GenresImplCopyWith<$Res> {
+  __$$GenresImplCopyWithImpl(
+      _$GenresImpl _value, $Res Function(_$GenresImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenreModel
+  /// Create a copy of Genres
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2337,7 +2321,7 @@ class __$$GenreModelImplCopyWithImpl<$Res>
     Object? domain = null,
     Object? language = null,
   }) {
-    return _then(_$GenreModelImpl(
+    return _then(_$GenresImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2361,19 +2345,19 @@ class __$$GenreModelImplCopyWithImpl<$Res>
       domain: null == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as DomainModel,
+              as Domain,
       language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as LanguageModel,
+              as Language,
     ));
   }
 }
 
 /// @nodoc
 
-class _$GenreModelImpl implements _GenreModel {
-  const _$GenreModelImpl(
+class _$GenresImpl implements _Genres {
+  const _$GenresImpl(
       {required this.id,
       required this.name,
       required this.slug,
@@ -2393,20 +2377,20 @@ class _$GenreModelImpl implements _GenreModel {
   @override
   final String imageBackground;
   @override
-  final DomainModel domain;
+  final Domain domain;
   @override
-  final LanguageModel language;
+  final Language language;
 
   @override
   String toString() {
-    return 'GenreModel(id: $id, name: $name, slug: $slug, gamesCount: $gamesCount, imageBackground: $imageBackground, domain: $domain, language: $language)';
+    return 'Genres(id: $id, name: $name, slug: $slug, gamesCount: $gamesCount, imageBackground: $imageBackground, domain: $domain, language: $language)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GenreModelImpl &&
+            other is _$GenresImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.slug, slug) || other.slug == slug) &&
@@ -2423,24 +2407,24 @@ class _$GenreModelImpl implements _GenreModel {
   int get hashCode => Object.hash(runtimeType, id, name, slug, gamesCount,
       imageBackground, domain, language);
 
-  /// Create a copy of GenreModel
+  /// Create a copy of Genres
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenreModelImplCopyWith<_$GenreModelImpl> get copyWith =>
-      __$$GenreModelImplCopyWithImpl<_$GenreModelImpl>(this, _$identity);
+  _$$GenresImplCopyWith<_$GenresImpl> get copyWith =>
+      __$$GenresImplCopyWithImpl<_$GenresImpl>(this, _$identity);
 }
 
-abstract class _GenreModel implements GenreModel {
-  const factory _GenreModel(
+abstract class _Genres implements Genres {
+  const factory _Genres(
       {required final int id,
       required final String name,
       required final String slug,
       required final int gamesCount,
       required final String imageBackground,
-      required final DomainModel domain,
-      required final LanguageModel language}) = _$GenreModelImpl;
+      required final Domain domain,
+      required final Language language}) = _$GenresImpl;
 
   @override
   int get id;
@@ -2453,51 +2437,51 @@ abstract class _GenreModel implements GenreModel {
   @override
   String get imageBackground;
   @override
-  DomainModel get domain;
+  Domain get domain;
   @override
-  LanguageModel get language;
+  Language get language;
 
-  /// Create a copy of GenreModel
+  /// Create a copy of Genres
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GenreModelImplCopyWith<_$GenreModelImpl> get copyWith =>
+  _$$GenresImplCopyWith<_$GenresImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$ParentPlatformModel {
-  EsrbRatingModel get platform => throw _privateConstructorUsedError;
+mixin _$ParentPlatform {
+  EsrbRating get platform => throw _privateConstructorUsedError;
 
-  /// Create a copy of ParentPlatformModel
+  /// Create a copy of ParentPlatform
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ParentPlatformModelCopyWith<ParentPlatformModel> get copyWith =>
+  $ParentPlatformCopyWith<ParentPlatform> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParentPlatformModelCopyWith<$Res> {
-  factory $ParentPlatformModelCopyWith(
-          ParentPlatformModel value, $Res Function(ParentPlatformModel) then) =
-      _$ParentPlatformModelCopyWithImpl<$Res, ParentPlatformModel>;
+abstract class $ParentPlatformCopyWith<$Res> {
+  factory $ParentPlatformCopyWith(
+          ParentPlatform value, $Res Function(ParentPlatform) then) =
+      _$ParentPlatformCopyWithImpl<$Res, ParentPlatform>;
   @useResult
-  $Res call({EsrbRatingModel platform});
+  $Res call({EsrbRating platform});
 
-  $EsrbRatingModelCopyWith<$Res> get platform;
+  $EsrbRatingCopyWith<$Res> get platform;
 }
 
 /// @nodoc
-class _$ParentPlatformModelCopyWithImpl<$Res, $Val extends ParentPlatformModel>
-    implements $ParentPlatformModelCopyWith<$Res> {
-  _$ParentPlatformModelCopyWithImpl(this._value, this._then);
+class _$ParentPlatformCopyWithImpl<$Res, $Val extends ParentPlatform>
+    implements $ParentPlatformCopyWith<$Res> {
+  _$ParentPlatformCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParentPlatformModel
+  /// Create a copy of ParentPlatform
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2508,77 +2492,77 @@ class _$ParentPlatformModelCopyWithImpl<$Res, $Val extends ParentPlatformModel>
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
-              as EsrbRatingModel,
+              as EsrbRating,
     ) as $Val);
   }
 
-  /// Create a copy of ParentPlatformModel
+  /// Create a copy of ParentPlatform
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $EsrbRatingModelCopyWith<$Res> get platform {
-    return $EsrbRatingModelCopyWith<$Res>(_value.platform, (value) {
+  $EsrbRatingCopyWith<$Res> get platform {
+    return $EsrbRatingCopyWith<$Res>(_value.platform, (value) {
       return _then(_value.copyWith(platform: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$ParentPlatformModelImplCopyWith<$Res>
-    implements $ParentPlatformModelCopyWith<$Res> {
-  factory _$$ParentPlatformModelImplCopyWith(_$ParentPlatformModelImpl value,
-          $Res Function(_$ParentPlatformModelImpl) then) =
-      __$$ParentPlatformModelImplCopyWithImpl<$Res>;
+abstract class _$$ParentPlatformImplCopyWith<$Res>
+    implements $ParentPlatformCopyWith<$Res> {
+  factory _$$ParentPlatformImplCopyWith(_$ParentPlatformImpl value,
+          $Res Function(_$ParentPlatformImpl) then) =
+      __$$ParentPlatformImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({EsrbRatingModel platform});
+  $Res call({EsrbRating platform});
 
   @override
-  $EsrbRatingModelCopyWith<$Res> get platform;
+  $EsrbRatingCopyWith<$Res> get platform;
 }
 
 /// @nodoc
-class __$$ParentPlatformModelImplCopyWithImpl<$Res>
-    extends _$ParentPlatformModelCopyWithImpl<$Res, _$ParentPlatformModelImpl>
-    implements _$$ParentPlatformModelImplCopyWith<$Res> {
-  __$$ParentPlatformModelImplCopyWithImpl(_$ParentPlatformModelImpl _value,
-      $Res Function(_$ParentPlatformModelImpl) _then)
+class __$$ParentPlatformImplCopyWithImpl<$Res>
+    extends _$ParentPlatformCopyWithImpl<$Res, _$ParentPlatformImpl>
+    implements _$$ParentPlatformImplCopyWith<$Res> {
+  __$$ParentPlatformImplCopyWithImpl(
+      _$ParentPlatformImpl _value, $Res Function(_$ParentPlatformImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParentPlatformModel
+  /// Create a copy of ParentPlatform
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? platform = null,
   }) {
-    return _then(_$ParentPlatformModelImpl(
+    return _then(_$ParentPlatformImpl(
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
-              as EsrbRatingModel,
+              as EsrbRating,
     ));
   }
 }
 
 /// @nodoc
 
-class _$ParentPlatformModelImpl implements _ParentPlatformModel {
-  const _$ParentPlatformModelImpl({required this.platform});
+class _$ParentPlatformImpl implements _ParentPlatform {
+  const _$ParentPlatformImpl({required this.platform});
 
   @override
-  final EsrbRatingModel platform;
+  final EsrbRating platform;
 
   @override
   String toString() {
-    return 'ParentPlatformModel(platform: $platform)';
+    return 'ParentPlatform(platform: $platform)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ParentPlatformModelImpl &&
+            other is _$ParentPlatformImpl &&
             (identical(other.platform, platform) ||
                 other.platform == platform));
   }
@@ -2586,74 +2570,73 @@ class _$ParentPlatformModelImpl implements _ParentPlatformModel {
   @override
   int get hashCode => Object.hash(runtimeType, platform);
 
-  /// Create a copy of ParentPlatformModel
+  /// Create a copy of ParentPlatform
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ParentPlatformModelImplCopyWith<_$ParentPlatformModelImpl> get copyWith =>
-      __$$ParentPlatformModelImplCopyWithImpl<_$ParentPlatformModelImpl>(
+  _$$ParentPlatformImplCopyWith<_$ParentPlatformImpl> get copyWith =>
+      __$$ParentPlatformImplCopyWithImpl<_$ParentPlatformImpl>(
           this, _$identity);
 }
 
-abstract class _ParentPlatformModel implements ParentPlatformModel {
-  const factory _ParentPlatformModel(
-      {required final EsrbRatingModel platform}) = _$ParentPlatformModelImpl;
+abstract class _ParentPlatform implements ParentPlatform {
+  const factory _ParentPlatform({required final EsrbRating platform}) =
+      _$ParentPlatformImpl;
 
   @override
-  EsrbRatingModel get platform;
+  EsrbRating get platform;
 
-  /// Create a copy of ParentPlatformModel
+  /// Create a copy of ParentPlatform
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ParentPlatformModelImplCopyWith<_$ParentPlatformModelImpl> get copyWith =>
+  _$$ParentPlatformImplCopyWith<_$ParentPlatformImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$PlatformElementModel {
-  PlatformPlatformModel get platform => throw _privateConstructorUsedError;
+mixin _$PlatformElement {
+  PlatformPlatform get platform => throw _privateConstructorUsedError;
   DateTime get releasedAt => throw _privateConstructorUsedError;
-  RequirementsModel get requirementsEn => throw _privateConstructorUsedError;
-  RequirementsModel get requirementsRu => throw _privateConstructorUsedError;
+  Requirements get requirementsEn => throw _privateConstructorUsedError;
+  Requirements get requirementsRu => throw _privateConstructorUsedError;
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlatformElementModelCopyWith<PlatformElementModel> get copyWith =>
+  $PlatformElementCopyWith<PlatformElement> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PlatformElementModelCopyWith<$Res> {
-  factory $PlatformElementModelCopyWith(PlatformElementModel value,
-          $Res Function(PlatformElementModel) then) =
-      _$PlatformElementModelCopyWithImpl<$Res, PlatformElementModel>;
+abstract class $PlatformElementCopyWith<$Res> {
+  factory $PlatformElementCopyWith(
+          PlatformElement value, $Res Function(PlatformElement) then) =
+      _$PlatformElementCopyWithImpl<$Res, PlatformElement>;
   @useResult
   $Res call(
-      {PlatformPlatformModel platform,
+      {PlatformPlatform platform,
       DateTime releasedAt,
-      RequirementsModel requirementsEn,
-      RequirementsModel requirementsRu});
+      Requirements requirementsEn,
+      Requirements requirementsRu});
 
-  $PlatformPlatformModelCopyWith<$Res> get platform;
-  $RequirementsModelCopyWith<$Res> get requirementsEn;
-  $RequirementsModelCopyWith<$Res> get requirementsRu;
+  $PlatformPlatformCopyWith<$Res> get platform;
+  $RequirementsCopyWith<$Res> get requirementsEn;
+  $RequirementsCopyWith<$Res> get requirementsRu;
 }
 
 /// @nodoc
-class _$PlatformElementModelCopyWithImpl<$Res,
-        $Val extends PlatformElementModel>
-    implements $PlatformElementModelCopyWith<$Res> {
-  _$PlatformElementModelCopyWithImpl(this._value, this._then);
+class _$PlatformElementCopyWithImpl<$Res, $Val extends PlatformElement>
+    implements $PlatformElementCopyWith<$Res> {
+  _$PlatformElementCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2667,7 +2650,7 @@ class _$PlatformElementModelCopyWithImpl<$Res,
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
-              as PlatformPlatformModel,
+              as PlatformPlatform,
       releasedAt: null == releasedAt
           ? _value.releasedAt
           : releasedAt // ignore: cast_nullable_to_non_nullable
@@ -2675,76 +2658,76 @@ class _$PlatformElementModelCopyWithImpl<$Res,
       requirementsEn: null == requirementsEn
           ? _value.requirementsEn
           : requirementsEn // ignore: cast_nullable_to_non_nullable
-              as RequirementsModel,
+              as Requirements,
       requirementsRu: null == requirementsRu
           ? _value.requirementsRu
           : requirementsRu // ignore: cast_nullable_to_non_nullable
-              as RequirementsModel,
+              as Requirements,
     ) as $Val);
   }
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PlatformPlatformModelCopyWith<$Res> get platform {
-    return $PlatformPlatformModelCopyWith<$Res>(_value.platform, (value) {
+  $PlatformPlatformCopyWith<$Res> get platform {
+    return $PlatformPlatformCopyWith<$Res>(_value.platform, (value) {
       return _then(_value.copyWith(platform: value) as $Val);
     });
   }
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $RequirementsModelCopyWith<$Res> get requirementsEn {
-    return $RequirementsModelCopyWith<$Res>(_value.requirementsEn, (value) {
+  $RequirementsCopyWith<$Res> get requirementsEn {
+    return $RequirementsCopyWith<$Res>(_value.requirementsEn, (value) {
       return _then(_value.copyWith(requirementsEn: value) as $Val);
     });
   }
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $RequirementsModelCopyWith<$Res> get requirementsRu {
-    return $RequirementsModelCopyWith<$Res>(_value.requirementsRu, (value) {
+  $RequirementsCopyWith<$Res> get requirementsRu {
+    return $RequirementsCopyWith<$Res>(_value.requirementsRu, (value) {
       return _then(_value.copyWith(requirementsRu: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$PlatformElementModelImplCopyWith<$Res>
-    implements $PlatformElementModelCopyWith<$Res> {
-  factory _$$PlatformElementModelImplCopyWith(_$PlatformElementModelImpl value,
-          $Res Function(_$PlatformElementModelImpl) then) =
-      __$$PlatformElementModelImplCopyWithImpl<$Res>;
+abstract class _$$PlatformElementImplCopyWith<$Res>
+    implements $PlatformElementCopyWith<$Res> {
+  factory _$$PlatformElementImplCopyWith(_$PlatformElementImpl value,
+          $Res Function(_$PlatformElementImpl) then) =
+      __$$PlatformElementImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {PlatformPlatformModel platform,
+      {PlatformPlatform platform,
       DateTime releasedAt,
-      RequirementsModel requirementsEn,
-      RequirementsModel requirementsRu});
+      Requirements requirementsEn,
+      Requirements requirementsRu});
 
   @override
-  $PlatformPlatformModelCopyWith<$Res> get platform;
+  $PlatformPlatformCopyWith<$Res> get platform;
   @override
-  $RequirementsModelCopyWith<$Res> get requirementsEn;
+  $RequirementsCopyWith<$Res> get requirementsEn;
   @override
-  $RequirementsModelCopyWith<$Res> get requirementsRu;
+  $RequirementsCopyWith<$Res> get requirementsRu;
 }
 
 /// @nodoc
-class __$$PlatformElementModelImplCopyWithImpl<$Res>
-    extends _$PlatformElementModelCopyWithImpl<$Res, _$PlatformElementModelImpl>
-    implements _$$PlatformElementModelImplCopyWith<$Res> {
-  __$$PlatformElementModelImplCopyWithImpl(_$PlatformElementModelImpl _value,
-      $Res Function(_$PlatformElementModelImpl) _then)
+class __$$PlatformElementImplCopyWithImpl<$Res>
+    extends _$PlatformElementCopyWithImpl<$Res, _$PlatformElementImpl>
+    implements _$$PlatformElementImplCopyWith<$Res> {
+  __$$PlatformElementImplCopyWithImpl(
+      _$PlatformElementImpl _value, $Res Function(_$PlatformElementImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2754,11 +2737,11 @@ class __$$PlatformElementModelImplCopyWithImpl<$Res>
     Object? requirementsEn = null,
     Object? requirementsRu = null,
   }) {
-    return _then(_$PlatformElementModelImpl(
+    return _then(_$PlatformElementImpl(
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
-              as PlatformPlatformModel,
+              as PlatformPlatform,
       releasedAt: null == releasedAt
           ? _value.releasedAt
           : releasedAt // ignore: cast_nullable_to_non_nullable
@@ -2766,43 +2749,43 @@ class __$$PlatformElementModelImplCopyWithImpl<$Res>
       requirementsEn: null == requirementsEn
           ? _value.requirementsEn
           : requirementsEn // ignore: cast_nullable_to_non_nullable
-              as RequirementsModel,
+              as Requirements,
       requirementsRu: null == requirementsRu
           ? _value.requirementsRu
           : requirementsRu // ignore: cast_nullable_to_non_nullable
-              as RequirementsModel,
+              as Requirements,
     ));
   }
 }
 
 /// @nodoc
 
-class _$PlatformElementModelImpl implements _PlatformElementModel {
-  const _$PlatformElementModelImpl(
+class _$PlatformElementImpl implements _PlatformElement {
+  const _$PlatformElementImpl(
       {required this.platform,
       required this.releasedAt,
       required this.requirementsEn,
       required this.requirementsRu});
 
   @override
-  final PlatformPlatformModel platform;
+  final PlatformPlatform platform;
   @override
   final DateTime releasedAt;
   @override
-  final RequirementsModel requirementsEn;
+  final Requirements requirementsEn;
   @override
-  final RequirementsModel requirementsRu;
+  final Requirements requirementsRu;
 
   @override
   String toString() {
-    return 'PlatformElementModel(platform: $platform, releasedAt: $releasedAt, requirementsEn: $requirementsEn, requirementsRu: $requirementsRu)';
+    return 'PlatformElement(platform: $platform, releasedAt: $releasedAt, requirementsEn: $requirementsEn, requirementsRu: $requirementsRu)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PlatformElementModelImpl &&
+            other is _$PlatformElementImpl &&
             (identical(other.platform, platform) ||
                 other.platform == platform) &&
             (identical(other.releasedAt, releasedAt) ||
@@ -2817,44 +2800,42 @@ class _$PlatformElementModelImpl implements _PlatformElementModel {
   int get hashCode => Object.hash(
       runtimeType, platform, releasedAt, requirementsEn, requirementsRu);
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlatformElementModelImplCopyWith<_$PlatformElementModelImpl>
-      get copyWith =>
-          __$$PlatformElementModelImplCopyWithImpl<_$PlatformElementModelImpl>(
-              this, _$identity);
+  _$$PlatformElementImplCopyWith<_$PlatformElementImpl> get copyWith =>
+      __$$PlatformElementImplCopyWithImpl<_$PlatformElementImpl>(
+          this, _$identity);
 }
 
-abstract class _PlatformElementModel implements PlatformElementModel {
-  const factory _PlatformElementModel(
-          {required final PlatformPlatformModel platform,
-          required final DateTime releasedAt,
-          required final RequirementsModel requirementsEn,
-          required final RequirementsModel requirementsRu}) =
-      _$PlatformElementModelImpl;
+abstract class _PlatformElement implements PlatformElement {
+  const factory _PlatformElement(
+      {required final PlatformPlatform platform,
+      required final DateTime releasedAt,
+      required final Requirements requirementsEn,
+      required final Requirements requirementsRu}) = _$PlatformElementImpl;
 
   @override
-  PlatformPlatformModel get platform;
+  PlatformPlatform get platform;
   @override
   DateTime get releasedAt;
   @override
-  RequirementsModel get requirementsEn;
+  Requirements get requirementsEn;
   @override
-  RequirementsModel get requirementsRu;
+  Requirements get requirementsRu;
 
-  /// Create a copy of PlatformElementModel
+  /// Create a copy of PlatformElement
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlatformElementModelImplCopyWith<_$PlatformElementModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$PlatformElementImplCopyWith<_$PlatformElementImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$PlatformPlatformModel {
+mixin _$PlatformPlatform {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get slug => throw _privateConstructorUsedError;
@@ -2864,18 +2845,18 @@ mixin _$PlatformPlatformModel {
   int get gamesCount => throw _privateConstructorUsedError;
   String get imageBackground => throw _privateConstructorUsedError;
 
-  /// Create a copy of PlatformPlatformModel
+  /// Create a copy of PlatformPlatform
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlatformPlatformModelCopyWith<PlatformPlatformModel> get copyWith =>
+  $PlatformPlatformCopyWith<PlatformPlatform> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PlatformPlatformModelCopyWith<$Res> {
-  factory $PlatformPlatformModelCopyWith(PlatformPlatformModel value,
-          $Res Function(PlatformPlatformModel) then) =
-      _$PlatformPlatformModelCopyWithImpl<$Res, PlatformPlatformModel>;
+abstract class $PlatformPlatformCopyWith<$Res> {
+  factory $PlatformPlatformCopyWith(
+          PlatformPlatform value, $Res Function(PlatformPlatform) then) =
+      _$PlatformPlatformCopyWithImpl<$Res, PlatformPlatform>;
   @useResult
   $Res call(
       {int id,
@@ -2889,17 +2870,16 @@ abstract class $PlatformPlatformModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlatformPlatformModelCopyWithImpl<$Res,
-        $Val extends PlatformPlatformModel>
-    implements $PlatformPlatformModelCopyWith<$Res> {
-  _$PlatformPlatformModelCopyWithImpl(this._value, this._then);
+class _$PlatformPlatformCopyWithImpl<$Res, $Val extends PlatformPlatform>
+    implements $PlatformPlatformCopyWith<$Res> {
+  _$PlatformPlatformCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PlatformPlatformModel
+  /// Create a copy of PlatformPlatform
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2951,12 +2931,11 @@ class _$PlatformPlatformModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$PlatformPlatformModelImplCopyWith<$Res>
-    implements $PlatformPlatformModelCopyWith<$Res> {
-  factory _$$PlatformPlatformModelImplCopyWith(
-          _$PlatformPlatformModelImpl value,
-          $Res Function(_$PlatformPlatformModelImpl) then) =
-      __$$PlatformPlatformModelImplCopyWithImpl<$Res>;
+abstract class _$$PlatformPlatformImplCopyWith<$Res>
+    implements $PlatformPlatformCopyWith<$Res> {
+  factory _$$PlatformPlatformImplCopyWith(_$PlatformPlatformImpl value,
+          $Res Function(_$PlatformPlatformImpl) then) =
+      __$$PlatformPlatformImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2971,15 +2950,14 @@ abstract class _$$PlatformPlatformModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PlatformPlatformModelImplCopyWithImpl<$Res>
-    extends _$PlatformPlatformModelCopyWithImpl<$Res,
-        _$PlatformPlatformModelImpl>
-    implements _$$PlatformPlatformModelImplCopyWith<$Res> {
-  __$$PlatformPlatformModelImplCopyWithImpl(_$PlatformPlatformModelImpl _value,
-      $Res Function(_$PlatformPlatformModelImpl) _then)
+class __$$PlatformPlatformImplCopyWithImpl<$Res>
+    extends _$PlatformPlatformCopyWithImpl<$Res, _$PlatformPlatformImpl>
+    implements _$$PlatformPlatformImplCopyWith<$Res> {
+  __$$PlatformPlatformImplCopyWithImpl(_$PlatformPlatformImpl _value,
+      $Res Function(_$PlatformPlatformImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlatformPlatformModel
+  /// Create a copy of PlatformPlatform
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -2993,7 +2971,7 @@ class __$$PlatformPlatformModelImplCopyWithImpl<$Res>
     Object? gamesCount = null,
     Object? imageBackground = null,
   }) {
-    return _then(_$PlatformPlatformModelImpl(
+    return _then(_$PlatformPlatformImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3032,8 +3010,8 @@ class __$$PlatformPlatformModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PlatformPlatformModelImpl implements _PlatformPlatformModel {
-  const _$PlatformPlatformModelImpl(
+class _$PlatformPlatformImpl implements _PlatformPlatform {
+  const _$PlatformPlatformImpl(
       {required this.id,
       required this.name,
       required this.slug,
@@ -3062,14 +3040,14 @@ class _$PlatformPlatformModelImpl implements _PlatformPlatformModel {
 
   @override
   String toString() {
-    return 'PlatformPlatformModel(id: $id, name: $name, slug: $slug, image: $image, yearEnd: $yearEnd, yearStart: $yearStart, gamesCount: $gamesCount, imageBackground: $imageBackground)';
+    return 'PlatformPlatform(id: $id, name: $name, slug: $slug, image: $image, yearEnd: $yearEnd, yearStart: $yearStart, gamesCount: $gamesCount, imageBackground: $imageBackground)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PlatformPlatformModelImpl &&
+            other is _$PlatformPlatformImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.slug, slug) || other.slug == slug) &&
@@ -3095,18 +3073,18 @@ class _$PlatformPlatformModelImpl implements _PlatformPlatformModel {
       gamesCount,
       imageBackground);
 
-  /// Create a copy of PlatformPlatformModel
+  /// Create a copy of PlatformPlatform
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlatformPlatformModelImplCopyWith<_$PlatformPlatformModelImpl>
-      get copyWith => __$$PlatformPlatformModelImplCopyWithImpl<
-          _$PlatformPlatformModelImpl>(this, _$identity);
+  _$$PlatformPlatformImplCopyWith<_$PlatformPlatformImpl> get copyWith =>
+      __$$PlatformPlatformImplCopyWithImpl<_$PlatformPlatformImpl>(
+          this, _$identity);
 }
 
-abstract class _PlatformPlatformModel implements PlatformPlatformModel {
-  const factory _PlatformPlatformModel(
+abstract class _PlatformPlatform implements PlatformPlatform {
+  const factory _PlatformPlatform(
       {required final int id,
       required final String name,
       required final String slug,
@@ -3114,7 +3092,7 @@ abstract class _PlatformPlatformModel implements PlatformPlatformModel {
       required final dynamic yearEnd,
       required final int yearStart,
       required final int gamesCount,
-      required final String imageBackground}) = _$PlatformPlatformModelImpl;
+      required final String imageBackground}) = _$PlatformPlatformImpl;
 
   @override
   int get id;
@@ -3133,46 +3111,46 @@ abstract class _PlatformPlatformModel implements PlatformPlatformModel {
   @override
   String get imageBackground;
 
-  /// Create a copy of PlatformPlatformModel
+  /// Create a copy of PlatformPlatform
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlatformPlatformModelImplCopyWith<_$PlatformPlatformModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$RequirementsModel {
-  String get minimum => throw _privateConstructorUsedError;
-  String get recommended => throw _privateConstructorUsedError;
-
-  /// Create a copy of RequirementsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RequirementsModelCopyWith<RequirementsModel> get copyWith =>
+  _$$PlatformPlatformImplCopyWith<_$PlatformPlatformImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RequirementsModelCopyWith<$Res> {
-  factory $RequirementsModelCopyWith(
-          RequirementsModel value, $Res Function(RequirementsModel) then) =
-      _$RequirementsModelCopyWithImpl<$Res, RequirementsModel>;
+mixin _$Requirements {
+  String get minimum => throw _privateConstructorUsedError;
+  String get recommended => throw _privateConstructorUsedError;
+
+  /// Create a copy of Requirements
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $RequirementsCopyWith<Requirements> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RequirementsCopyWith<$Res> {
+  factory $RequirementsCopyWith(
+          Requirements value, $Res Function(Requirements) then) =
+      _$RequirementsCopyWithImpl<$Res, Requirements>;
   @useResult
   $Res call({String minimum, String recommended});
 }
 
 /// @nodoc
-class _$RequirementsModelCopyWithImpl<$Res, $Val extends RequirementsModel>
-    implements $RequirementsModelCopyWith<$Res> {
-  _$RequirementsModelCopyWithImpl(this._value, this._then);
+class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
+    implements $RequirementsCopyWith<$Res> {
+  _$RequirementsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RequirementsModel
+  /// Create a copy of Requirements
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3194,25 +3172,25 @@ class _$RequirementsModelCopyWithImpl<$Res, $Val extends RequirementsModel>
 }
 
 /// @nodoc
-abstract class _$$RequirementsModelImplCopyWith<$Res>
-    implements $RequirementsModelCopyWith<$Res> {
-  factory _$$RequirementsModelImplCopyWith(_$RequirementsModelImpl value,
-          $Res Function(_$RequirementsModelImpl) then) =
-      __$$RequirementsModelImplCopyWithImpl<$Res>;
+abstract class _$$RequirementsImplCopyWith<$Res>
+    implements $RequirementsCopyWith<$Res> {
+  factory _$$RequirementsImplCopyWith(
+          _$RequirementsImpl value, $Res Function(_$RequirementsImpl) then) =
+      __$$RequirementsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String minimum, String recommended});
 }
 
 /// @nodoc
-class __$$RequirementsModelImplCopyWithImpl<$Res>
-    extends _$RequirementsModelCopyWithImpl<$Res, _$RequirementsModelImpl>
-    implements _$$RequirementsModelImplCopyWith<$Res> {
-  __$$RequirementsModelImplCopyWithImpl(_$RequirementsModelImpl _value,
-      $Res Function(_$RequirementsModelImpl) _then)
+class __$$RequirementsImplCopyWithImpl<$Res>
+    extends _$RequirementsCopyWithImpl<$Res, _$RequirementsImpl>
+    implements _$$RequirementsImplCopyWith<$Res> {
+  __$$RequirementsImplCopyWithImpl(
+      _$RequirementsImpl _value, $Res Function(_$RequirementsImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RequirementsModel
+  /// Create a copy of Requirements
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3220,7 +3198,7 @@ class __$$RequirementsModelImplCopyWithImpl<$Res>
     Object? minimum = null,
     Object? recommended = null,
   }) {
-    return _then(_$RequirementsModelImpl(
+    return _then(_$RequirementsImpl(
       minimum: null == minimum
           ? _value.minimum
           : minimum // ignore: cast_nullable_to_non_nullable
@@ -3235,9 +3213,8 @@ class __$$RequirementsModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RequirementsModelImpl implements _RequirementsModel {
-  const _$RequirementsModelImpl(
-      {required this.minimum, required this.recommended});
+class _$RequirementsImpl implements _Requirements {
+  const _$RequirementsImpl({required this.minimum, required this.recommended});
 
   @override
   final String minimum;
@@ -3246,14 +3223,14 @@ class _$RequirementsModelImpl implements _RequirementsModel {
 
   @override
   String toString() {
-    return 'RequirementsModel(minimum: $minimum, recommended: $recommended)';
+    return 'Requirements(minimum: $minimum, recommended: $recommended)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RequirementsModelImpl &&
+            other is _$RequirementsImpl &&
             (identical(other.minimum, minimum) || other.minimum == minimum) &&
             (identical(other.recommended, recommended) ||
                 other.recommended == recommended));
@@ -3262,68 +3239,65 @@ class _$RequirementsModelImpl implements _RequirementsModel {
   @override
   int get hashCode => Object.hash(runtimeType, minimum, recommended);
 
-  /// Create a copy of RequirementsModel
+  /// Create a copy of Requirements
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RequirementsModelImplCopyWith<_$RequirementsModelImpl> get copyWith =>
-      __$$RequirementsModelImplCopyWithImpl<_$RequirementsModelImpl>(
-          this, _$identity);
+  _$$RequirementsImplCopyWith<_$RequirementsImpl> get copyWith =>
+      __$$RequirementsImplCopyWithImpl<_$RequirementsImpl>(this, _$identity);
 }
 
-abstract class _RequirementsModel implements RequirementsModel {
-  const factory _RequirementsModel(
+abstract class _Requirements implements Requirements {
+  const factory _Requirements(
       {required final String minimum,
-      required final String recommended}) = _$RequirementsModelImpl;
+      required final String recommended}) = _$RequirementsImpl;
 
   @override
   String get minimum;
   @override
   String get recommended;
 
-  /// Create a copy of RequirementsModel
+  /// Create a copy of Requirements
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RequirementsModelImplCopyWith<_$RequirementsModelImpl> get copyWith =>
+  _$$RequirementsImplCopyWith<_$RequirementsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$RatingModel {
+mixin _$Rating {
   int get id => throw _privateConstructorUsedError;
   TitleModel get title => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
   double get percent => throw _privateConstructorUsedError;
 
-  /// Create a copy of RatingModel
+  /// Create a copy of Rating
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RatingModelCopyWith<RatingModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RatingCopyWith<Rating> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RatingModelCopyWith<$Res> {
-  factory $RatingModelCopyWith(
-          RatingModel value, $Res Function(RatingModel) then) =
-      _$RatingModelCopyWithImpl<$Res, RatingModel>;
+abstract class $RatingCopyWith<$Res> {
+  factory $RatingCopyWith(Rating value, $Res Function(Rating) then) =
+      _$RatingCopyWithImpl<$Res, Rating>;
   @useResult
   $Res call({int id, TitleModel title, int count, double percent});
 }
 
 /// @nodoc
-class _$RatingModelCopyWithImpl<$Res, $Val extends RatingModel>
-    implements $RatingModelCopyWith<$Res> {
-  _$RatingModelCopyWithImpl(this._value, this._then);
+class _$RatingCopyWithImpl<$Res, $Val extends Rating>
+    implements $RatingCopyWith<$Res> {
+  _$RatingCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RatingModel
+  /// Create a copy of Rating
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3355,25 +3329,24 @@ class _$RatingModelCopyWithImpl<$Res, $Val extends RatingModel>
 }
 
 /// @nodoc
-abstract class _$$RatingModelImplCopyWith<$Res>
-    implements $RatingModelCopyWith<$Res> {
-  factory _$$RatingModelImplCopyWith(
-          _$RatingModelImpl value, $Res Function(_$RatingModelImpl) then) =
-      __$$RatingModelImplCopyWithImpl<$Res>;
+abstract class _$$RatingImplCopyWith<$Res> implements $RatingCopyWith<$Res> {
+  factory _$$RatingImplCopyWith(
+          _$RatingImpl value, $Res Function(_$RatingImpl) then) =
+      __$$RatingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, TitleModel title, int count, double percent});
 }
 
 /// @nodoc
-class __$$RatingModelImplCopyWithImpl<$Res>
-    extends _$RatingModelCopyWithImpl<$Res, _$RatingModelImpl>
-    implements _$$RatingModelImplCopyWith<$Res> {
-  __$$RatingModelImplCopyWithImpl(
-      _$RatingModelImpl _value, $Res Function(_$RatingModelImpl) _then)
+class __$$RatingImplCopyWithImpl<$Res>
+    extends _$RatingCopyWithImpl<$Res, _$RatingImpl>
+    implements _$$RatingImplCopyWith<$Res> {
+  __$$RatingImplCopyWithImpl(
+      _$RatingImpl _value, $Res Function(_$RatingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RatingModel
+  /// Create a copy of Rating
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3383,7 +3356,7 @@ class __$$RatingModelImplCopyWithImpl<$Res>
     Object? count = null,
     Object? percent = null,
   }) {
-    return _then(_$RatingModelImpl(
+    return _then(_$RatingImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3406,8 +3379,8 @@ class __$$RatingModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RatingModelImpl implements _RatingModel {
-  const _$RatingModelImpl(
+class _$RatingImpl implements _Rating {
+  const _$RatingImpl(
       {required this.id,
       required this.title,
       required this.count,
@@ -3424,14 +3397,14 @@ class _$RatingModelImpl implements _RatingModel {
 
   @override
   String toString() {
-    return 'RatingModel(id: $id, title: $title, count: $count, percent: $percent)';
+    return 'Rating(id: $id, title: $title, count: $count, percent: $percent)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RatingModelImpl &&
+            other is _$RatingImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.count, count) || other.count == count) &&
@@ -3441,21 +3414,21 @@ class _$RatingModelImpl implements _RatingModel {
   @override
   int get hashCode => Object.hash(runtimeType, id, title, count, percent);
 
-  /// Create a copy of RatingModel
+  /// Create a copy of Rating
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RatingModelImplCopyWith<_$RatingModelImpl> get copyWith =>
-      __$$RatingModelImplCopyWithImpl<_$RatingModelImpl>(this, _$identity);
+  _$$RatingImplCopyWith<_$RatingImpl> get copyWith =>
+      __$$RatingImplCopyWithImpl<_$RatingImpl>(this, _$identity);
 }
 
-abstract class _RatingModel implements RatingModel {
-  const factory _RatingModel(
+abstract class _Rating implements Rating {
+  const factory _Rating(
       {required final int id,
       required final TitleModel title,
       required final int count,
-      required final double percent}) = _$RatingModelImpl;
+      required final double percent}) = _$RatingImpl;
 
   @override
   int get id;
@@ -3466,47 +3439,46 @@ abstract class _RatingModel implements RatingModel {
   @override
   double get percent;
 
-  /// Create a copy of RatingModel
+  /// Create a copy of Rating
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RatingModelImplCopyWith<_$RatingModelImpl> get copyWith =>
+  _$$RatingImplCopyWith<_$RatingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$ShortScreenshotModel {
+mixin _$ShortScreenshot {
   int get id => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
 
-  /// Create a copy of ShortScreenshotModel
+  /// Create a copy of ShortScreenshot
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ShortScreenshotModelCopyWith<ShortScreenshotModel> get copyWith =>
+  $ShortScreenshotCopyWith<ShortScreenshot> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ShortScreenshotModelCopyWith<$Res> {
-  factory $ShortScreenshotModelCopyWith(ShortScreenshotModel value,
-          $Res Function(ShortScreenshotModel) then) =
-      _$ShortScreenshotModelCopyWithImpl<$Res, ShortScreenshotModel>;
+abstract class $ShortScreenshotCopyWith<$Res> {
+  factory $ShortScreenshotCopyWith(
+          ShortScreenshot value, $Res Function(ShortScreenshot) then) =
+      _$ShortScreenshotCopyWithImpl<$Res, ShortScreenshot>;
   @useResult
   $Res call({int id, String image});
 }
 
 /// @nodoc
-class _$ShortScreenshotModelCopyWithImpl<$Res,
-        $Val extends ShortScreenshotModel>
-    implements $ShortScreenshotModelCopyWith<$Res> {
-  _$ShortScreenshotModelCopyWithImpl(this._value, this._then);
+class _$ShortScreenshotCopyWithImpl<$Res, $Val extends ShortScreenshot>
+    implements $ShortScreenshotCopyWith<$Res> {
+  _$ShortScreenshotCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ShortScreenshotModel
+  /// Create a copy of ShortScreenshot
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3528,25 +3500,25 @@ class _$ShortScreenshotModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ShortScreenshotModelImplCopyWith<$Res>
-    implements $ShortScreenshotModelCopyWith<$Res> {
-  factory _$$ShortScreenshotModelImplCopyWith(_$ShortScreenshotModelImpl value,
-          $Res Function(_$ShortScreenshotModelImpl) then) =
-      __$$ShortScreenshotModelImplCopyWithImpl<$Res>;
+abstract class _$$ShortScreenshotImplCopyWith<$Res>
+    implements $ShortScreenshotCopyWith<$Res> {
+  factory _$$ShortScreenshotImplCopyWith(_$ShortScreenshotImpl value,
+          $Res Function(_$ShortScreenshotImpl) then) =
+      __$$ShortScreenshotImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String image});
 }
 
 /// @nodoc
-class __$$ShortScreenshotModelImplCopyWithImpl<$Res>
-    extends _$ShortScreenshotModelCopyWithImpl<$Res, _$ShortScreenshotModelImpl>
-    implements _$$ShortScreenshotModelImplCopyWith<$Res> {
-  __$$ShortScreenshotModelImplCopyWithImpl(_$ShortScreenshotModelImpl _value,
-      $Res Function(_$ShortScreenshotModelImpl) _then)
+class __$$ShortScreenshotImplCopyWithImpl<$Res>
+    extends _$ShortScreenshotCopyWithImpl<$Res, _$ShortScreenshotImpl>
+    implements _$$ShortScreenshotImplCopyWith<$Res> {
+  __$$ShortScreenshotImplCopyWithImpl(
+      _$ShortScreenshotImpl _value, $Res Function(_$ShortScreenshotImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ShortScreenshotModel
+  /// Create a copy of ShortScreenshot
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3554,7 +3526,7 @@ class __$$ShortScreenshotModelImplCopyWithImpl<$Res>
     Object? id = null,
     Object? image = null,
   }) {
-    return _then(_$ShortScreenshotModelImpl(
+    return _then(_$ShortScreenshotImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3569,8 +3541,8 @@ class __$$ShortScreenshotModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ShortScreenshotModelImpl implements _ShortScreenshotModel {
-  const _$ShortScreenshotModelImpl({required this.id, required this.image});
+class _$ShortScreenshotImpl implements _ShortScreenshot {
+  const _$ShortScreenshotImpl({required this.id, required this.image});
 
   @override
   final int id;
@@ -3579,14 +3551,14 @@ class _$ShortScreenshotModelImpl implements _ShortScreenshotModel {
 
   @override
   String toString() {
-    return 'ShortScreenshotModel(id: $id, image: $image)';
+    return 'ShortScreenshot(id: $id, image: $image)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShortScreenshotModelImpl &&
+            other is _$ShortScreenshotImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.image, image) || other.image == image));
   }
@@ -3594,69 +3566,66 @@ class _$ShortScreenshotModelImpl implements _ShortScreenshotModel {
   @override
   int get hashCode => Object.hash(runtimeType, id, image);
 
-  /// Create a copy of ShortScreenshotModel
+  /// Create a copy of ShortScreenshot
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ShortScreenshotModelImplCopyWith<_$ShortScreenshotModelImpl>
-      get copyWith =>
-          __$$ShortScreenshotModelImplCopyWithImpl<_$ShortScreenshotModelImpl>(
-              this, _$identity);
+  _$$ShortScreenshotImplCopyWith<_$ShortScreenshotImpl> get copyWith =>
+      __$$ShortScreenshotImplCopyWithImpl<_$ShortScreenshotImpl>(
+          this, _$identity);
 }
 
-abstract class _ShortScreenshotModel implements ShortScreenshotModel {
-  const factory _ShortScreenshotModel(
+abstract class _ShortScreenshot implements ShortScreenshot {
+  const factory _ShortScreenshot(
       {required final int id,
-      required final String image}) = _$ShortScreenshotModelImpl;
+      required final String image}) = _$ShortScreenshotImpl;
 
   @override
   int get id;
   @override
   String get image;
 
-  /// Create a copy of ShortScreenshotModel
+  /// Create a copy of ShortScreenshot
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ShortScreenshotModelImplCopyWith<_$ShortScreenshotModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$StoreModel {
-  int get id => throw _privateConstructorUsedError;
-  GenreModel get store => throw _privateConstructorUsedError;
-
-  /// Create a copy of StoreModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $StoreModelCopyWith<StoreModel> get copyWith =>
+  _$$ShortScreenshotImplCopyWith<_$ShortScreenshotImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $StoreModelCopyWith<$Res> {
-  factory $StoreModelCopyWith(
-          StoreModel value, $Res Function(StoreModel) then) =
-      _$StoreModelCopyWithImpl<$Res, StoreModel>;
-  @useResult
-  $Res call({int id, GenreModel store});
+mixin _$Store {
+  int get id => throw _privateConstructorUsedError;
+  Genres get store => throw _privateConstructorUsedError;
 
-  $GenreModelCopyWith<$Res> get store;
+  /// Create a copy of Store
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $StoreCopyWith<Store> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-class _$StoreModelCopyWithImpl<$Res, $Val extends StoreModel>
-    implements $StoreModelCopyWith<$Res> {
-  _$StoreModelCopyWithImpl(this._value, this._then);
+abstract class $StoreCopyWith<$Res> {
+  factory $StoreCopyWith(Store value, $Res Function(Store) then) =
+      _$StoreCopyWithImpl<$Res, Store>;
+  @useResult
+  $Res call({int id, Genres store});
+
+  $GenresCopyWith<$Res> get store;
+}
+
+/// @nodoc
+class _$StoreCopyWithImpl<$Res, $Val extends Store>
+    implements $StoreCopyWith<$Res> {
+  _$StoreCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StoreModel
+  /// Create a copy of Store
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3672,44 +3641,43 @@ class _$StoreModelCopyWithImpl<$Res, $Val extends StoreModel>
       store: null == store
           ? _value.store
           : store // ignore: cast_nullable_to_non_nullable
-              as GenreModel,
+              as Genres,
     ) as $Val);
   }
 
-  /// Create a copy of StoreModel
+  /// Create a copy of Store
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $GenreModelCopyWith<$Res> get store {
-    return $GenreModelCopyWith<$Res>(_value.store, (value) {
+  $GenresCopyWith<$Res> get store {
+    return $GenresCopyWith<$Res>(_value.store, (value) {
       return _then(_value.copyWith(store: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$StoreModelImplCopyWith<$Res>
-    implements $StoreModelCopyWith<$Res> {
-  factory _$$StoreModelImplCopyWith(
-          _$StoreModelImpl value, $Res Function(_$StoreModelImpl) then) =
-      __$$StoreModelImplCopyWithImpl<$Res>;
+abstract class _$$StoreImplCopyWith<$Res> implements $StoreCopyWith<$Res> {
+  factory _$$StoreImplCopyWith(
+          _$StoreImpl value, $Res Function(_$StoreImpl) then) =
+      __$$StoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, GenreModel store});
+  $Res call({int id, Genres store});
 
   @override
-  $GenreModelCopyWith<$Res> get store;
+  $GenresCopyWith<$Res> get store;
 }
 
 /// @nodoc
-class __$$StoreModelImplCopyWithImpl<$Res>
-    extends _$StoreModelCopyWithImpl<$Res, _$StoreModelImpl>
-    implements _$$StoreModelImplCopyWith<$Res> {
-  __$$StoreModelImplCopyWithImpl(
-      _$StoreModelImpl _value, $Res Function(_$StoreModelImpl) _then)
+class __$$StoreImplCopyWithImpl<$Res>
+    extends _$StoreCopyWithImpl<$Res, _$StoreImpl>
+    implements _$$StoreImplCopyWith<$Res> {
+  __$$StoreImplCopyWithImpl(
+      _$StoreImpl _value, $Res Function(_$StoreImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StoreModel
+  /// Create a copy of Store
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -3717,7 +3685,7 @@ class __$$StoreModelImplCopyWithImpl<$Res>
     Object? id = null,
     Object? store = null,
   }) {
-    return _then(_$StoreModelImpl(
+    return _then(_$StoreImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3725,31 +3693,31 @@ class __$$StoreModelImplCopyWithImpl<$Res>
       store: null == store
           ? _value.store
           : store // ignore: cast_nullable_to_non_nullable
-              as GenreModel,
+              as Genres,
     ));
   }
 }
 
 /// @nodoc
 
-class _$StoreModelImpl implements _StoreModel {
-  const _$StoreModelImpl({required this.id, required this.store});
+class _$StoreImpl implements _Store {
+  const _$StoreImpl({required this.id, required this.store});
 
   @override
   final int id;
   @override
-  final GenreModel store;
+  final Genres store;
 
   @override
   String toString() {
-    return 'StoreModel(id: $id, store: $store)';
+    return 'Store(id: $id, store: $store)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$StoreModelImpl &&
+            other is _$StoreImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.store, store) || other.store == store));
   }
@@ -3757,29 +3725,28 @@ class _$StoreModelImpl implements _StoreModel {
   @override
   int get hashCode => Object.hash(runtimeType, id, store);
 
-  /// Create a copy of StoreModel
+  /// Create a copy of Store
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$StoreModelImplCopyWith<_$StoreModelImpl> get copyWith =>
-      __$$StoreModelImplCopyWithImpl<_$StoreModelImpl>(this, _$identity);
+  _$$StoreImplCopyWith<_$StoreImpl> get copyWith =>
+      __$$StoreImplCopyWithImpl<_$StoreImpl>(this, _$identity);
 }
 
-abstract class _StoreModel implements StoreModel {
-  const factory _StoreModel(
-      {required final int id,
-      required final GenreModel store}) = _$StoreModelImpl;
+abstract class _Store implements Store {
+  const factory _Store({required final int id, required final Genres store}) =
+      _$StoreImpl;
 
   @override
   int get id;
   @override
-  GenreModel get store;
+  Genres get store;
 
-  /// Create a copy of StoreModel
+  /// Create a copy of Store
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StoreModelImplCopyWith<_$StoreModelImpl> get copyWith =>
+  _$$StoreImplCopyWith<_$StoreImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

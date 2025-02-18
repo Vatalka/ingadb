@@ -42,7 +42,7 @@ class ListOfGamesEntity {
 }
 
 extension ListOfGamesEntityExt on ListOfGamesEntity {
-  ListOfGamesModel toDomain() => ListOfGamesModel(
+  ListOfGames toDomain() => ListOfGames(
         count: count,
         next: next,
         previous: previous,
@@ -74,7 +74,7 @@ class FiltersEntity {
 }
 
 extension FiltersEntityExt on FiltersEntity {
-  FiltersModel toDomain() => FiltersModel(
+  Filters toDomain() => Filters(
         years: years.map((e) => e.toDomain()).toList(),
       );
 }
@@ -136,7 +136,7 @@ class YearYearEntity {
 }
 
 extension YearYearEntityExt on YearYearEntity {
-  YearYearModel toDomain() => YearYearModel(
+  YearYear toDomain() => YearYear(
         year: year,
         count: count,
         noFollow: noFollow,
@@ -214,7 +214,7 @@ class ResultEntity {
 }
 
 extension ResultEntityExt on ResultEntity {
-  ResultModel toDomain() => ResultModel(
+  Games toDomain() => Games(
         id: id,
         slug: slug,
         name: name,
@@ -272,7 +272,7 @@ class AddedByStatusEntity {
 }
 
 extension AddedByStatusEntityExt on AddedByStatusEntity {
-  AddedByStatusModel toDomain() => AddedByStatusModel(
+  AddedByStatus toDomain() => AddedByStatus(
         yet: yet,
         owned: owned,
         beaten: beaten,
@@ -289,10 +289,10 @@ final colorValues = EnumValues(
 );
 
 extension ColorEntityExt on ColorEntity {
-  ColorModel toDomain() {
+  Color toDomain() {
     switch (this) {
       case ColorEntity.THE_0_F0_F0_F:
-        return ColorModel.THE_0_F0_F0_F;
+        return Color.THE_0_F0_F0_F;
     }
   }
 }
@@ -316,7 +316,7 @@ class EsrbRatingEntity {
 }
 
 extension EsrbRatingEntityExt on EsrbRatingEntity {
-  EsrbRatingModel toDomain() => EsrbRatingModel(
+  EsrbRating toDomain() => EsrbRating(
         id: id,
         name: name,
         slug: slug,
@@ -350,7 +350,7 @@ class GenreEntity {
 }
 
 extension GenreEntityExt on GenreEntity {
-  GenreModel toDomain() => GenreModel(
+  Genres toDomain() => Genres(
         id: id,
         slug: slug,
         name: name,
@@ -386,26 +386,26 @@ final domainValues = EnumValues({
 });
 
 extension DomainEntityExt on DomainEntity {
-  DomainModel toDomain() {
+  Domain toDomain() {
     switch (this) {
       case DomainEntity.APPS_APPLE_COM:
-        return DomainModel.APPS_APPLE_COM;
+        return Domain.APPS_APPLE_COM;
       case DomainEntity.EPICGAMES_COM:
-        return DomainModel.EPICGAMES_COM;
+        return Domain.EPICGAMES_COM;
       case DomainEntity.GOG_COM:
-        return DomainModel.GOG_COM;
+        return Domain.GOG_COM;
       case DomainEntity.MARKETPLACE_XBOX_COM:
-        return DomainModel.MARKETPLACE_XBOX_COM;
+        return Domain.MARKETPLACE_XBOX_COM;
       case DomainEntity.MICROSOFT_COM:
-        return DomainModel.MICROSOFT_COM;
+        return Domain.MICROSOFT_COM;
       case DomainEntity.NINTENDO_COM:
-        return DomainModel.NINTENDO_COM;
+        return Domain.NINTENDO_COM;
       case DomainEntity.PLAY_GOOGLE_COM:
-        return DomainModel.PLAY_GOOGLE_COM;
+        return Domain.PLAY_GOOGLE_COM;
       case DomainEntity.STORE_PLAYSTATION_COM:
-        return DomainModel.STORE_PLAYSTATION_COM;
+        return Domain.STORE_PLAYSTATION_COM;
       case DomainEntity.STORE_STEAMPOWERED_COM:
-        return DomainModel.STORE_STEAMPOWERED_COM;
+        return Domain.STORE_STEAMPOWERED_COM;
     }
   }
 }
@@ -415,10 +415,10 @@ enum LanguageEntity { ENG }
 final languageValues = EnumValues({"eng": LanguageEntity.ENG});
 
 extension LanguageEntityExt on LanguageEntity {
-  LanguageModel toDomain() {
+  Language toDomain() {
     switch (this) {
       case LanguageEntity.ENG:
-        return LanguageModel.ENG;
+        return Language.ENG;
     }
   }
 }
@@ -438,7 +438,7 @@ class ParentPlatformEntity {
 }
 
 extension ParentPlatformEntityExt on ParentPlatformEntity {
-  ParentPlatformModel toDomain() => ParentPlatformModel(
+  ParentPlatform toDomain() => ParentPlatform(
         platform: platform.toDomain(),
       );
 }
@@ -464,7 +464,7 @@ class PlatformElementEntity {
 }
 
 extension PlatformElementEntityExt on PlatformElementEntity {
-  PlatformElementModel toDomain() => PlatformElementModel(
+  PlatformElement toDomain() => PlatformElement(
         platform: platform.toDomain(),
         releasedAt: releasedAt,
         requirementsEn: requirementsEn.toDomain(),
@@ -501,7 +501,7 @@ class PlatformPlatformEntity {
 }
 
 extension PlatformPlatformEntityExt on PlatformPlatformEntity {
-  PlatformPlatformModel toDomain() => PlatformPlatformModel(
+  PlatformPlatform toDomain() => PlatformPlatform(
         id: id,
         name: name,
         slug: slug,
@@ -530,7 +530,7 @@ class RequirementsEntity {
 }
 
 extension RequirementsEntityExt on RequirementsEntity {
-  RequirementsModel toDomain() => RequirementsModel(
+  Requirements toDomain() => Requirements(
         minimum: minimum,
         recommended: recommended,
       );
@@ -557,7 +557,7 @@ class RatingEntity {
 }
 
 extension RatingEntityExt on RatingEntity {
-  RatingModel toDomain() => RatingModel(
+  Rating toDomain() => Rating(
         id: id,
         title: title.toDomain(),
         count: count,
@@ -608,7 +608,7 @@ class ShortScreenshotEntity {
 }
 
 extension ShortScreenshotEntityExt on ShortScreenshotEntity {
-  ShortScreenshotModel toDomain() => ShortScreenshotModel(
+  ShortScreenshot toDomain() => ShortScreenshot(
         id: id,
         image: image,
       );
@@ -631,7 +631,7 @@ class StoreEntity {
 }
 
 extension StoreEntityExt on StoreEntity {
-  StoreModel toDomain() => StoreModel(
+  Store toDomain() => Store(
         id: id,
         store: store.toDomain(),
       );
