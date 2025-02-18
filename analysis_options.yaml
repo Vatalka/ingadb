@@ -11,11 +11,12 @@ include: package:lint/analysis_options.yaml
 
 analyzer:
   exclude:
-    - "/*.freezed.dart"
-    - "/*.g.dart"
+    - '**/*.freezed.dart'
+    - '**/*.g.dart'
 
   errors:
     sort_pub_dependencies: ignore
+    constant_identifier_names: ignore
   language:
     strict-casts: true
     strict-inference: true

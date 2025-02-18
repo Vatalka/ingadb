@@ -391,7 +391,7 @@ extension DomainEntityExt on DomainEntity {
       case DomainEntity.APPS_APPLE_COM:
         return Domain.APPS_APPLE_COM;
       case DomainEntity.EPICGAMES_COM:
-        return Domain.EPICGAMES_COM;
+        return Domain.EPIC_GAMES_COM;
       case DomainEntity.GOG_COM:
         return Domain.GOG_COM;
       case DomainEntity.MARKETPLACE_XBOX_COM:
@@ -405,7 +405,7 @@ extension DomainEntityExt on DomainEntity {
       case DomainEntity.STORE_PLAYSTATION_COM:
         return Domain.STORE_PLAYSTATION_COM;
       case DomainEntity.STORE_STEAMPOWERED_COM:
-        return Domain.STORE_STEAMPOWERED_COM;
+        return Domain.STORE_STEAM_POWERED_COM;
     }
   }
 }

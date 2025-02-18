@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ingadb/domain/repository/repository.dart';
 import 'package:ingadb/domain/model/genre/genres_model.dart';
+import 'package:ingadb/domain/repository/repository.dart';
 import 'package:injectable/injectable.dart';
 
 part 'genre_detail_cubit.freezed.dart';
