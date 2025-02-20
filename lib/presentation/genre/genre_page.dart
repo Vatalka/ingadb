@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:ingadb/domain/cubit/genre/genre_cubit.dart';
-import 'package:ingadb/presentation/genre/failure_page.dart';
-import 'package:ingadb/presentation/genre/genre_item.dart';
-import 'package:ingadb/presentation/genre/initial_page.dart';
-import 'package:ingadb/presentation/genre/loading_page.dart';
+import 'package:ingadb/presentation/failure_page.dart';
+import 'package:ingadb/presentation/genre/item/genre_item.dart';
+import 'package:ingadb/presentation/initial_page.dart';
+import 'package:ingadb/presentation/loading_page.dart';
 
 class GenrePage extends StatelessWidget {
   @override

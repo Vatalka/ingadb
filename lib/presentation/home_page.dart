@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ingadb/config/theme/colors.dart';
+import 'package:ingadb/presentation/game/game_page.dart';
 import 'package:ingadb/presentation/genre/genre_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,8 +17,8 @@ class HomePage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                CupertinoPageRoute<GenrePage>(
-                  builder: (context) => GenrePage(),
+                CupertinoPageRoute<GamePage>(
+                  builder: (context) => GamePage(),
                 ),
               );
             },
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         '>',
                         style: TextStyle(
-                          fontSize:30,
+                          fontSize: 30,
                         ),
                       ),
                     ),
@@ -83,7 +84,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         '>',
                         style: TextStyle(
-                          fontSize:30,
+                          fontSize: 30,
                         ),
                       ),
                     ),

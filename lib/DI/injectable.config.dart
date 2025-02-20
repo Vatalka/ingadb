@@ -42,7 +42,7 @@ extension GetItInjectableX on _i1.GetIt {
         () => networkModule.provideGenresDataSource(gh<_i3.Dio>()));
     gh.lazySingleton<_i5.Repository>(
         () => _i6.RepositoryImpl(apiClient: gh<_i4.ApiClient>()));
-    gh.factoryParam<_i7.GameCubit, List<_i8.Games>, dynamic>((
+    gh.factoryParam<_i7.GameCubit, List<_i8.Games>?, dynamic>((
       games,
       _,
     ) =>
