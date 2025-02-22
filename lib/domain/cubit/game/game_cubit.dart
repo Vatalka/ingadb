@@ -20,13 +20,15 @@ class GameCubit extends Cubit<GameState> {
     if (state.gameLoading) return;
     emit(state.copyWith(gameLoading: true));
     try {
-      final response = await _repository.getGames();
+      final response = await _repository.getGames(page: _currentPage);
       emit(
         state.copyWith(
           gameLoading: false,
           games: [...state.games, ...response.data ?? []],
+          error: response.error,
         ),
       );
+      print('Games count ${state.games.length}');
       _currentPage++;
     } catch (e) {
       emit(state.copyWith(gameLoading: false, error: e));

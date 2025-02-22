@@ -115,7 +115,7 @@ class __$$GameStateImplCopyWithImpl<$Res>
 class _$GameStateImpl implements _GameState {
   const _$GameStateImpl(
       {final List<Games> games = const <Games>[],
-      this.gameLoading = true,
+      this.gameLoading = false,
       this.error})
       : _games = games;
 

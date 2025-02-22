@@ -93,13 +93,18 @@ class _ApiClient implements ApiClient {
   }
 
   @override
-  Future<ListOfGamesEntity> getListOfGames(
-      {String key = Constants.apiKey}) async {
+  Future<GamePaginationEntity> getListOfGames({
+    String key = Constants.apiKey,
+    required int page,
+  }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'key': key};
+    final queryParameters = <String, dynamic>{
+      r'key': key,
+      r'page': page,
+    };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ListOfGamesEntity>(Options(
+    final _options = _setStreamType<GamePaginationEntity>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -116,9 +121,9 @@ class _ApiClient implements ApiClient {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late ListOfGamesEntity _value;
+    late GamePaginationEntity _value;
     try {
-      _value = ListOfGamesEntity.fromJson(_result.data!);
+      _value = GamePaginationEntity.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

@@ -8,5 +8,5 @@ abstract class Repository {
 
   Future<ResponseData<GenreDetail>> getGenreDetail({required int id});
 
-  Future<ResponseData<List<Games>>> getGames();
+  Future<ResponseData<List<Games>>> getGames({required int page});
 }

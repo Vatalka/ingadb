@@ -4,7 +4,7 @@ part of 'game_cubit.dart';
 class GameState with _$GameState {
   const factory GameState({
     @Default(<Games>[]) List<Games> games,
-    @Default(true) bool gameLoading,
+    @Default(false) bool gameLoading,
     Object? error,
 }) = _GameState;
 }

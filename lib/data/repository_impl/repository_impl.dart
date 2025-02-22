@@ -38,9 +38,9 @@ class RepositoryImpl implements Repository {
   }
 
   @override
-  Future<ResponseData<List<Games>>> getGames() async {
+  Future<ResponseData<List<Games>>> getGames({required int page}) async {
     try {
-      final response = await apiClient.getListOfGames();
+      final response = await apiClient.getListOfGames(page: page);
       final games = response.results.map((game) => game.toDomain()).toList();
       return ResponseData.success(games);
     } catch (e) {

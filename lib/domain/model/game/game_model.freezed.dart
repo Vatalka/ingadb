@@ -1000,33 +1000,6 @@ mixin _$Games {
   String get slug => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   DateTime get released => throw _privateConstructorUsedError;
-  bool get tba => throw _privateConstructorUsedError;
-  String get backgroundImage => throw _privateConstructorUsedError;
-  double get rating => throw _privateConstructorUsedError;
-  int get ratingTop => throw _privateConstructorUsedError;
-  List<Rating> get ratings => throw _privateConstructorUsedError;
-  int get ratingsCount => throw _privateConstructorUsedError;
-  int get reviewsTextCount => throw _privateConstructorUsedError;
-  int get added => throw _privateConstructorUsedError;
-  AddedByStatus get addedByStatus => throw _privateConstructorUsedError;
-  int get metaCritic => throw _privateConstructorUsedError;
-  int get playtime => throw _privateConstructorUsedError;
-  int get suggestionsCount => throw _privateConstructorUsedError;
-  DateTime get updated => throw _privateConstructorUsedError;
-  dynamic get userGame => throw _privateConstructorUsedError;
-  int get reviewsCount => throw _privateConstructorUsedError;
-  Color get saturatedColor => throw _privateConstructorUsedError;
-  Color get dominantColor => throw _privateConstructorUsedError;
-  List<PlatformElement> get platforms => throw _privateConstructorUsedError;
-  List<ParentPlatform> get parentPlatforms =>
-      throw _privateConstructorUsedError;
-  List<Genres> get genres => throw _privateConstructorUsedError;
-  List<Store> get stores => throw _privateConstructorUsedError;
-  dynamic get clip => throw _privateConstructorUsedError;
-  List<Genres> get tags => throw _privateConstructorUsedError;
-  EsrbRating get esrbRating => throw _privateConstructorUsedError;
-  List<ShortScreenshot> get shortScreenshots =>
-      throw _privateConstructorUsedError;
 
   /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
@@ -1039,39 +1012,7 @@ abstract class $GamesCopyWith<$Res> {
   factory $GamesCopyWith(Games value, $Res Function(Games) then) =
       _$GamesCopyWithImpl<$Res, Games>;
   @useResult
-  $Res call(
-      {int id,
-      String slug,
-      String name,
-      DateTime released,
-      bool tba,
-      String backgroundImage,
-      double rating,
-      int ratingTop,
-      List<Rating> ratings,
-      int ratingsCount,
-      int reviewsTextCount,
-      int added,
-      AddedByStatus addedByStatus,
-      int metaCritic,
-      int playtime,
-      int suggestionsCount,
-      DateTime updated,
-      dynamic userGame,
-      int reviewsCount,
-      Color saturatedColor,
-      Color dominantColor,
-      List<PlatformElement> platforms,
-      List<ParentPlatform> parentPlatforms,
-      List<Genres> genres,
-      List<Store> stores,
-      dynamic clip,
-      List<Genres> tags,
-      EsrbRating esrbRating,
-      List<ShortScreenshot> shortScreenshots});
-
-  $AddedByStatusCopyWith<$Res> get addedByStatus;
-  $EsrbRatingCopyWith<$Res> get esrbRating;
+  $Res call({int id, String slug, String name, DateTime released});
 }
 
 /// @nodoc
@@ -1093,31 +1034,6 @@ class _$GamesCopyWithImpl<$Res, $Val extends Games>
     Object? slug = null,
     Object? name = null,
     Object? released = null,
-    Object? tba = null,
-    Object? backgroundImage = null,
-    Object? rating = null,
-    Object? ratingTop = null,
-    Object? ratings = null,
-    Object? ratingsCount = null,
-    Object? reviewsTextCount = null,
-    Object? added = null,
-    Object? addedByStatus = null,
-    Object? metaCritic = null,
-    Object? playtime = null,
-    Object? suggestionsCount = null,
-    Object? updated = null,
-    Object? userGame = freezed,
-    Object? reviewsCount = null,
-    Object? saturatedColor = null,
-    Object? dominantColor = null,
-    Object? platforms = null,
-    Object? parentPlatforms = null,
-    Object? genres = null,
-    Object? stores = null,
-    Object? clip = freezed,
-    Object? tags = null,
-    Object? esrbRating = null,
-    Object? shortScreenshots = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -1136,127 +1052,7 @@ class _$GamesCopyWithImpl<$Res, $Val extends Games>
           ? _value.released
           : released // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      tba: null == tba
-          ? _value.tba
-          : tba // ignore: cast_nullable_to_non_nullable
-              as bool,
-      backgroundImage: null == backgroundImage
-          ? _value.backgroundImage
-          : backgroundImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      rating: null == rating
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as double,
-      ratingTop: null == ratingTop
-          ? _value.ratingTop
-          : ratingTop // ignore: cast_nullable_to_non_nullable
-              as int,
-      ratings: null == ratings
-          ? _value.ratings
-          : ratings // ignore: cast_nullable_to_non_nullable
-              as List<Rating>,
-      ratingsCount: null == ratingsCount
-          ? _value.ratingsCount
-          : ratingsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reviewsTextCount: null == reviewsTextCount
-          ? _value.reviewsTextCount
-          : reviewsTextCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as int,
-      addedByStatus: null == addedByStatus
-          ? _value.addedByStatus
-          : addedByStatus // ignore: cast_nullable_to_non_nullable
-              as AddedByStatus,
-      metaCritic: null == metaCritic
-          ? _value.metaCritic
-          : metaCritic // ignore: cast_nullable_to_non_nullable
-              as int,
-      playtime: null == playtime
-          ? _value.playtime
-          : playtime // ignore: cast_nullable_to_non_nullable
-              as int,
-      suggestionsCount: null == suggestionsCount
-          ? _value.suggestionsCount
-          : suggestionsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      updated: null == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      userGame: freezed == userGame
-          ? _value.userGame
-          : userGame // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      reviewsCount: null == reviewsCount
-          ? _value.reviewsCount
-          : reviewsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      saturatedColor: null == saturatedColor
-          ? _value.saturatedColor
-          : saturatedColor // ignore: cast_nullable_to_non_nullable
-              as Color,
-      dominantColor: null == dominantColor
-          ? _value.dominantColor
-          : dominantColor // ignore: cast_nullable_to_non_nullable
-              as Color,
-      platforms: null == platforms
-          ? _value.platforms
-          : platforms // ignore: cast_nullable_to_non_nullable
-              as List<PlatformElement>,
-      parentPlatforms: null == parentPlatforms
-          ? _value.parentPlatforms
-          : parentPlatforms // ignore: cast_nullable_to_non_nullable
-              as List<ParentPlatform>,
-      genres: null == genres
-          ? _value.genres
-          : genres // ignore: cast_nullable_to_non_nullable
-              as List<Genres>,
-      stores: null == stores
-          ? _value.stores
-          : stores // ignore: cast_nullable_to_non_nullable
-              as List<Store>,
-      clip: freezed == clip
-          ? _value.clip
-          : clip // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      tags: null == tags
-          ? _value.tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<Genres>,
-      esrbRating: null == esrbRating
-          ? _value.esrbRating
-          : esrbRating // ignore: cast_nullable_to_non_nullable
-              as EsrbRating,
-      shortScreenshots: null == shortScreenshots
-          ? _value.shortScreenshots
-          : shortScreenshots // ignore: cast_nullable_to_non_nullable
-              as List<ShortScreenshot>,
     ) as $Val);
-  }
-
-  /// Create a copy of Games
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $AddedByStatusCopyWith<$Res> get addedByStatus {
-    return $AddedByStatusCopyWith<$Res>(_value.addedByStatus, (value) {
-      return _then(_value.copyWith(addedByStatus: value) as $Val);
-    });
-  }
-
-  /// Create a copy of Games
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $EsrbRatingCopyWith<$Res> get esrbRating {
-    return $EsrbRatingCopyWith<$Res>(_value.esrbRating, (value) {
-      return _then(_value.copyWith(esrbRating: value) as $Val);
-    });
   }
 }
 
@@ -1267,41 +1063,7 @@ abstract class _$$GamesImplCopyWith<$Res> implements $GamesCopyWith<$Res> {
       __$$GamesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      String slug,
-      String name,
-      DateTime released,
-      bool tba,
-      String backgroundImage,
-      double rating,
-      int ratingTop,
-      List<Rating> ratings,
-      int ratingsCount,
-      int reviewsTextCount,
-      int added,
-      AddedByStatus addedByStatus,
-      int metaCritic,
-      int playtime,
-      int suggestionsCount,
-      DateTime updated,
-      dynamic userGame,
-      int reviewsCount,
-      Color saturatedColor,
-      Color dominantColor,
-      List<PlatformElement> platforms,
-      List<ParentPlatform> parentPlatforms,
-      List<Genres> genres,
-      List<Store> stores,
-      dynamic clip,
-      List<Genres> tags,
-      EsrbRating esrbRating,
-      List<ShortScreenshot> shortScreenshots});
-
-  @override
-  $AddedByStatusCopyWith<$Res> get addedByStatus;
-  @override
-  $EsrbRatingCopyWith<$Res> get esrbRating;
+  $Res call({int id, String slug, String name, DateTime released});
 }
 
 /// @nodoc
@@ -1321,31 +1083,6 @@ class __$$GamesImplCopyWithImpl<$Res>
     Object? slug = null,
     Object? name = null,
     Object? released = null,
-    Object? tba = null,
-    Object? backgroundImage = null,
-    Object? rating = null,
-    Object? ratingTop = null,
-    Object? ratings = null,
-    Object? ratingsCount = null,
-    Object? reviewsTextCount = null,
-    Object? added = null,
-    Object? addedByStatus = null,
-    Object? metaCritic = null,
-    Object? playtime = null,
-    Object? suggestionsCount = null,
-    Object? updated = null,
-    Object? userGame = freezed,
-    Object? reviewsCount = null,
-    Object? saturatedColor = null,
-    Object? dominantColor = null,
-    Object? platforms = null,
-    Object? parentPlatforms = null,
-    Object? genres = null,
-    Object? stores = null,
-    Object? clip = freezed,
-    Object? tags = null,
-    Object? esrbRating = null,
-    Object? shortScreenshots = null,
   }) {
     return _then(_$GamesImpl(
       id: null == id
@@ -1364,106 +1101,6 @@ class __$$GamesImplCopyWithImpl<$Res>
           ? _value.released
           : released // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      tba: null == tba
-          ? _value.tba
-          : tba // ignore: cast_nullable_to_non_nullable
-              as bool,
-      backgroundImage: null == backgroundImage
-          ? _value.backgroundImage
-          : backgroundImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      rating: null == rating
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as double,
-      ratingTop: null == ratingTop
-          ? _value.ratingTop
-          : ratingTop // ignore: cast_nullable_to_non_nullable
-              as int,
-      ratings: null == ratings
-          ? _value._ratings
-          : ratings // ignore: cast_nullable_to_non_nullable
-              as List<Rating>,
-      ratingsCount: null == ratingsCount
-          ? _value.ratingsCount
-          : ratingsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reviewsTextCount: null == reviewsTextCount
-          ? _value.reviewsTextCount
-          : reviewsTextCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as int,
-      addedByStatus: null == addedByStatus
-          ? _value.addedByStatus
-          : addedByStatus // ignore: cast_nullable_to_non_nullable
-              as AddedByStatus,
-      metaCritic: null == metaCritic
-          ? _value.metaCritic
-          : metaCritic // ignore: cast_nullable_to_non_nullable
-              as int,
-      playtime: null == playtime
-          ? _value.playtime
-          : playtime // ignore: cast_nullable_to_non_nullable
-              as int,
-      suggestionsCount: null == suggestionsCount
-          ? _value.suggestionsCount
-          : suggestionsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      updated: null == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      userGame: freezed == userGame
-          ? _value.userGame
-          : userGame // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      reviewsCount: null == reviewsCount
-          ? _value.reviewsCount
-          : reviewsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      saturatedColor: null == saturatedColor
-          ? _value.saturatedColor
-          : saturatedColor // ignore: cast_nullable_to_non_nullable
-              as Color,
-      dominantColor: null == dominantColor
-          ? _value.dominantColor
-          : dominantColor // ignore: cast_nullable_to_non_nullable
-              as Color,
-      platforms: null == platforms
-          ? _value._platforms
-          : platforms // ignore: cast_nullable_to_non_nullable
-              as List<PlatformElement>,
-      parentPlatforms: null == parentPlatforms
-          ? _value._parentPlatforms
-          : parentPlatforms // ignore: cast_nullable_to_non_nullable
-              as List<ParentPlatform>,
-      genres: null == genres
-          ? _value._genres
-          : genres // ignore: cast_nullable_to_non_nullable
-              as List<Genres>,
-      stores: null == stores
-          ? _value._stores
-          : stores // ignore: cast_nullable_to_non_nullable
-              as List<Store>,
-      clip: freezed == clip
-          ? _value.clip
-          : clip // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      tags: null == tags
-          ? _value._tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<Genres>,
-      esrbRating: null == esrbRating
-          ? _value.esrbRating
-          : esrbRating // ignore: cast_nullable_to_non_nullable
-              as EsrbRating,
-      shortScreenshots: null == shortScreenshots
-          ? _value._shortScreenshots
-          : shortScreenshots // ignore: cast_nullable_to_non_nullable
-              as List<ShortScreenshot>,
     ));
   }
 }
@@ -1475,39 +1112,7 @@ class _$GamesImpl implements _Games {
       {required this.id,
       required this.slug,
       required this.name,
-      required this.released,
-      required this.tba,
-      required this.backgroundImage,
-      required this.rating,
-      required this.ratingTop,
-      required final List<Rating> ratings,
-      required this.ratingsCount,
-      required this.reviewsTextCount,
-      required this.added,
-      required this.addedByStatus,
-      required this.metaCritic,
-      required this.playtime,
-      required this.suggestionsCount,
-      required this.updated,
-      required this.userGame,
-      required this.reviewsCount,
-      required this.saturatedColor,
-      required this.dominantColor,
-      required final List<PlatformElement> platforms,
-      required final List<ParentPlatform> parentPlatforms,
-      required final List<Genres> genres,
-      required final List<Store> stores,
-      required this.clip,
-      required final List<Genres> tags,
-      required this.esrbRating,
-      required final List<ShortScreenshot> shortScreenshots})
-      : _ratings = ratings,
-        _platforms = platforms,
-        _parentPlatforms = parentPlatforms,
-        _genres = genres,
-        _stores = stores,
-        _tags = tags,
-        _shortScreenshots = shortScreenshots;
+      required this.released});
 
   @override
   final int id;
@@ -1517,102 +1122,10 @@ class _$GamesImpl implements _Games {
   final String name;
   @override
   final DateTime released;
-  @override
-  final bool tba;
-  @override
-  final String backgroundImage;
-  @override
-  final double rating;
-  @override
-  final int ratingTop;
-  final List<Rating> _ratings;
-  @override
-  List<Rating> get ratings {
-    if (_ratings is EqualUnmodifiableListView) return _ratings;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_ratings);
-  }
-
-  @override
-  final int ratingsCount;
-  @override
-  final int reviewsTextCount;
-  @override
-  final int added;
-  @override
-  final AddedByStatus addedByStatus;
-  @override
-  final int metaCritic;
-  @override
-  final int playtime;
-  @override
-  final int suggestionsCount;
-  @override
-  final DateTime updated;
-  @override
-  final dynamic userGame;
-  @override
-  final int reviewsCount;
-  @override
-  final Color saturatedColor;
-  @override
-  final Color dominantColor;
-  final List<PlatformElement> _platforms;
-  @override
-  List<PlatformElement> get platforms {
-    if (_platforms is EqualUnmodifiableListView) return _platforms;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_platforms);
-  }
-
-  final List<ParentPlatform> _parentPlatforms;
-  @override
-  List<ParentPlatform> get parentPlatforms {
-    if (_parentPlatforms is EqualUnmodifiableListView) return _parentPlatforms;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_parentPlatforms);
-  }
-
-  final List<Genres> _genres;
-  @override
-  List<Genres> get genres {
-    if (_genres is EqualUnmodifiableListView) return _genres;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_genres);
-  }
-
-  final List<Store> _stores;
-  @override
-  List<Store> get stores {
-    if (_stores is EqualUnmodifiableListView) return _stores;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_stores);
-  }
-
-  @override
-  final dynamic clip;
-  final List<Genres> _tags;
-  @override
-  List<Genres> get tags {
-    if (_tags is EqualUnmodifiableListView) return _tags;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_tags);
-  }
-
-  @override
-  final EsrbRating esrbRating;
-  final List<ShortScreenshot> _shortScreenshots;
-  @override
-  List<ShortScreenshot> get shortScreenshots {
-    if (_shortScreenshots is EqualUnmodifiableListView)
-      return _shortScreenshots;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_shortScreenshots);
-  }
 
   @override
   String toString() {
-    return 'Games(id: $id, slug: $slug, name: $name, released: $released, tba: $tba, backgroundImage: $backgroundImage, rating: $rating, ratingTop: $ratingTop, ratings: $ratings, ratingsCount: $ratingsCount, reviewsTextCount: $reviewsTextCount, added: $added, addedByStatus: $addedByStatus, metaCritic: $metaCritic, playtime: $playtime, suggestionsCount: $suggestionsCount, updated: $updated, userGame: $userGame, reviewsCount: $reviewsCount, saturatedColor: $saturatedColor, dominantColor: $dominantColor, platforms: $platforms, parentPlatforms: $parentPlatforms, genres: $genres, stores: $stores, clip: $clip, tags: $tags, esrbRating: $esrbRating, shortScreenshots: $shortScreenshots)';
+    return 'Games(id: $id, slug: $slug, name: $name, released: $released)';
   }
 
   @override
@@ -1624,82 +1137,11 @@ class _$GamesImpl implements _Games {
             (identical(other.slug, slug) || other.slug == slug) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.released, released) ||
-                other.released == released) &&
-            (identical(other.tba, tba) || other.tba == tba) &&
-            (identical(other.backgroundImage, backgroundImage) ||
-                other.backgroundImage == backgroundImage) &&
-            (identical(other.rating, rating) || other.rating == rating) &&
-            (identical(other.ratingTop, ratingTop) ||
-                other.ratingTop == ratingTop) &&
-            const DeepCollectionEquality().equals(other._ratings, _ratings) &&
-            (identical(other.ratingsCount, ratingsCount) ||
-                other.ratingsCount == ratingsCount) &&
-            (identical(other.reviewsTextCount, reviewsTextCount) ||
-                other.reviewsTextCount == reviewsTextCount) &&
-            (identical(other.added, added) || other.added == added) &&
-            (identical(other.addedByStatus, addedByStatus) ||
-                other.addedByStatus == addedByStatus) &&
-            (identical(other.metaCritic, metaCritic) ||
-                other.metaCritic == metaCritic) &&
-            (identical(other.playtime, playtime) ||
-                other.playtime == playtime) &&
-            (identical(other.suggestionsCount, suggestionsCount) ||
-                other.suggestionsCount == suggestionsCount) &&
-            (identical(other.updated, updated) || other.updated == updated) &&
-            const DeepCollectionEquality().equals(other.userGame, userGame) &&
-            (identical(other.reviewsCount, reviewsCount) ||
-                other.reviewsCount == reviewsCount) &&
-            (identical(other.saturatedColor, saturatedColor) ||
-                other.saturatedColor == saturatedColor) &&
-            (identical(other.dominantColor, dominantColor) ||
-                other.dominantColor == dominantColor) &&
-            const DeepCollectionEquality()
-                .equals(other._platforms, _platforms) &&
-            const DeepCollectionEquality()
-                .equals(other._parentPlatforms, _parentPlatforms) &&
-            const DeepCollectionEquality().equals(other._genres, _genres) &&
-            const DeepCollectionEquality().equals(other._stores, _stores) &&
-            const DeepCollectionEquality().equals(other.clip, clip) &&
-            const DeepCollectionEquality().equals(other._tags, _tags) &&
-            (identical(other.esrbRating, esrbRating) ||
-                other.esrbRating == esrbRating) &&
-            const DeepCollectionEquality()
-                .equals(other._shortScreenshots, _shortScreenshots));
+                other.released == released));
   }
 
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        slug,
-        name,
-        released,
-        tba,
-        backgroundImage,
-        rating,
-        ratingTop,
-        const DeepCollectionEquality().hash(_ratings),
-        ratingsCount,
-        reviewsTextCount,
-        added,
-        addedByStatus,
-        metaCritic,
-        playtime,
-        suggestionsCount,
-        updated,
-        const DeepCollectionEquality().hash(userGame),
-        reviewsCount,
-        saturatedColor,
-        dominantColor,
-        const DeepCollectionEquality().hash(_platforms),
-        const DeepCollectionEquality().hash(_parentPlatforms),
-        const DeepCollectionEquality().hash(_genres),
-        const DeepCollectionEquality().hash(_stores),
-        const DeepCollectionEquality().hash(clip),
-        const DeepCollectionEquality().hash(_tags),
-        esrbRating,
-        const DeepCollectionEquality().hash(_shortScreenshots)
-      ]);
+  int get hashCode => Object.hash(runtimeType, id, slug, name, released);
 
   /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.
@@ -1715,32 +1157,7 @@ abstract class _Games implements Games {
       {required final int id,
       required final String slug,
       required final String name,
-      required final DateTime released,
-      required final bool tba,
-      required final String backgroundImage,
-      required final double rating,
-      required final int ratingTop,
-      required final List<Rating> ratings,
-      required final int ratingsCount,
-      required final int reviewsTextCount,
-      required final int added,
-      required final AddedByStatus addedByStatus,
-      required final int metaCritic,
-      required final int playtime,
-      required final int suggestionsCount,
-      required final DateTime updated,
-      required final dynamic userGame,
-      required final int reviewsCount,
-      required final Color saturatedColor,
-      required final Color dominantColor,
-      required final List<PlatformElement> platforms,
-      required final List<ParentPlatform> parentPlatforms,
-      required final List<Genres> genres,
-      required final List<Store> stores,
-      required final dynamic clip,
-      required final List<Genres> tags,
-      required final EsrbRating esrbRating,
-      required final List<ShortScreenshot> shortScreenshots}) = _$GamesImpl;
+      required final DateTime released}) = _$GamesImpl;
 
   @override
   int get id;
@@ -1750,56 +1167,6 @@ abstract class _Games implements Games {
   String get name;
   @override
   DateTime get released;
-  @override
-  bool get tba;
-  @override
-  String get backgroundImage;
-  @override
-  double get rating;
-  @override
-  int get ratingTop;
-  @override
-  List<Rating> get ratings;
-  @override
-  int get ratingsCount;
-  @override
-  int get reviewsTextCount;
-  @override
-  int get added;
-  @override
-  AddedByStatus get addedByStatus;
-  @override
-  int get metaCritic;
-  @override
-  int get playtime;
-  @override
-  int get suggestionsCount;
-  @override
-  DateTime get updated;
-  @override
-  dynamic get userGame;
-  @override
-  int get reviewsCount;
-  @override
-  Color get saturatedColor;
-  @override
-  Color get dominantColor;
-  @override
-  List<PlatformElement> get platforms;
-  @override
-  List<ParentPlatform> get parentPlatforms;
-  @override
-  List<Genres> get genres;
-  @override
-  List<Store> get stores;
-  @override
-  dynamic get clip;
-  @override
-  List<Genres> get tags;
-  @override
-  EsrbRating get esrbRating;
-  @override
-  List<ShortScreenshot> get shortScreenshots;
 
   /// Create a copy of Games
   /// with the given fields replaced by the non-null parameter values.

@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:ingadb/core/constants.dart';
-import 'package:ingadb/data/entity/game/game_entity.dart';
 import 'package:ingadb/data/entity/genre/genres_entity.dart';
 import 'package:ingadb/data/entity/genre_detail/genre_detail_entity.dart';
+import 'package:ingadb/data/entity/pagination/game_pagination_entity.dart';
 import 'package:logger/logger.dart';
 import 'package:retrofit/http.dart';
 
@@ -24,8 +24,9 @@ abstract class ApiClient {
   });
 
   @GET('games')
-  Future<ListOfGamesEntity> getListOfGames({
+  Future<GamePaginationEntity> getListOfGames({
     @Query('key') String key = Constants.apiKey,
+    @Query('page') required int page,
   });
 }
 
@@ -34,6 +35,6 @@ class ParseErrorLogger {
 
   void logError(Object error, StackTrace stackTrace, RequestOptions options) {
     _logger.e('Error occurred: $error', stackTrace: stackTrace);
-    _logger.i('Request Options: ${options.uri}');
+    _logger.i('Request options: ${options.uri}');
   }
 }
