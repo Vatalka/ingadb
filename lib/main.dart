@@ -4,7 +4,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:ingadb/DI/injectable.dart';
 import 'package:ingadb/config/theme/colors.dart';
 import 'package:ingadb/counter_observer.dart';
-import 'package:ingadb/presentation/home_page.dart';
+import 'package:ingadb/presentation/home_page/home_page.dart';
 
 void main() async {
   final WidgetsBinding widgetsBinding =

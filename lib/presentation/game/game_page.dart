@@ -33,9 +33,11 @@ class _ViewState extends State<_View> {
 
   void _onScroll() {
     if (_scrollController.position.pixels <=
-            MediaQuery.sizeOf(context).height &&
+            2 * MediaQuery.sizeOf(context).height &&
         !_gameCubit.state.gameLoading) {
-      _gameCubit.fetchGames();
+      _gameCubit.fetchGames().then((_) {
+        setState(() {});
+      });
     }
   }
 
