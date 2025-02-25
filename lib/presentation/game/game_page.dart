@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
+import 'package:ingadb/config/theme/colors.dart';
 import 'package:ingadb/domain/cubit/game/game_cubit.dart';
 
 class GamePage extends StatelessWidget {
@@ -31,13 +32,19 @@ class _ViewState extends State<_View> {
     _scrollController.addListener(_onScroll);
   }
 
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   void _onScroll() {
+    //MediaQuery.sizeOf(context).height
+    //_scrollController.position.maxScrollExtent
     if (_scrollController.position.pixels <=
-            2 * MediaQuery.sizeOf(context).height &&
+            _scrollController.position.maxScrollExtent &&
         !_gameCubit.state.gameLoading) {
-      _gameCubit.fetchGames().then((_) {
-        setState(() {});
-      });
+      _gameCubit.fetchGames();
     }
   }
 
@@ -50,6 +57,16 @@ class _ViewState extends State<_View> {
           if (state.gameLoading && state.games.isEmpty) {
             return const Center(child: CircularProgressIndicator());
           }
+          if (state.error != null) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Error: ${state.error}'),
+                  backgroundColor: Colors.red[300],
+                ),
+              );
+            });
+          }
           return ListView.builder(
             controller: _scrollController,
             itemCount: state.games.length + (state.gameLoading ? 1 : 0),
@@ -58,21 +75,18 @@ class _ViewState extends State<_View> {
                 return const Center(child: CircularProgressIndicator());
               }
               final game = state.games[index];
-              return ListTile(
-                key: ValueKey(game.id),
-                title: Text(game.name),
-                subtitle: Text('Released: ${game.released.toIso8601String()}'),
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  tileColor: AppColors.lightGrey,
+                  title: Text(game.name),
+                  subtitle: Text('Released: ${game.released}'),
+                ),
               );
             },
           );
         },
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
   }
 }

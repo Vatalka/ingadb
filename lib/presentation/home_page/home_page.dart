@@ -32,10 +32,10 @@ class HomePage extends StatelessWidget {
         slivers: <Widget>[
           PopularItem(),
           DiscoverFullCatalog(),
-          ForYou(),
-          GameGenresCatalog(),
           RecentReviews(),
           AdItem(),
+          ForYou(),
+          GameGenresCatalog(),
         ],
       ),
     );

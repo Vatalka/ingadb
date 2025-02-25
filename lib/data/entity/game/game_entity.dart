@@ -22,7 +22,7 @@ class GameEntity with _$GameEntity {
     required int added,
     @JsonKey(name: 'added_by_status')
     required GameAddedByStatusEntity addedByStatus,
-    required int metacritic,
+    int? metacritic,
     required int playtime,
     @JsonKey(name: 'suggestions_count') required int suggestionsCount,
     required String updated,
@@ -65,9 +65,9 @@ class GameAddedByStatusEntity with _$GameAddedByStatusEntity {
     required int yet,
     required int owned,
     required int beaten,
-    required int toplay,
+    int? toplay,
     required int dropped,
-    required int playing,
+    int? playing,
   }) = _GameAddedByStatusEntity;
 
   factory GameAddedByStatusEntity.fromJson(Map<String, dynamic> json) =>
@@ -78,7 +78,7 @@ class GameAddedByStatusEntity with _$GameAddedByStatusEntity {
 class GamePlatformsEntity with _$GamePlatformsEntity {
   factory GamePlatformsEntity({
     required GamePlatformsPlatformEntity platform,
-    @JsonKey(name: 'released_at') required DateTime releasedAt,
+    @JsonKey(name: 'released_at') DateTime? releasedAt,
     @JsonKey(name: 'requirements_en')
     GamePlatformsRequirementsEnEntity? requirementsEn,
     @JsonKey(name: 'requirements_ru') required dynamic requirementsRu,
@@ -109,7 +109,7 @@ class GamePlatformsPlatformEntity with _$GamePlatformsPlatformEntity {
 class GamePlatformsRequirementsEnEntity
     with _$GamePlatformsRequirementsEnEntity {
   factory GamePlatformsRequirementsEnEntity({
-    required String minimum,
+    String? minimum,
     String? recommended,
   }) = _GamePlatformsRequirementsEnEntity;
 
@@ -226,5 +226,9 @@ extension GameEntityExt on GameEntity {
         slug: slug,
         name: name,
         released: released,
+        backgroundImage: backgroundImage,
+        rating: rating,
+        ratingTop: ratingTop,
+        metaCritic: metacritic,
       );
 }

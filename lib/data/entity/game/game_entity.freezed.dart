@@ -59,8 +59,8 @@ mixin _$GameEntity {
   @JsonKey(name: 'added_by_status')
   set addedByStatus(GameAddedByStatusEntity value) =>
       throw _privateConstructorUsedError;
-  int get metacritic => throw _privateConstructorUsedError;
-  set metacritic(int value) => throw _privateConstructorUsedError;
+  int? get metacritic => throw _privateConstructorUsedError;
+  set metacritic(int? value) => throw _privateConstructorUsedError;
   int get playtime => throw _privateConstructorUsedError;
   set playtime(int value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'suggestions_count')
@@ -146,7 +146,7 @@ abstract class $GameEntityCopyWith<$Res> {
       @JsonKey(name: 'reviews_text_count') int reviewsTextCount,
       int added,
       @JsonKey(name: 'added_by_status') GameAddedByStatusEntity addedByStatus,
-      int metacritic,
+      int? metacritic,
       int playtime,
       @JsonKey(name: 'suggestions_count') int suggestionsCount,
       String updated,
@@ -197,7 +197,7 @@ class _$GameEntityCopyWithImpl<$Res, $Val extends GameEntity>
     Object? reviewsTextCount = null,
     Object? added = null,
     Object? addedByStatus = null,
-    Object? metacritic = null,
+    Object? metacritic = freezed,
     Object? playtime = null,
     Object? suggestionsCount = null,
     Object? updated = null,
@@ -267,10 +267,10 @@ class _$GameEntityCopyWithImpl<$Res, $Val extends GameEntity>
           ? _value.addedByStatus
           : addedByStatus // ignore: cast_nullable_to_non_nullable
               as GameAddedByStatusEntity,
-      metacritic: null == metacritic
+      metacritic: freezed == metacritic
           ? _value.metacritic
           : metacritic // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       playtime: null == playtime
           ? _value.playtime
           : playtime // ignore: cast_nullable_to_non_nullable
@@ -382,7 +382,7 @@ abstract class _$$GameEntityImplCopyWith<$Res>
       @JsonKey(name: 'reviews_text_count') int reviewsTextCount,
       int added,
       @JsonKey(name: 'added_by_status') GameAddedByStatusEntity addedByStatus,
-      int metacritic,
+      int? metacritic,
       int playtime,
       @JsonKey(name: 'suggestions_count') int suggestionsCount,
       String updated,
@@ -433,7 +433,7 @@ class __$$GameEntityImplCopyWithImpl<$Res>
     Object? reviewsTextCount = null,
     Object? added = null,
     Object? addedByStatus = null,
-    Object? metacritic = null,
+    Object? metacritic = freezed,
     Object? playtime = null,
     Object? suggestionsCount = null,
     Object? updated = null,
@@ -503,10 +503,10 @@ class __$$GameEntityImplCopyWithImpl<$Res>
           ? _value.addedByStatus
           : addedByStatus // ignore: cast_nullable_to_non_nullable
               as GameAddedByStatusEntity,
-      metacritic: null == metacritic
+      metacritic: freezed == metacritic
           ? _value.metacritic
           : metacritic // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       playtime: null == playtime
           ? _value.playtime
           : playtime // ignore: cast_nullable_to_non_nullable
@@ -588,7 +588,7 @@ class _$GameEntityImpl implements _GameEntity {
       @JsonKey(name: 'reviews_text_count') required this.reviewsTextCount,
       required this.added,
       @JsonKey(name: 'added_by_status') required this.addedByStatus,
-      required this.metacritic,
+      this.metacritic,
       required this.playtime,
       @JsonKey(name: 'suggestions_count') required this.suggestionsCount,
       required this.updated,
@@ -640,7 +640,7 @@ class _$GameEntityImpl implements _GameEntity {
   @JsonKey(name: 'added_by_status')
   GameAddedByStatusEntity addedByStatus;
   @override
-  int metacritic;
+  int? metacritic;
   @override
   int playtime;
   @override
@@ -717,7 +717,7 @@ abstract class _GameEntity implements GameEntity {
           required int added,
           @JsonKey(name: 'added_by_status')
           required GameAddedByStatusEntity addedByStatus,
-          required int metacritic,
+          int? metacritic,
           required int playtime,
           @JsonKey(name: 'suggestions_count') required int suggestionsCount,
           required String updated,
@@ -790,8 +790,8 @@ abstract class _GameEntity implements GameEntity {
   @JsonKey(name: 'added_by_status')
   set addedByStatus(GameAddedByStatusEntity value);
   @override
-  int get metacritic;
-  set metacritic(int value);
+  int? get metacritic;
+  set metacritic(int? value);
   @override
   int get playtime;
   set playtime(int value);
@@ -1074,12 +1074,12 @@ mixin _$GameAddedByStatusEntity {
   set owned(int value) => throw _privateConstructorUsedError;
   int get beaten => throw _privateConstructorUsedError;
   set beaten(int value) => throw _privateConstructorUsedError;
-  int get toplay => throw _privateConstructorUsedError;
-  set toplay(int value) => throw _privateConstructorUsedError;
+  int? get toplay => throw _privateConstructorUsedError;
+  set toplay(int? value) => throw _privateConstructorUsedError;
   int get dropped => throw _privateConstructorUsedError;
   set dropped(int value) => throw _privateConstructorUsedError;
-  int get playing => throw _privateConstructorUsedError;
-  set playing(int value) => throw _privateConstructorUsedError;
+  int? get playing => throw _privateConstructorUsedError;
+  set playing(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GameAddedByStatusEntity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1098,7 +1098,7 @@ abstract class $GameAddedByStatusEntityCopyWith<$Res> {
       _$GameAddedByStatusEntityCopyWithImpl<$Res, GameAddedByStatusEntity>;
   @useResult
   $Res call(
-      {int yet, int owned, int beaten, int toplay, int dropped, int playing});
+      {int yet, int owned, int beaten, int? toplay, int dropped, int? playing});
 }
 
 /// @nodoc
@@ -1120,9 +1120,9 @@ class _$GameAddedByStatusEntityCopyWithImpl<$Res,
     Object? yet = null,
     Object? owned = null,
     Object? beaten = null,
-    Object? toplay = null,
+    Object? toplay = freezed,
     Object? dropped = null,
-    Object? playing = null,
+    Object? playing = freezed,
   }) {
     return _then(_value.copyWith(
       yet: null == yet
@@ -1137,18 +1137,18 @@ class _$GameAddedByStatusEntityCopyWithImpl<$Res,
           ? _value.beaten
           : beaten // ignore: cast_nullable_to_non_nullable
               as int,
-      toplay: null == toplay
+      toplay: freezed == toplay
           ? _value.toplay
           : toplay // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dropped: null == dropped
           ? _value.dropped
           : dropped // ignore: cast_nullable_to_non_nullable
               as int,
-      playing: null == playing
+      playing: freezed == playing
           ? _value.playing
           : playing // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -1163,7 +1163,7 @@ abstract class _$$GameAddedByStatusEntityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int yet, int owned, int beaten, int toplay, int dropped, int playing});
+      {int yet, int owned, int beaten, int? toplay, int dropped, int? playing});
 }
 
 /// @nodoc
@@ -1184,9 +1184,9 @@ class __$$GameAddedByStatusEntityImplCopyWithImpl<$Res>
     Object? yet = null,
     Object? owned = null,
     Object? beaten = null,
-    Object? toplay = null,
+    Object? toplay = freezed,
     Object? dropped = null,
-    Object? playing = null,
+    Object? playing = freezed,
   }) {
     return _then(_$GameAddedByStatusEntityImpl(
       yet: null == yet
@@ -1201,18 +1201,18 @@ class __$$GameAddedByStatusEntityImplCopyWithImpl<$Res>
           ? _value.beaten
           : beaten // ignore: cast_nullable_to_non_nullable
               as int,
-      toplay: null == toplay
+      toplay: freezed == toplay
           ? _value.toplay
           : toplay // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dropped: null == dropped
           ? _value.dropped
           : dropped // ignore: cast_nullable_to_non_nullable
               as int,
-      playing: null == playing
+      playing: freezed == playing
           ? _value.playing
           : playing // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -1224,9 +1224,9 @@ class _$GameAddedByStatusEntityImpl implements _GameAddedByStatusEntity {
       {required this.yet,
       required this.owned,
       required this.beaten,
-      required this.toplay,
+      this.toplay,
       required this.dropped,
-      required this.playing});
+      this.playing});
 
   factory _$GameAddedByStatusEntityImpl.fromJson(Map<String, dynamic> json) =>
       _$$GameAddedByStatusEntityImplFromJson(json);
@@ -1238,11 +1238,11 @@ class _$GameAddedByStatusEntityImpl implements _GameAddedByStatusEntity {
   @override
   int beaten;
   @override
-  int toplay;
+  int? toplay;
   @override
   int dropped;
   @override
-  int playing;
+  int? playing;
 
   @override
   String toString() {
@@ -1271,9 +1271,9 @@ abstract class _GameAddedByStatusEntity implements GameAddedByStatusEntity {
       {required int yet,
       required int owned,
       required int beaten,
-      required int toplay,
+      int? toplay,
       required int dropped,
-      required int playing}) = _$GameAddedByStatusEntityImpl;
+      int? playing}) = _$GameAddedByStatusEntityImpl;
 
   factory _GameAddedByStatusEntity.fromJson(Map<String, dynamic> json) =
       _$GameAddedByStatusEntityImpl.fromJson;
@@ -1288,14 +1288,14 @@ abstract class _GameAddedByStatusEntity implements GameAddedByStatusEntity {
   int get beaten;
   set beaten(int value);
   @override
-  int get toplay;
-  set toplay(int value);
+  int? get toplay;
+  set toplay(int? value);
   @override
   int get dropped;
   set dropped(int value);
   @override
-  int get playing;
-  set playing(int value);
+  int? get playing;
+  set playing(int? value);
 
   /// Create a copy of GameAddedByStatusEntity
   /// with the given fields replaced by the non-null parameter values.
@@ -1316,9 +1316,9 @@ mixin _$GamePlatformsEntity {
   set platform(GamePlatformsPlatformEntity value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'released_at')
-  DateTime get releasedAt => throw _privateConstructorUsedError;
+  DateTime? get releasedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'released_at')
-  set releasedAt(DateTime value) => throw _privateConstructorUsedError;
+  set releasedAt(DateTime? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'requirements_en')
   GamePlatformsRequirementsEnEntity? get requirementsEn =>
       throw _privateConstructorUsedError;
@@ -1348,7 +1348,7 @@ abstract class $GamePlatformsEntityCopyWith<$Res> {
   @useResult
   $Res call(
       {GamePlatformsPlatformEntity platform,
-      @JsonKey(name: 'released_at') DateTime releasedAt,
+      @JsonKey(name: 'released_at') DateTime? releasedAt,
       @JsonKey(name: 'requirements_en')
       GamePlatformsRequirementsEnEntity? requirementsEn,
       @JsonKey(name: 'requirements_ru') dynamic requirementsRu});
@@ -1373,7 +1373,7 @@ class _$GamePlatformsEntityCopyWithImpl<$Res, $Val extends GamePlatformsEntity>
   @override
   $Res call({
     Object? platform = null,
-    Object? releasedAt = null,
+    Object? releasedAt = freezed,
     Object? requirementsEn = freezed,
     Object? requirementsRu = freezed,
   }) {
@@ -1382,10 +1382,10 @@ class _$GamePlatformsEntityCopyWithImpl<$Res, $Val extends GamePlatformsEntity>
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as GamePlatformsPlatformEntity,
-      releasedAt: null == releasedAt
+      releasedAt: freezed == releasedAt
           ? _value.releasedAt
           : releasedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       requirementsEn: freezed == requirementsEn
           ? _value.requirementsEn
           : requirementsEn // ignore: cast_nullable_to_non_nullable
@@ -1433,7 +1433,7 @@ abstract class _$$GamePlatformsEntityImplCopyWith<$Res>
   @useResult
   $Res call(
       {GamePlatformsPlatformEntity platform,
-      @JsonKey(name: 'released_at') DateTime releasedAt,
+      @JsonKey(name: 'released_at') DateTime? releasedAt,
       @JsonKey(name: 'requirements_en')
       GamePlatformsRequirementsEnEntity? requirementsEn,
       @JsonKey(name: 'requirements_ru') dynamic requirementsRu});
@@ -1458,7 +1458,7 @@ class __$$GamePlatformsEntityImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? platform = null,
-    Object? releasedAt = null,
+    Object? releasedAt = freezed,
     Object? requirementsEn = freezed,
     Object? requirementsRu = freezed,
   }) {
@@ -1467,10 +1467,10 @@ class __$$GamePlatformsEntityImplCopyWithImpl<$Res>
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as GamePlatformsPlatformEntity,
-      releasedAt: null == releasedAt
+      releasedAt: freezed == releasedAt
           ? _value.releasedAt
           : releasedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       requirementsEn: freezed == requirementsEn
           ? _value.requirementsEn
           : requirementsEn // ignore: cast_nullable_to_non_nullable
@@ -1488,7 +1488,7 @@ class __$$GamePlatformsEntityImplCopyWithImpl<$Res>
 class _$GamePlatformsEntityImpl implements _GamePlatformsEntity {
   _$GamePlatformsEntityImpl(
       {required this.platform,
-      @JsonKey(name: 'released_at') required this.releasedAt,
+      @JsonKey(name: 'released_at') this.releasedAt,
       @JsonKey(name: 'requirements_en') this.requirementsEn,
       @JsonKey(name: 'requirements_ru') required this.requirementsRu});
 
@@ -1499,7 +1499,7 @@ class _$GamePlatformsEntityImpl implements _GamePlatformsEntity {
   GamePlatformsPlatformEntity platform;
   @override
   @JsonKey(name: 'released_at')
-  DateTime releasedAt;
+  DateTime? releasedAt;
   @override
   @JsonKey(name: 'requirements_en')
   GamePlatformsRequirementsEnEntity? requirementsEn;
@@ -1532,7 +1532,7 @@ class _$GamePlatformsEntityImpl implements _GamePlatformsEntity {
 abstract class _GamePlatformsEntity implements GamePlatformsEntity {
   factory _GamePlatformsEntity(
           {required GamePlatformsPlatformEntity platform,
-          @JsonKey(name: 'released_at') required DateTime releasedAt,
+          @JsonKey(name: 'released_at') DateTime? releasedAt,
           @JsonKey(name: 'requirements_en')
           GamePlatformsRequirementsEnEntity? requirementsEn,
           @JsonKey(name: 'requirements_ru') required dynamic requirementsRu}) =
@@ -1546,9 +1546,9 @@ abstract class _GamePlatformsEntity implements GamePlatformsEntity {
   set platform(GamePlatformsPlatformEntity value);
   @override
   @JsonKey(name: 'released_at')
-  DateTime get releasedAt;
+  DateTime? get releasedAt;
   @JsonKey(name: 'released_at')
-  set releasedAt(DateTime value);
+  set releasedAt(DateTime? value);
   @override
   @JsonKey(name: 'requirements_en')
   GamePlatformsRequirementsEnEntity? get requirementsEn;
@@ -1897,8 +1897,8 @@ GamePlatformsRequirementsEnEntity _$GamePlatformsRequirementsEnEntityFromJson(
 
 /// @nodoc
 mixin _$GamePlatformsRequirementsEnEntity {
-  String get minimum => throw _privateConstructorUsedError;
-  set minimum(String value) => throw _privateConstructorUsedError;
+  String? get minimum => throw _privateConstructorUsedError;
+  set minimum(String? value) => throw _privateConstructorUsedError;
   String? get recommended => throw _privateConstructorUsedError;
   set recommended(String? value) => throw _privateConstructorUsedError;
 
@@ -1920,7 +1920,7 @@ abstract class $GamePlatformsRequirementsEnEntityCopyWith<$Res> {
       _$GamePlatformsRequirementsEnEntityCopyWithImpl<$Res,
           GamePlatformsRequirementsEnEntity>;
   @useResult
-  $Res call({String minimum, String? recommended});
+  $Res call({String? minimum, String? recommended});
 }
 
 /// @nodoc
@@ -1939,14 +1939,14 @@ class _$GamePlatformsRequirementsEnEntityCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? minimum = null,
+    Object? minimum = freezed,
     Object? recommended = freezed,
   }) {
     return _then(_value.copyWith(
-      minimum: null == minimum
+      minimum: freezed == minimum
           ? _value.minimum
           : minimum // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       recommended: freezed == recommended
           ? _value.recommended
           : recommended // ignore: cast_nullable_to_non_nullable
@@ -1964,7 +1964,7 @@ abstract class _$$GamePlatformsRequirementsEnEntityImplCopyWith<$Res>
       __$$GamePlatformsRequirementsEnEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String minimum, String? recommended});
+  $Res call({String? minimum, String? recommended});
 }
 
 /// @nodoc
@@ -1982,14 +1982,14 @@ class __$$GamePlatformsRequirementsEnEntityImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? minimum = null,
+    Object? minimum = freezed,
     Object? recommended = freezed,
   }) {
     return _then(_$GamePlatformsRequirementsEnEntityImpl(
-      minimum: null == minimum
+      minimum: freezed == minimum
           ? _value.minimum
           : minimum // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       recommended: freezed == recommended
           ? _value.recommended
           : recommended // ignore: cast_nullable_to_non_nullable
@@ -2002,15 +2002,14 @@ class __$$GamePlatformsRequirementsEnEntityImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GamePlatformsRequirementsEnEntityImpl
     implements _GamePlatformsRequirementsEnEntity {
-  _$GamePlatformsRequirementsEnEntityImpl(
-      {required this.minimum, this.recommended});
+  _$GamePlatformsRequirementsEnEntityImpl({this.minimum, this.recommended});
 
   factory _$GamePlatformsRequirementsEnEntityImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$GamePlatformsRequirementsEnEntityImplFromJson(json);
 
   @override
-  String minimum;
+  String? minimum;
   @override
   String? recommended;
 
@@ -2040,7 +2039,7 @@ class _$GamePlatformsRequirementsEnEntityImpl
 abstract class _GamePlatformsRequirementsEnEntity
     implements GamePlatformsRequirementsEnEntity {
   factory _GamePlatformsRequirementsEnEntity(
-      {required String minimum,
+      {String? minimum,
       String? recommended}) = _$GamePlatformsRequirementsEnEntityImpl;
 
   factory _GamePlatformsRequirementsEnEntity.fromJson(
@@ -2048,8 +2047,8 @@ abstract class _GamePlatformsRequirementsEnEntity
       _$GamePlatformsRequirementsEnEntityImpl.fromJson;
 
   @override
-  String get minimum;
-  set minimum(String value);
+  String? get minimum;
+  set minimum(String? value);
   @override
   String? get recommended;
   set recommended(String? value);

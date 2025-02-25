@@ -24,7 +24,7 @@ _$GameEntityImpl _$$GameEntityImplFromJson(Map<String, dynamic> json) =>
       added: (json['added'] as num).toInt(),
       addedByStatus: GameAddedByStatusEntity.fromJson(
           json['added_by_status'] as Map<String, dynamic>),
-      metacritic: (json['metacritic'] as num).toInt(),
+      metacritic: (json['metacritic'] as num?)?.toInt(),
       playtime: (json['playtime'] as num).toInt(),
       suggestionsCount: (json['suggestions_count'] as num).toInt(),
       updated: json['updated'] as String,
@@ -116,9 +116,9 @@ _$GameAddedByStatusEntityImpl _$$GameAddedByStatusEntityImplFromJson(
       yet: (json['yet'] as num).toInt(),
       owned: (json['owned'] as num).toInt(),
       beaten: (json['beaten'] as num).toInt(),
-      toplay: (json['toplay'] as num).toInt(),
+      toplay: (json['toplay'] as num?)?.toInt(),
       dropped: (json['dropped'] as num).toInt(),
-      playing: (json['playing'] as num).toInt(),
+      playing: (json['playing'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GameAddedByStatusEntityImplToJson(
@@ -137,7 +137,9 @@ _$GamePlatformsEntityImpl _$$GamePlatformsEntityImplFromJson(
     _$GamePlatformsEntityImpl(
       platform: GamePlatformsPlatformEntity.fromJson(
           json['platform'] as Map<String, dynamic>),
-      releasedAt: DateTime.parse(json['released_at'] as String),
+      releasedAt: json['released_at'] == null
+          ? null
+          : DateTime.parse(json['released_at'] as String),
       requirementsEn: json['requirements_en'] == null
           ? null
           : GamePlatformsRequirementsEnEntity.fromJson(
@@ -149,7 +151,7 @@ Map<String, dynamic> _$$GamePlatformsEntityImplToJson(
         _$GamePlatformsEntityImpl instance) =>
     <String, dynamic>{
       'platform': instance.platform,
-      'released_at': instance.releasedAt.toIso8601String(),
+      'released_at': instance.releasedAt?.toIso8601String(),
       'requirements_en': instance.requirementsEn,
       'requirements_ru': instance.requirementsRu,
     };
@@ -184,7 +186,7 @@ _$GamePlatformsRequirementsEnEntityImpl
     _$$GamePlatformsRequirementsEnEntityImplFromJson(
             Map<String, dynamic> json) =>
         _$GamePlatformsRequirementsEnEntityImpl(
-          minimum: json['minimum'] as String,
+          minimum: json['minimum'] as String?,
           recommended: json['recommended'] as String?,
         );
 

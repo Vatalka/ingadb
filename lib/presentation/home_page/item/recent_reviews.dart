@@ -64,6 +64,7 @@ class RecentReviews extends StatelessWidget {
                                 ),
                                 Row(
                                   children: <Widget>[
+                                    SizedBox(width: 8.0),
                                     CircleAvatar(
                                       radius: 12,
                                       child: FlutterLogo(size: 20),
