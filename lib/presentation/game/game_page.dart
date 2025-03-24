@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:ingadb/domain/cubit/game/game_cubit.dart';
 import 'package:ingadb/presentation/game/item/game_item.dart';
+import 'package:ingadb/presentation/game/item/search_item.dart';
 
 class GamePage extends StatelessWidget {
   const GamePage({super.key});
@@ -68,19 +69,45 @@ class _ViewState extends State<_View> {
               );
             });
           }
-          return ListView.builder(
-            controller: _scrollController,
-            itemCount: state.games.length +
-                ((state.gameLoading && state.games.length % 20 == 0) ? 1 : 0),
-            itemBuilder: (context, index) {
-              if (index == state.games.length && state.gameLoading) {
-                return const Center(child: CircularProgressIndicator());
-              }
-              final game = state.games[index];
-              return GameItem(
-                game: game,
-              );
-            },
+          return Stack(
+            children: [
+              ListView.builder(
+                controller: _scrollController,
+                itemCount: state.games.length +
+                    ((state.gameLoading && state.games.length % 20 == 0)
+                        ? 1
+                        : 0),
+                itemBuilder: (context, index) {
+                  if (index == state.games.length && state.gameLoading) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  final game = state.games[index];
+                  return GameItem(
+                    game: game,
+                  );
+                },
+              ),
+              const Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Search games',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SearchItem(),
+                  ],
+                ),
+              ),
+            ],
           );
         },
       ),
